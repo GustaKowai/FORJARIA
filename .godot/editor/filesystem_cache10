@@ -1,0 +1,11 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1758909189
+button.gd::GDScript/GDScript::2120410370702478066::1758906974::0::1::::<>Button<><>0<>0<><>::
+icon.svg::CompressedTexture2D/CompressedTexture2D::1308928174603214380::1758906974::1758907500::1::::<><><>0<>0<>0c5be19d270111c00a4b9ba3677c8058<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+images.png::CompressedTexture2D/CompressedTexture2D::8336374084628455489::1758906974::1758907500::1::::<><><>0<>0<>b0b08163a4ad90dbf83b3b17f042293d<>res://.godot/imported/images.png-b603883770f213c0c175102e3045df3b.ctex::
+jorge.gd::GDScript/GDScript::7016920353644293089::1758906974::0::1::::<>Node2D<><>0<>0<><>::
+malibus.png::CompressedTexture2D/CompressedTexture2D::4382255233376537629::1758906974::1758907500::1::::<><><>0<>0<>a0af05bfbab829608566f8f9e5da1ae9<>res://.godot/imported/malibus.png-58813131df0c0f7485e1b0befdb86329.ctex::
+minigame.tscn::PackedScene/PackedScene::9195407029911625649::1758906974::0::1::::<><><>0<>0<><>::uid://dsjubx2st8ga3::::res://node_2d.tscn<>uid://swb4dkk5ttiy::::res://icon.svg
+node_2d.gd::GDScript/GDScript::1157720466129503175::1758906974::0::1::::<>Node2D<><>0<>0<><>::
+node_2d.tscn::PackedScene::8442458012590962796::1758907531::0::1::::<><><>0<>0<><>::uid://qq2qs5m4lihr::::res://node_2d.gd<>uid://swb4dkk5ttiy::::res://icon.svg<>uid://5he34pqe4lc1::::res://button.gd<>uid://b3o2drtsg5k6h::::res://malibus.png
+sprite_2d.gd::GDScript/GDScript::2253147701349637846::1758906974::0::1::::<>Sprite2D<><>0<>0<><>::
