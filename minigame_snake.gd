@@ -2,7 +2,7 @@ extends Node2D
 @onready var timer: Timer = $Timer
 @onready var marker_2d: Marker2D = $Marker2D
 @onready var tesoura: Area2D = $Area2D
-var tamanho_tesoura:int = 20
+var tamanho_tesoura:int = 22
 var vector_position:Vector2 = Vector2(1,0)
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
