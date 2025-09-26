@@ -7,7 +7,7 @@
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_nslmr"]
 size = Vector2(22, 22)
 
-[node name="Bloquinho de teste" type="Node2D"]
+[node name="Bloquinho de grid" type="Node2D"]
 script = ExtResource("1_nslmr")
 
 [node name="Area2D" type="Area2D" parent="."]

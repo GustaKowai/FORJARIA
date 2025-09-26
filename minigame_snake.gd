@@ -5,6 +5,7 @@ extends Node2D
 var tamanho_tesoura:int = 22
 var vector_position:Vector2 = Vector2(1,0)
 # Called when the node enters the scene tree for the first time.
+
 func _ready() -> void:
 	tesoura.position = marker_2d.position
 
