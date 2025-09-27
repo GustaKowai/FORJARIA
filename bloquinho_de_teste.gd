@@ -18,5 +18,6 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 func cortado():
 	if sprite_2d.modulate == Color(255,0,0):
 		print_debug("morreu")
+		GameManager.mini_game_snake.emit()
 	else:
 		sprite_2d.modulate = Color(255,0,0)

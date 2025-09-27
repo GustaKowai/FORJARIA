@@ -1,4 +1,5 @@
+res://bloquinho_de_teste.tscn
+res://game_manager.gd
 res://minigame_snake.tscn
 res://minigame_snake.gd
 res://bloquinho_de_teste.gd
-res://bloquinho_de_teste.tscn

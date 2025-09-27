@@ -8,7 +8,7 @@ var vector_position:Vector2 = Vector2(1,0)
 
 func _ready() -> void:
 	tesoura.position = marker_2d.position
-
+	GameManager.mini_game_snake.connect(end_minigame)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -27,3 +27,6 @@ func _on_esquerda_pressed() -> void:
 	if vector_position.x == 0: vector_position = Vector2(-1,0) 
 func _on_direita_pressed() -> void:
 	if vector_position.x == 0 : vector_position = Vector2(1,0) 
+
+func end_minigame():
+	timer.stop()
