@@ -1,5 +1,13 @@
-res://bloquinho_de_teste.tscn
-res://game_manager.gd
+res://bloquinho_de_corte.gd
 res://minigame_snake.tscn
-res://minigame_snake.gd
-res://bloquinho_de_teste.gd
+res://bloquinho_de_teste.tscn
+res://minigame_snake/bloquinho_de_corte.tscn
+res://minigame_snake/minigame_snake.tscn
+res://minigame_snake/bloquinho.gd
+res://minigame_snake/bloquinho_de_teste.tscn
+res://minigame_snake/bloquinho_de_teste.gd
+res://minigame_snake/bloquinho_de_corte.gd
+res://game_manager.gd
+res://minigame_snake/minigame_snake.gd
+res://bloquinho_de_borda.gd
+res://minigame_snake/bloquinho_de_borda.tscn

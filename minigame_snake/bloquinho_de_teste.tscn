@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://csyhdft1atli4"]
 
-[ext_resource type="Script" uid="uid://b7td8tg8yqypa" path="res://bloquinho_de_teste.gd" id="1_nslmr"]
+[ext_resource type="Script" uid="uid://b7td8tg8yqypa" path="res://minigame_snake/bloquinho_de_teste.gd" id="1_nslmr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xiq12"]
 
@@ -9,6 +9,8 @@ size = Vector2(22, 22)
 
 [node name="Bloquinho de grid" type="Node2D"]
 script = ExtResource("1_nslmr")
+pontos = -1
+cor = Color(1, 0, 0, 1)
 
 [node name="Area2D" type="Area2D" parent="."]
 
