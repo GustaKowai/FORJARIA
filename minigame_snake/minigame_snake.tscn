@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=4 uid="uid://cg8s2ahem447w"]
+[gd_scene load_steps=12 format=4 uid="uid://cg8s2ahem447w"]
 
 [ext_resource type="Script" uid="uid://cs1a6v7sxgofr" path="res://minigame_snake/minigame_snake.gd" id="1_ruknq"]
 [ext_resource type="PackedScene" uid="uid://csyhdft1atli4" path="res://minigame_snake/bloquinho_de_teste.tscn" id="2_xikpy"]
 [ext_resource type="PackedScene" uid="uid://cluwliqo7pcaj" path="res://minigame_snake/bloquinho_de_corte.tscn" id="3_pm3ah"]
 [ext_resource type="PackedScene" uid="uid://dx6o4at8dxu4k" path="res://minigame_snake/bloquinho_de_borda.tscn" id="4_5hx5t"]
+[ext_resource type="Texture2D" uid="uid://dgt858rnpogd0" path="res://minigame_snake/tesoura_minigame2sheet.png" id="5_c25d2"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_ruknq"]
 scenes/1/scene = ExtResource("2_xikpy")
@@ -16,8 +17,27 @@ sources/0 = SubResource("TileSetScenesCollectionSource_ruknq")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ruknq"]
 
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_xikpy"]
-size = Vector2(20, 20)
+[sub_resource type="AtlasTexture" id="AtlasTexture_c25d2"]
+atlas = ExtResource("5_c25d2")
+region = Rect2(0, 0, 350, 210)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gs44j"]
+atlas = ExtResource("5_c25d2")
+region = Rect2(350, 0, 350, 210)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wsanh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c25d2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gs44j")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
 
 [node name="Minigame_snake" type="Node2D"]
 script = ExtResource("1_ruknq")
@@ -38,8 +58,12 @@ position = Vector2(99, 319)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_ruknq")
 
-[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
-texture = SubResource("PlaceholderTexture2D_xikpy")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Area2D"]
+scale = Vector2(0.3, 0.3)
+sprite_frames = SubResource("SpriteFrames_wsanh")
+autoplay = "default"
+offset = Vector2(-150, 0)
+flip_h = true
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3

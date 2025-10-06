@@ -10,3 +10,5 @@ res://forja_interior/tile_map_layer.gd
 res://minigame_snake/minigame_snake.gd
 res://minigame_snake/bloquinho.gd
 res://minigame_snake/bloquinho_de_corte.gd
+res://minigame.tscn
+res://node_2d.tscn

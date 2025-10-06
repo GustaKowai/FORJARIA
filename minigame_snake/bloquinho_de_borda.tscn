@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://dx6o4at8dxu4k"]
 
-[ext_resource type="Script" uid="uid://38fytr4alnur" path="res://bloquinho_de_borda.gd" id="1_jvpgc"]
+[ext_resource type="Script" uid="uid://38fytr4alnur" path="res://minigame_snake/bloquinho_de_borda.gd" id="1_jvpgc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jvpgc"]
 

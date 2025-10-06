@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://8lvr8atrhxkk"]
 
-[ext_resource type="Script" uid="uid://djburygob550n" path="res://jogador.gd" id="1_gw4iw"]
+[ext_resource type="Script" uid="uid://djburygob550n" path="res://jogador/jogador.gd" id="1_gw4iw"]
 [ext_resource type="Texture2D" uid="uid://bnepxan1ort1d" path="res://jogador/personagem.png" id="2_5aga6"]
 [ext_resource type="PackedScene" uid="uid://bc4bylx0blnya" path="res://jogador/follow_player.tscn" id="3_wq8wa"]
 

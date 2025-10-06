@@ -17,8 +17,11 @@ func _process(delta: float) -> void:
 	pass
 
 func _input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("action") and corte_de_couro:
-		inicia_minigame_snake()
+	if Input.is_action_just_pressed("action"):
+		if corte_de_couro:
+			inicia_minigame(minigame_snake)
+		if bigorna:
+			inicia_minigame(minigame_bigorna)
 #region corte de couro
 func _on_snake_body_entered(body: Node2D) -> void:
 	if body.is_in_group("jogador"):
@@ -30,16 +33,11 @@ func _on_snake_body_exited(body: Node2D) -> void:
 
 func _on_snake_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and corte_de_couro:
-		inicia_minigame_snake()
+		inicia_minigame(minigame_snake)
 
-func inicia_minigame_snake():
-	print_debug("jogando")
-	GameManager.mini_game_start.emit()
-	var minigame_snake_scene = minigame_snake.instantiate()
-	window.add_child(minigame_snake_scene)
-	window.visible = true
 #endregion
 
+#region minigame bigorna
 func close_minigame():
 	window.visible = false
 	if window.get_child(0):
@@ -56,11 +54,13 @@ func _on_bigorna_body_exited(body: Node2D) -> void:
 
 func _on_bigorna_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and bigorna:
-		inicia_minigame_bigorna()
+		inicia_minigame(minigame_bigorna)
 
-func inicia_minigame_bigorna():
+#endregion
+
+func inicia_minigame(minigame):
 	print_debug("jogando")
 	GameManager.mini_game_start.emit()
-	var minigame_snake_scene = minigame_snake.instantiate()
-	window.add_child(minigame_snake_scene)
+	var minigame_scene = minigame.instantiate()
+	window.add_child(minigame_scene)
 	window.visible = true

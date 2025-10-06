@@ -1,8 +1,9 @@
-[gd_scene load_steps=23 format=4 uid="uid://81dw4cg2wxdw"]
+[gd_scene load_steps=24 format=4 uid="uid://81dw4cg2wxdw"]
 
 [ext_resource type="Texture2D" uid="uid://2lejbc0srq6o" path="res://forja_interior/grounds.png" id="1_iked2"]
 [ext_resource type="Script" uid="uid://b8ma8a4vfl0sj" path="res://forja_interior/forja.gd" id="1_lld1g"]
 [ext_resource type="Texture2D" uid="uid://bgqvq1xr25wbh" path="res://forja_interior/animated_props.png" id="2_yxeog"]
+[ext_resource type="PackedScene" uid="uid://d4alal6q2c7i8" path="res://minigame.tscn" id="3_jna6w"]
 [ext_resource type="Texture2D" uid="uid://tw0ut7e31o8i" path="res://forja_interior/pickup_items_animated.png" id="3_slqol"]
 [ext_resource type="Texture2D" uid="uid://bn0xaux5qbwhg" path="res://forja_interior/props.png" id="4_lld1g"]
 [ext_resource type="Texture2D" uid="uid://cf6qwcp8cmslv" path="res://forja_interior/surground.png" id="5_p7va2"]
@@ -868,6 +869,7 @@ size = Vector2(55, 44)
 [node name="Forja" type="Node2D"]
 script = ExtResource("1_lld1g")
 minigame_snake = ExtResource("8_slqol")
+minigame_bigorna = ExtResource("3_jna6w")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 scale = Vector2(2, 2)
