@@ -12,3 +12,6 @@ res://minigame_snake/bloquinho.gd
 res://minigame_snake/bloquinho_de_corte.gd
 res://minigame.tscn
 res://node_2d.tscn
+res://minigame_snake/bloquinho_de_corte.tscn
+res://minigame_snake/bloquinho_de_borda.tscn
+res://minigame_snake/bloquinho_de_teste.tscn
