@@ -1,7 +1,7 @@
 extends Bloquinho
 
 func _ready() -> void:
-	GameManager.mini_game_snake.connect(sobrou)
+	GameManager.mini_game_snake_end.connect(sobrou)
 	
 func sobrou():
 	if !cortado:

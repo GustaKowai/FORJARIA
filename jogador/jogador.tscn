@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://8lvr8atrhxkk"]
+
+[ext_resource type="Script" uid="uid://djburygob550n" path="res://jogador.gd" id="1_gw4iw"]
+[ext_resource type="Texture2D" uid="uid://bnepxan1ort1d" path="res://jogador/personagem.png" id="2_5aga6"]
+[ext_resource type="PackedScene" uid="uid://bc4bylx0blnya" path="res://jogador/follow_player.tscn" id="3_wq8wa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gw4iw"]
+size = Vector2(12.0786, 12.7384)
+
+[node name="jogador" type="CharacterBody2D" groups=["jogador"]]
+script = ExtResource("1_gw4iw")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4.76837e-07, 2)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("2_5aga6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 12)
+scale = Vector2(1.57303, 0.942033)
+shape = SubResource("RectangleShape2D_gw4iw")
+
+[node name="FollowMouse" parent="." instance=ExtResource("3_wq8wa")]
+position = Vector2(0, 18)

@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://bc4bylx0blnya"]
+
+[ext_resource type="Script" uid="uid://bmiqaa5ta3i5c" path="res://jogador/follow_player.gd" id="1_ghrro"]
+
+[node name="FollowMouse" type="Node2D"]
+script = ExtResource("1_ghrro")
+speed = 2.0
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_postprocessing = 1
+radius = 50.0
+debug_enabled = true
+
+[connection signal="navigation_finished" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_navigation_finished"]
+[connection signal="velocity_computed" from="NavigationAgent2D" to="." method="_on_navigation_agent_2d_velocity_computed"]

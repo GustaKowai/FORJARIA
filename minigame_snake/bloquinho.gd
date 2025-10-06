@@ -19,7 +19,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 func cortar():
 	if sprite_2d.modulate == cor:
 		print_debug("morreu")
-		GameManager.mini_game_snake.emit()
+		GameManager.mini_game_snake_end.emit()
 	else:
 		sprite_2d.modulate = cor
 		cortado = true

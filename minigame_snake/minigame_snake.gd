@@ -10,7 +10,7 @@ var pontuacao:int = 0
 
 func _ready() -> void:
 	tesoura.position = marker_2d.position
-	GameManager.mini_game_snake.connect(end_minigame)
+	GameManager.mini_game_snake_end.connect(end_minigame)
 	GameManager.mini_game_snake_score.connect(change_score)
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -32,6 +32,7 @@ func _on_direita_pressed() -> void:
 
 func end_minigame():
 	timer.stop()
+	GameManager.exit_minigame.emit()
 	
 func change_score(pontos):
 	pontuacao+=pontos
