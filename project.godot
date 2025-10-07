@@ -19,6 +19,10 @@ config/icon="res://icon.svg"
 
 GameManager="*res://game_manager.gd"
 
+[editor]
+
+movie_writer/movie_file="C:/Users/gusta/Documents/Workbench/Godot DIO/Projetos GODOT/forjaria/FORJARIA/videos/video.avi"
+
 [global_group]
 
 jogador=""
