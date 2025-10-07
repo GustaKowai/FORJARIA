@@ -886,14 +886,15 @@ tile_set = SubResource("TileSet_fhfks")
 position = Vector2(561, 374)
 
 [node name="Window" type="Window" parent="."]
+mode = 3
 initial_position = 1
-size = Vector2i(550, 300)
+size = Vector2i(1000, 600)
 visible = false
 unresizable = true
 borderless = true
 always_on_top = true
 content_scale_aspect = 4
-content_scale_factor = 0.5
+content_scale_factor = 0.7
 
 [node name="snake" type="Area2D" parent="."]
 position = Vector2(968, 66)
