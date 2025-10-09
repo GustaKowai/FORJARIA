@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://b21w1xa04eitn"]
+
+[ext_resource type="Script" uid="uid://d000kxgp1noj1" path="res://Locais_forja/tempo_do_dia.gd" id="1_l058s"]
+[ext_resource type="Texture2D" uid="uid://bky64vtr8t6pc" path="res://Locais_forja/png-clipart-gold-clock.png" id="2_12wqp"]
+
+[node name="Tempo do dia" type="Node2D"]
+script = ExtResource("1_l058s")
+valor_tempo = 0.5
+
+[node name="time_elapsed" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "06:00"
+metadata/_edit_use_anchors_ = true
+
+[node name="clock" type="TextureProgressBar" parent="."]
+offset_left = 143.0
+offset_top = 88.0
+offset_right = 1043.0
+offset_bottom = 988.0
+rotation = 3.14159
+scale = Vector2(0.1, 0.1)
+max_value = 720.0
+fill_mode = 4
+texture_under = ExtResource("2_12wqp")
+texture_progress = ExtResource("2_12wqp")
+tint_progress = Color(0.532566, 0.0658614, 0.12835, 1)

@@ -1,0 +1,119 @@
+[gd_scene load_steps=15 format=3 uid="uid://ca7xjwoywjm6y"]
+
+[ext_resource type="Script" uid="uid://ng2hyh2ecm84" path="res://Locais_forja/fornalha.gd" id="1_uo0w2"]
+[ext_resource type="Texture2D" uid="uid://bgqvq1xr25wbh" path="res://forja_interior/animated_props.png" id="1_wbdil"]
+[ext_resource type="Texture2D" uid="uid://c1kyuykmvcvll" path="res://forja_interior/20909.jpg" id="2_lg6hc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lg6hc"]
+atlas = ExtResource("1_wbdil")
+region = Rect2(0, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uo0w2"]
+atlas = ExtResource("1_wbdil")
+region = Rect2(16, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_neqgh"]
+atlas = ExtResource("1_wbdil")
+region = Rect2(32, 64, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2lij4"]
+atlas = ExtResource("1_wbdil")
+region = Rect2(48, 64, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xa8b7"]
+animations = [{
+"frames": [{
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_lg6hc")
+}, {
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_uo0w2")
+}, {
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_neqgh")
+}, {
+"duration": 0.2,
+"texture": SubResource("AtlasTexture_2lij4")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uo0w2"]
+size = Vector2(18, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_neqgh"]
+size = Vector2(14, 12)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2lij4"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xa8b7"]
+bg_color = Color(0.374139, 0.374139, 0.374139, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hrqor"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_078eb"]
+bg_color = Color(0.80952, 0, 0.259371, 1)
+
+[node name="Fornalha" type="Node2D"]
+script = ExtResource("1_uo0w2")
+variacao_temperatura = 5.0
+velocidade_queima = 0.1
+
+[node name="forja" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_xa8b7")
+autoplay = "default"
+frame_progress = 0.49278
+
+[node name="soprador" type="Sprite2D" parent="."]
+position = Vector2(17, 8)
+rotation = -2.87129
+scale = Vector2(0.0141907, 0.0176892)
+texture = ExtResource("2_lg6hc")
+
+[node name="area soprador" type="Area2D" parent="soprador"]
+position = Vector2(1305.01, 179.211)
+rotation = 2.92287
+scale = Vector2(69.5675, 57.637)
+skew = -0.113841
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="soprador/area soprador"]
+position = Vector2(17, 8)
+shape = SubResource("RectangleShape2D_uo0w2")
+
+[node name="area_carvao" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area_carvao"]
+position = Vector2(0, 20)
+shape = SubResource("RectangleShape2D_neqgh")
+
+[node name="Combustivel" type="ProgressBar" parent="."]
+offset_left = -9.0
+offset_top = -20.0
+offset_right = -5.0
+offset_bottom = 12.0
+theme_override_styles/background = SubResource("StyleBoxFlat_2lij4")
+theme_override_styles/fill = SubResource("StyleBoxFlat_xa8b7")
+value = 40.0
+fill_mode = 3
+show_percentage = false
+
+[node name="Temperatura" type="ProgressBar" parent="."]
+offset_left = 4.0
+offset_top = -21.0
+offset_right = 8.0
+offset_bottom = 11.0
+theme_override_styles/background = SubResource("StyleBoxFlat_hrqor")
+theme_override_styles/fill = SubResource("StyleBoxFlat_078eb")
+value = 40.0
+fill_mode = 3
+show_percentage = false
+
+[connection signal="body_entered" from="soprador/area soprador" to="." method="_on_area_soprador_body_entered"]
+[connection signal="body_exited" from="soprador/area soprador" to="." method="_on_area_soprador_body_exited"]
+[connection signal="input_event" from="soprador/area soprador" to="." method="_on_area_soprador_input_event"]
+[connection signal="body_entered" from="area_carvao" to="." method="_on_area_carvao_body_entered"]
+[connection signal="body_exited" from="area_carvao" to="." method="_on_area_carvao_body_exited"]
+[connection signal="input_event" from="area_carvao" to="." method="_on_area_carvao_input_event"]
