@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://d340pnoaksmy2"]
+
+[ext_resource type="PackedScene" uid="uid://duouc8oy3bnv2" path="res://itens/item_base.tscn" id="1_ephih"]
+[ext_resource type="Script" uid="uid://biiof4751fqfv" path="res://itens/carvão.gd" id="2_nthq3"]
+
+[node name="Carvão" instance=ExtResource("1_ephih")]
+script = ExtResource("2_nthq3")

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b3o2drtsg5k6h"
-path="res://.godot/imported/malibus.png-58813131df0c0f7485e1b0befdb86329.ctex"
+path="res://.godot/imported/malibus.png-9458b2f0ab644d06d1e8e2a19a17bc33.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://malibus.png"
-dest_files=["res://.godot/imported/malibus.png-58813131df0c0f7485e1b0befdb86329.ctex"]
+source_file="res://minigame-bigorna/malibus.png"
+dest_files=["res://.godot/imported/malibus.png-9458b2f0ab644d06d1e8e2a19a17bc33.ctex"]
 
 [params]
 
