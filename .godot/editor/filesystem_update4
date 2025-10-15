@@ -1,0 +1,7 @@
+res://forja_interior/forja.tscn
+res://itens/item_base.tscn
+res://itens/carvão.tscn
+res://Locais_forja/bigorna.tscn
+res://Locais_forja/corte_couro.tscn
+res://minigame-bigorna/bigorna-minigame.tscn
+res://minigame_snake/minigame_snake.tscn

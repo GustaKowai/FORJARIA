@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://d4alal6q2c7i8"]
 
-[ext_resource type="PackedScene" uid="uid://dsjubx2st8ga3" path="res://node_2d.tscn" id="1_k7ghj"]
+[ext_resource type="PackedScene" uid="uid://dsjubx2st8ga3" path="res://minigame-bigorna/bigorna-minigame.tscn" id="1_k7ghj"]
 [ext_resource type="Texture2D" uid="uid://swb4dkk5ttiy" path="res://icon.svg" id="2_gdft7"]
 
 [node name="Minigame" type="Node2D"]

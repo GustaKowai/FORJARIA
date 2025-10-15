@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://dsjubx2st8ga3"]
+
+[ext_resource type="Texture2D" uid="uid://b3o2drtsg5k6h" path="res://minigame-bigorna/malibus.png" id="4_uaajk"]
+[ext_resource type="Texture2D" uid="uid://bxbws0p678h0d" path="res://minigame-bigorna/bigorna.png" id="5_5ck6h"]
+[ext_resource type="Script" uid="uid://sr4do0lolpmp" path="res://minigame-bigorna/minigameforja.gd" id="5_uaajk"]
+[ext_resource type="Texture2D" uid="uid://bd3kr415as4p" path="res://minigame-bigorna/acertobigorna.png" id="6_uaajk"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="minigameforja" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("5_uaajk")
+
+[node name="barraalvo" type="TextureRect" parent="minigameforja"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(2, 2)
+texture = ExtResource("5_5ck6h")
+expand_mode = 5
+
+[node name="indicadormartelo" type="TextureRect" parent="minigameforja/barraalvo"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(1, 0.2)
+texture = ExtResource("4_uaajk")
+expand_mode = 1
+
+[node name="medidorbigorna" type="TextureRect" parent="minigameforja"]
+layout_mode = 0
+offset_top = 17.0
+offset_right = 340.0
+offset_bottom = 1017.0
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("6_uaajk")
