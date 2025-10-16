@@ -1,0 +1,54 @@
+[gd_scene load_steps=3 format=3 uid="uid://dsappc1xym3pk"]
+
+[ext_resource type="Script" uid="uid://drgmr75p123oa" path="res://UI/inventario.gd" id="1_x7tli"]
+[ext_resource type="PackedScene" uid="uid://cc0p2qr1eocsl" path="res://itens/item_coletado.tscn" id="2_poxva"]
+
+[node name="Inventário" type="CanvasLayer"]
+script = ExtResource("1_x7tli")
+item_coletado_scene = ExtResource("2_poxva")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_horizontal = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+grow_horizontal = 0
+grow_vertical = 0
+
+[node name="ColorRect" type="ColorRect" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+
+[node name="item1" type="TextureButton" parent="Control/VBoxContainer/ColorRect"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+offset_top = 4.0
+offset_right = 40.0
+offset_bottom = 34.0
+
+[node name="ColorRect2" type="ColorRect" parent="Control/VBoxContainer"]
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+
+[node name="item2" type="TextureButton" parent="Control/VBoxContainer/ColorRect2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+offset_top = 4.0
+offset_right = 40.0
+offset_bottom = 34.0

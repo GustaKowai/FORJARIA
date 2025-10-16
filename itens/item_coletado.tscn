@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cc0p2qr1eocsl"]
+
+[ext_resource type="Script" uid="uid://sqpntf8momdo" path="res://itens/item_coletado.gd" id="1_xrxfr"]
+
+[node name="item_coletado" type="Node2D"]
+script = ExtResource("1_xrxfr")

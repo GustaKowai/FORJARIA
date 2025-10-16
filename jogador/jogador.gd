@@ -27,18 +27,19 @@ func _process(delta):
 	#GameManager.player_position = global_position
 	#Obtem o vetor de input:	
 	input_vector = Input.get_vector("ui_left","ui_right","ui_up","ui_down")
-	play_run_iddle()
+	#play_run_iddle()
 	if not is_playing:
 		rotate_sprite()
 	
 
 
 func _input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("Dash") and not is_playing:
-		dash()
-
+#	if Input.is_action_just_pressed("Dash") and not is_playing:
+		#dash()
+	pass
+	
 func _physics_process(_delta):
-	if is_playing: input_vector = Vector2(0,0)
+	if is_playing: return
 	var target_velocity:Vector2 = input_vector*speed*100.0
 	velocity = lerp(velocity,target_velocity,lerp_smoothness)
 	move_and_slide()
@@ -108,5 +109,6 @@ func rotate_sprite():
 func jogando():
 	is_playing = true
 	print_debug("jogando ",is_playing)
+	
 func nao_jogando():
 	is_playing=false

@@ -17,7 +17,7 @@ func _process(delta: float) -> void:
 	pass
 
 func _input(event: InputEvent) -> void:
-	if Input.is_action_just_pressed("action"):
+	if Input.is_action_just_pressed("interagir"):
 		if corte_de_couro:
 			inicia_minigame(minigame_snake)
 		if bigorna:

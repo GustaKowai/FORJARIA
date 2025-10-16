@@ -1,4 +1,4 @@
-extends "res://itens/item_base.gd"
+extends Item
 
-func _collect():
-	print("Pegou um carvão")
+#func _collect():
+	#print("Pegou um carvão")

@@ -2,8 +2,8 @@ extends Control
 
 signal minigame_finalizado(qualidade_minigame_bonus: float)
 
-@onready var barra_alvo: TextureRect = %BarraAlvo
-@onready var indicador_martelo: TextureRect = %IndicadorMartelo
+@onready var barra_alvo: TextureRect = %barraalvo
+@onready var indicador_martelo: TextureRect = %indicadormartelo
 
 # Configurações do minigame
 var velocidade_indicador: float = 200.0
@@ -26,7 +26,7 @@ var zona_vermelha_y_max: float = 340 # O resto da barra (ou o total)
 func _ready():
 	indicador_martelo.position.y = barra_alvo.size.y / 2
 	visible = false
-
+	#iniciar("seila")
 func iniciar(laminas_escolhidas: String):
 	visible = true
 	pontuacao_total_minigame = 0.0
@@ -74,7 +74,7 @@ func calcular_pontuacao_martelada():
 func finalizar_minigame():
 	var resultado_medio = pontuacao_total_minigame / 5.0 # Divida pelo número total de marteladas
 	emit_signal("minigame_finalizado", resultado_medio)
-	
+	GameManager.exit_minigame.emit()
 	visible = false
 	# Se quiser, pode liberar a cena aqui: queue_free()
 	# Mas talvez seja melhor mantê-la e reusar para performance, apenas escondendo.

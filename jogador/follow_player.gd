@@ -31,7 +31,7 @@ func move():
 	#Determinar qual animação será usada:
 	if abs(var_diff.x) >= abs(var_diff.y):
 		position_running = "side"
-		animation_player.play("Walk Side")
+		#animation_player.play("Walk Side")
 		#girar sprite:
 		if input_vector.x > 0:
 			sprite.flip_h = false
@@ -39,10 +39,10 @@ func move():
 			sprite.flip_h = true
 	elif var_diff.y < 0:
 		position_running = "up"
-		animation_player.play("Walk Up")
+		#animation_player.play("Walk Up")
 	else:
 		position_running = "down"
-		animation_player.play("Walk Down")
+		#animation_player.play("Walk Down")
 		
 	jogador.position_running = position_running
 	jogador.move_and_slide()
@@ -54,7 +54,7 @@ func make_path(): #Calcula e cria o melhor caminho até o jogador, desviando de 
 	
 func _input(event: InputEvent) -> void:
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-		print_debug(jogador.is_playing)
+		#print_debug(jogador.is_playing)
 		if not jogador.is_playing:
 			make_path()
 			ponto_final_alcancado = false

@@ -47,7 +47,7 @@ tile_map_data = PackedByteArray("AAAJAAQAAAAAAAAAAQAJAAUAAAAAAAAAAQAJAAYAAAAAAAA
 tile_set = SubResource("TileSet_xikpy")
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.5
+wait_time = 0.2
 autostart = true
 
 [node name="Marker2D" type="Marker2D" parent="."]

@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxca1w4t2wss8"]
+
+[ext_resource type="Script" uid="uid://cepttqhk4xqos" path="res://dados_item.gd" id="1_u5afu"]
+[ext_resource type="Texture2D" uid="uid://dpkdlqo0krxo4" path="res://itens/itembase.png" id="2_qvpew"]
+
+[node name="dados_item" type="Node2D"]
+script = ExtResource("1_u5afu")
+sprite = ExtResource("2_qvpew")
