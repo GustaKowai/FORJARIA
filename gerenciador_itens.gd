@@ -1,6 +1,8 @@
 extends Node
 signal Item_coletado(slot,item)
-var inventario:Array = [null,null]
+signal drop_item(item)
+var inventario:Array = [null,null,null]
+var active_slot:int 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.

@@ -29,11 +29,12 @@ offset_top = -40.0
 grow_horizontal = 0
 grow_vertical = 0
 
-[node name="ColorRect" type="ColorRect" parent="Control/VBoxContainer"]
+[node name="inventory1" type="ColorRect" parent="Control/VBoxContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 
-[node name="item1" type="TextureButton" parent="Control/VBoxContainer/ColorRect"]
+[node name="item1" type="TextureButton" parent="Control/VBoxContainer/inventory1"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
@@ -41,14 +42,33 @@ offset_top = 4.0
 offset_right = 40.0
 offset_bottom = 34.0
 
-[node name="ColorRect2" type="ColorRect" parent="Control/VBoxContainer"]
+[node name="slot_mao" type="ColorRect" parent="Control/VBoxContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
+color = Color(0.462291, 0.462291, 0.462291, 1)
 
-[node name="item2" type="TextureButton" parent="Control/VBoxContainer/ColorRect2"]
+[node name="mao" type="TextureButton" parent="Control/VBoxContainer/slot_mao"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 offset_top = 4.0
 offset_right = 40.0
 offset_bottom = 34.0
+
+[node name="inventory2" type="ColorRect" parent="Control/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+
+[node name="item2" type="TextureButton" parent="Control/VBoxContainer/inventory2"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+offset_top = 4.0
+offset_right = 40.0
+offset_bottom = 34.0
+
+[connection signal="pressed" from="Control/VBoxContainer/inventory1/item1" to="." method="_on_item_1_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/slot_mao/mao" to="." method="_on_mao_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/inventory2/item2" to="." method="_on_item_2_pressed"]

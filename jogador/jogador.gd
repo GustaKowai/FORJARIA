@@ -25,7 +25,7 @@ func _ready():
 	
 func _process(delta):
 	#GameManager.player_position = global_position
-	#Obtem o vetor de input:	
+	#Obtem o vetor de input:
 	input_vector = Input.get_vector("ui_left","ui_right","ui_up","ui_down")
 	#play_run_iddle()
 	if not is_playing:
