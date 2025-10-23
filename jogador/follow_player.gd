@@ -52,7 +52,7 @@ func make_path(): #Calcula e cria o melhor caminho até o jogador, desviando de 
 	nav_agent.target_position = get_global_mouse_position()
 		
 	
-func _input(event: InputEvent) -> void:
+func _unhandled_input(event: InputEvent) -> void:
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
 		#print_debug(jogador.is_playing)
 		if not jogador.is_playing:

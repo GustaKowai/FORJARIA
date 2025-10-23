@@ -22,6 +22,7 @@ var position_running:String = "down"
 func _ready():
 	GameManager.mini_game_start.connect(jogando)
 	GameManager.exit_minigame.connect(nao_jogando)
+	GerenciadorItens.drop_item.connect(drop_item)
 	
 func _process(delta):
 	#GameManager.player_position = global_position
@@ -112,3 +113,11 @@ func jogando():
 	
 func nao_jogando():
 	is_playing=false
+
+func drop_item(slot):
+	var objeto = GerenciadorItens.inventario[slot]
+	print_debug(objeto)
+	objeto.global_position = global_position
+	get_parent().add_child(objeto)
+	GerenciadorItens.inventario[slot] = null
+	GerenciadorItens.item_dropado.emit(slot)

@@ -19,20 +19,23 @@ func _ready() -> void:
 	pass
 	
 func _collect():
-	if GerenciadorItens.inventario[0] == null or GerenciadorItens.inventario[1] == null:
-		var slot:int
+	var slot:int
+	if GerenciadorItens.inventario[0] == null:
 		if GerenciadorItens.inventario[0] == null:
-			slot = 0
-		elif GerenciadorItens.inventario[2] != null:
-			if GerenciadorItens.inventario[2].item_name == "mao de mao":
-				slot = 1
-		GerenciadorItens.Item_coletado.emit(slot,self.duplicate())
-		print_debug(item_name+" coletado")
-		print_debug(GerenciadorItens.inventario)
-		print_debug(typeof(GerenciadorItens.inventario[0]))
-		queue_free()
+			GerenciadorItens.Item_coletado.emit(0,self.duplicate())
+			print_debug(item_name+" coletado no lsot 0")
+			queue_free()
+			return
 	else:
 		print_debug("inventario cheio")
+	if GerenciadorItens.inventario[2] != null:
+		if GerenciadorItens.inventario[2].item_name == "mao de mao" and GerenciadorItens.inventario[1]==null:
+			GerenciadorItens.Item_coletado.emit(1,self.duplicate())
+			print_debug(item_name+" coletado no slot 1")
+			queue_free()
+			return
+	else:
+		print_debug("mão secundaria indisponivel")
 		
 
 func _on_area_2d_body_entered(body: Node2D) -> void:

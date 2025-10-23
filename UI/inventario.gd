@@ -10,8 +10,9 @@ extends CanvasLayer
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	GerenciadorItens.Item_coletado.connect(AdicionaItem)
+	GerenciadorItens.item_dropado.connect(RemoveItem)
 	inventory_2.hide()
-
+	GerenciadorItens.active_slot = 2
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -33,6 +34,14 @@ func AdicionaItem(slot:int,item:Item):
 	if slot == 2:
 		mao.texture_normal = item_coletado.sprite
 
+func RemoveItem(slot):
+	if slot == 0:
+		item_1.texture_normal = null
+	if slot == 1:
+		item_2.texture_normal = null
+	if slot == 2:
+		mao.texture_normal = null
+
 
 func _on_item_1_pressed() -> void:
 	click_inventory(0)
@@ -48,10 +57,23 @@ func click_inventory(slot:int):
 		drop_item(slot)
 	else:
 		GerenciadorItens.active_slot = slot
-		inventory_1.modulate == Color.RED if slot == 0 else inventory_1.modulate == Color.WHITE
-		inventory_2.modulate == Color.RED if slot == 1 else inventory_2.modulate == Color.WHITE
-		slot_mao.modulate == Color.RED if slot == 2 else slot_mao.modulate == Color.WHITE
+		match slot:
+			0:
+				inventory_1.modulate = Color.RED
+				inventory_2.modulate = Color.WHITE
+				slot_mao.modulate = Color.WHITE
+			1:
+				inventory_1.modulate = Color.WHITE
+				inventory_2.modulate = Color.RED
+				slot_mao.modulate = Color.WHITE
+			2:
+				inventory_1.modulate = Color.WHITE
+				inventory_2.modulate = Color.WHITE
+				slot_mao.modulate = Color.RED
+		print_debug("clicado ",slot,inventory_1.modulate)
 
 func drop_item(slot):
-	GerenciadorItens.drop_item.emit(GerenciadorItens.inventario[slot])
+	GerenciadorItens.drop_item.emit(slot)
+	if slot == 2 and GerenciadorItens.inventario[2].item_name == "mao_de_mao" and GerenciadorItens.inventario[1] != null:
+		GerenciadorItens.drop_item.emit(1)
 	
