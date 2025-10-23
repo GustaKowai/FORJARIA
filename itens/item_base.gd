@@ -23,7 +23,7 @@ func _collect():
 	if GerenciadorItens.inventario[0] == null:
 		if GerenciadorItens.inventario[0] == null:
 			GerenciadorItens.Item_coletado.emit(0,self.duplicate())
-			print_debug(item_name+" coletado no lsot 0")
+			print_debug(item_name+" coletado no slot 0")
 			queue_free()
 			return
 	else:

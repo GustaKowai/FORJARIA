@@ -6,6 +6,7 @@ signal mini_game_start()
 signal exit_minigame()
 var is_game_over:bool = false
 var jogador:Jogador
+var multiplicador_de_qualidade:float
 #var player_position
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

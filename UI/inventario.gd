@@ -41,7 +41,7 @@ func RemoveItem(slot):
 		item_2.texture_normal = null
 	if slot == 2:
 		mao.texture_normal = null
-
+		inventory_2.hide()
 
 func _on_item_1_pressed() -> void:
 	click_inventory(0)
@@ -73,7 +73,9 @@ func click_inventory(slot:int):
 		print_debug("clicado ",slot,inventory_1.modulate)
 
 func drop_item(slot):
-	GerenciadorItens.drop_item.emit(slot)
-	if slot == 2 and GerenciadorItens.inventario[2].item_name == "mao_de_mao" and GerenciadorItens.inventario[1] != null:
+	#print_debug(slot, GerenciadorItens.inventario[2].item_name, GerenciadorItens.inventario[1])
+	if slot == 2 and GerenciadorItens.inventario[2].item_name == "mao de mao" and GerenciadorItens.inventario[1] != null:
+		print_debug("larguei a mao")
 		GerenciadorItens.drop_item.emit(1)
+	GerenciadorItens.drop_item.emit(slot)
 	

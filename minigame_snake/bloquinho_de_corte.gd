@@ -6,4 +6,4 @@ func _ready() -> void:
 func sobrou():
 	if !cortado:
 		GameManager.mini_game_snake_score.emit(-pontos)
-		print_debug("sobrou")
+		#print_debug("sobrou")

@@ -17,7 +17,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 	#print_debug("fui atingido")
 
 func cortar():
-	if sprite_2d.modulate == cor:
+	if cortado:
 		print_debug("morreu")
 		GameManager.mini_game_snake_end.emit()
 	else:
