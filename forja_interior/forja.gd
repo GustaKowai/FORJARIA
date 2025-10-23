@@ -24,9 +24,15 @@ func _input(event: InputEvent) -> void:
 			inicia_minigame(minigame_bigorna)
 			
 func checa_itens(item_necessario,mao_necessaria,minigame):
-	if GerenciadorItens.inventario[0] != null and GerenciadorItens.inventario[2] != null:
+	if GerenciadorItens.inventario[0] != null and GerenciadorItens.inventario[2] != null and window.visible == false:
 		if GerenciadorItens.inventario[0].item_name  == item_necessario and GerenciadorItens.inventario[2].item_name == mao_necessaria:	
 			inicia_minigame(minigame)
+
+func close_minigame():
+	window.visible = false
+	if window.get_child(0):
+		window.get_child(0).queue_free()
+
 #region corte de couro
 func _on_snake_body_entered(body: Node2D) -> void:
 	if body.is_in_group("jogador"):
@@ -43,11 +49,6 @@ func _on_snake_input_event(viewport: Node, event: InputEvent, shape_idx: int) ->
 #endregion
 
 #region minigame bigorna
-func close_minigame():
-	window.visible = false
-	if window.get_child(0):
-		window.get_child(0).queue_free()
-
 
 func _on_bigorna_body_entered(body: Node2D) -> void:
 	if body.is_in_group("jogador"):

@@ -53,7 +53,7 @@ autostart = true
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(99, 319)
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="Area2D" type="Area2D" parent="." groups=["tesoura"]]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_ruknq")
