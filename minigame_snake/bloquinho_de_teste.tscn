@@ -1,11 +1,10 @@
 [gd_scene load_steps=4 format=3 uid="uid://csyhdft1atli4"]
 
 [ext_resource type="Script" uid="uid://b7td8tg8yqypa" path="res://minigame_snake/bloquinho_de_teste.gd" id="1_nslmr"]
+[ext_resource type="Texture2D" uid="uid://b1dykupu1qhmu" path="res://minigame_snake/tileset_minigame2.png" id="2_1up2q"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xiq12"]
-
-[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_nslmr"]
-size = Vector2(22, 22)
+size = Vector2(65, 65)
 
 [node name="Bloquinho de grid" type="Node2D"]
 script = ExtResource("1_nslmr")
@@ -18,7 +17,9 @@ cor = Color(1, 0, 0, 1)
 shape = SubResource("RectangleShape2D_xiq12")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D"]
-modulate = Color(0.29513, 0.392014, 1, 1)
-texture = SubResource("PlaceholderTexture2D_nslmr")
+texture = ExtResource("2_1up2q")
+hframes = 6
+vframes = 6
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="Area2D" to="." method="_on_area_2d_area_exited"]

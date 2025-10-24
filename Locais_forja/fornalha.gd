@@ -47,7 +47,10 @@ func _on_area_carvao_body_exited(body: Node2D) -> void:
 
 
 func _on_area_carvao_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
-	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and carvao:
-		if combustivel.value < 100:
-			combustivel.value += 20
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and carvao and GerenciadorItens.inventario[0] != null:
+		if GerenciadorItens.inventario[0].item_name == "carvão":
+			if combustivel.value < 100:
+				combustivel.value += 20
+				GerenciadorItens.inventario[0] = null
+				GerenciadorItens.item_dropado.emit(0)
 #endregion

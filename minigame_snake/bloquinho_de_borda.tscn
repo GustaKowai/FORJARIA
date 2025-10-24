@@ -3,9 +3,10 @@
 [ext_resource type="Script" uid="uid://38fytr4alnur" path="res://minigame_snake/bloquinho_de_borda.gd" id="1_jvpgc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jvpgc"]
+size = Vector2(65, 65)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_1es83"]
-size = Vector2(22, 22)
+size = Vector2(70, 70)
 
 [node name="bloquinho_de_borda" type="Node2D"]
 script = ExtResource("1_jvpgc")

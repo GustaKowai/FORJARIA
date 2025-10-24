@@ -7,6 +7,8 @@ signal exit_minigame()
 var is_game_over:bool = false
 var jogador:Jogador
 var multiplicador_de_qualidade:float
+var direcao_tesoura:String #c = cima, b = baixo, e = esquerda, d = direita
+var valor_do_couro:int
 #var player_position
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

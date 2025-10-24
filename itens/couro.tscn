@@ -8,6 +8,7 @@
 script = ExtResource("2_4mfkw")
 sprite = ExtResource("3_4mfkw")
 item_name = "couro"
+qualidade = 50.0
 
 [node name="Sprite2D" parent="Area2D" index="1"]
 modulate = Color(0.158472, 0.158472, 0.158472, 1)

@@ -25,7 +25,9 @@ func _input(event: InputEvent) -> void:
 			
 func checa_itens(item_necessario,mao_necessaria,minigame):
 	if GerenciadorItens.inventario[0] != null and GerenciadorItens.inventario[2] != null and window.visible == false:
-		if GerenciadorItens.inventario[0].item_name  == item_necessario and GerenciadorItens.inventario[2].item_name == mao_necessaria:	
+		if GerenciadorItens.inventario[0].item_name  == item_necessario and GerenciadorItens.inventario[2].item_name == mao_necessaria:
+			GameManager.multiplicador_de_qualidade = GerenciadorItens.inventario[0].qualidade
+			GerenciadorItens.inventario[0] = null
 			inicia_minigame(minigame)
 
 func close_minigame():

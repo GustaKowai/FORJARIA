@@ -5,4 +5,4 @@
 
 [node name="Carvão" instance=ExtResource("1_ephih")]
 script = ExtResource("2_nthq3")
-item_name = "Carvão"
+item_name = "carvão"
