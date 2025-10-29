@@ -13,11 +13,11 @@
 [ext_resource type="PackedScene" uid="uid://cg8s2ahem447w" path="res://minigame_snake/minigame_snake.tscn" id="8_slqol"]
 [ext_resource type="PackedScene" uid="uid://ca7xjwoywjm6y" path="res://Locais_forja/fornalha.tscn" id="14_wt0nb"]
 [ext_resource type="PackedScene" uid="uid://b21w1xa04eitn" path="res://Locais_forja/tempo_do_dia.tscn" id="15_6p8tj"]
-[ext_resource type="PackedScene" uid="uid://bmh2mfcpoyusl" path="res://itens/mao_de_mao.tscn" id="16_fhfks"]
-[ext_resource type="PackedScene" uid="uid://d340pnoaksmy2" path="res://itens/carvão.tscn" id="16_fvg1a"]
+[ext_resource type="PackedScene" uid="uid://bmh2mfcpoyusl" path="res://itens/mãos/mao_de_mao.tscn" id="16_fhfks"]
+[ext_resource type="PackedScene" uid="uid://d340pnoaksmy2" path="res://itens/itens basicos/carvão.tscn" id="16_fvg1a"]
 [ext_resource type="PackedScene" uid="uid://dsappc1xym3pk" path="res://UI/inventario.tscn" id="16_wtqya"]
-[ext_resource type="PackedScene" uid="uid://cbdecjq0wbcdx" path="res://itens/couro.tscn" id="17_wtqya"]
-[ext_resource type="PackedScene" uid="uid://b5j8knq75bfqi" path="res://itens/mao_tesoura.tscn" id="18_fhfks"]
+[ext_resource type="PackedScene" uid="uid://cbdecjq0wbcdx" path="res://itens/materia prima/couro.tscn" id="17_wtqya"]
+[ext_resource type="PackedScene" uid="uid://b5j8knq75bfqi" path="res://itens/mãos/mao_tesoura.tscn" id="18_fhfks"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_lld1g"]
 vertices = PackedVector2Array(8, 8, -8, 8, -8, -8, 8, -8)

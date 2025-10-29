@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dsappc1xym3pk"]
 
 [ext_resource type="Script" uid="uid://drgmr75p123oa" path="res://UI/inventario.gd" id="1_x7tli"]
-[ext_resource type="PackedScene" uid="uid://cc0p2qr1eocsl" path="res://itens/item_coletado.tscn" id="2_poxva"]
+[ext_resource type="PackedScene" uid="uid://cc0p2qr1eocsl" path="res://itens/itens basicos/item_coletado.tscn" id="2_poxva"]
 
 [node name="Inventário" type="CanvasLayer"]
 script = ExtResource("1_x7tli")

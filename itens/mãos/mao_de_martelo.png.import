@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bqpl7y6n0r1bu"
-path="res://.godot/imported/mao_tesoura.png-4978288f6f7bf521c4065353c59936dc.ctex"
+uid="uid://bwk0c7w7i7aym"
+path="res://.godot/imported/mao_de_martelo.png-e374a7f355de1dcb3e34861e08ef7b42.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://itens/mao_tesoura.png"
-dest_files=["res://.godot/imported/mao_tesoura.png-4978288f6f7bf521c4065353c59936dc.ctex"]
+source_file="res://itens/mãos/mao_de_martelo.png"
+dest_files=["res://.godot/imported/mao_de_martelo.png-e374a7f355de1dcb3e34861e08ef7b42.ctex"]
 
 [params]
 

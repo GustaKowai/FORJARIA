@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://duouc8oy3bnv2"]
 
-[ext_resource type="Script" uid="uid://cdndpoa80vcga" path="res://itens/item_base.gd" id="1_rpf84"]
+[ext_resource type="Script" uid="uid://cdndpoa80vcga" path="res://itens/itens basicos/item_base.gd" id="1_rpf84"]
 [ext_resource type="Texture2D" uid="uid://dpkdlqo0krxo4" path="res://itens/itembase.png" id="2_k3csg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b7m8k"]

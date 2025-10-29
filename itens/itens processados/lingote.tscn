@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://frbdvv5il2hk"]
+
+[ext_resource type="PackedScene" uid="uid://duouc8oy3bnv2" path="res://itens/itens basicos/item_base.tscn" id="1_7iber"]
+[ext_resource type="Script" uid="uid://pj4neap8padw" path="res://lingote.gd" id="2_ty1g2"]
+
+[node name="Lingote" instance=ExtResource("1_7iber")]
+script = ExtResource("2_ty1g2")
+pontuacao = 0.0
+materia = ""

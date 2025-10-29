@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://yccr8r4wqjig"]
+
+[ext_resource type="PackedScene" uid="uid://duouc8oy3bnv2" path="res://itens/itens basicos/item_base.tscn" id="1_8yo3c"]
+
+[node name="minerio" instance=ExtResource("1_8yo3c")]
+item_name = "minerio"

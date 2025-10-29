@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://mm81pqa6hoe1"]
+
+[ext_resource type="PackedScene" uid="uid://duouc8oy3bnv2" path="res://itens/itens basicos/item_base.tscn" id="1_xlitk"]
+[ext_resource type="Script" uid="uid://c76ft8rpax44o" path="res://lamina.gd" id="2_hypnl"]
+
+[node name="lamina" instance=ExtResource("1_xlitk")]
+script = ExtResource("2_hypnl")
+pontuacao = 0.0
+tamanho = ""
+item_name = "lamina"

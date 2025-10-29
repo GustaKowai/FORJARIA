@@ -1,8 +1,0 @@
-[gd_scene load_steps=3 format=3 uid="uid://b4ag5lr6jisiy"]
-
-[ext_resource type="PackedScene" uid="uid://duouc8oy3bnv2" path="res://itens/item_base.tscn" id="1_jkljy"]
-[ext_resource type="Script" uid="uid://myhdpyrkkfrm" path="res://itens/base_mao.gd" id="2_titac"]
-
-[node name="base_mao" instance=ExtResource("1_jkljy")]
-script = ExtResource("2_titac")
-item_name = "base_mao"

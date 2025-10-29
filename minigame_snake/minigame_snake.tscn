@@ -1,7 +1,7 @@
 [gd_scene load_steps=25 format=4 uid="uid://cg8s2ahem447w"]
 
 [ext_resource type="Script" uid="uid://cs1a6v7sxgofr" path="res://minigame_snake/minigame_snake.gd" id="1_ruknq"]
-[ext_resource type="PackedScene" uid="uid://c1y6gcg2vsjcg" path="res://itens/cabo.tscn" id="2_wsanh"]
+[ext_resource type="PackedScene" uid="uid://c1y6gcg2vsjcg" path="res://itens/itens processados/cabo.tscn" id="2_wsanh"]
 [ext_resource type="PackedScene" uid="uid://csyhdft1atli4" path="res://minigame_snake/bloquinho_de_teste.tscn" id="2_xikpy"]
 [ext_resource type="PackedScene" uid="uid://dx6o4at8dxu4k" path="res://minigame_snake/bloquinho_de_borda.tscn" id="4_5hx5t"]
 [ext_resource type="Script" uid="uid://otyi7go1da57" path="res://minigame_snake/bloquinho_de_corte.gd" id="4_gs44j"]
