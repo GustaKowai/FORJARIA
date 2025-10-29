@@ -1,4 +1,6 @@
+Button
 VBoxContainer
+Control
 Label
 ItemList
 Sprite2D
@@ -8,7 +10,5 @@ ColorRect
 TextureButton
 TextureRect
 PanelContainer
-Control
 CanvasLayer
 ShapeCast2D
-CollisionShape2D

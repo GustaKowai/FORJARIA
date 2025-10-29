@@ -1,0 +1,33 @@
+[gd_scene load_steps=2 format=3 uid="uid://qrdd8jj62amq"]
+
+[ext_resource type="Script" uid="uid://bvhk4uwrvtru" path="res://menuinicial.gd" id="1_qtomq"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_qtomq")
+
+[node name="Menucontainer" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Control/Menucontainer"]
+layout_mode = 2
+text = "Jogar"
+
+[node name="Button2" type="Button" parent="Control/Menucontainer"]
+layout_mode = 2
+text = "opções"
+
+[node name="Button3" type="Button" parent="Control/Menucontainer"]
+layout_mode = 2
+text = "sair"
+
+[connection signal="pressed" from="Control/Menucontainer/Button" to="Control" method="_on_button_pressed"]
+[connection signal="pressed" from="Control/Menucontainer/Button2" to="Control" method="_on_button_2_pressed"]
+[connection signal="pressed" from="Control/Menucontainer/Button3" to="Control" method="_on_button_3_pressed"]
