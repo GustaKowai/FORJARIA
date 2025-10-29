@@ -52,7 +52,8 @@ func _on_direita_pressed() -> void:
 func end_minigame():
 	timer.stop()
 	sprite_tesoura.stop()
-	gerar_item()
+	if pontuacao > 0:
+		gerar_item()
 	GameManager.exit_minigame.emit()
 
 func gerar_item():
