@@ -1,5 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1761778984
+::res://::1762458955
 base_mao.gd::GDScript/GDScript::1352461291253789189::1761168108::0::1::::<>Item<><>0<>0<><>::
 button.gd::GDScript/GDScript::2120410370702478066::1760728349::0::1::::<>Button<><>0<>0<><>::
 dados_item.gd::GDScript/GDScript::5085750812877248310::1760728349::0::1::::DadosItens<>Node2D<><>0<>0<><>::
@@ -8,16 +8,18 @@ gerenciador_itens.gd::GDScript/GDScript::4674415811304399449::1761237587::0::1::
 icon.svg::CompressedTexture2D/CompressedTexture2D::1308928174603214380::1760728349::1761167110::1::::<><><>0<>0<>0c5be19d270111c00a4b9ba3677c8058<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
 item.gd::GDScript/GDScript::6234159134156947025::1761168358::0::1::::<>Item<><>0<>0<><>::
 item_base.gd::GDScript/GDScript::1262283870113021589::1761264698::0::1::::<>Item<><>0<>0<><>::
+lamina.gd::GDScript::7083219349441816500::1761779309::0::1::::<>Item<><>0<>0<><>::
+lingote.gd::GDScript::1073196273287635556::1761779314::0::1::::<>Item<><>0<>0<><>::
 mao_de_mao.gd::GDScript/GDScript::7274434074796971308::1761238236::0::1::::<>base_mao<><>0<>0<><>::
 menuinicial.gd::GDScript/GDScript::113985208458089370::1761778487::0::1::::<>Control<><>0<>0<><>::
 minigame.tscn::PackedScene/PackedScene::9195407029911625649::1761167658::0::1::::<><><>0<>0<><>::uid://dsjubx2st8ga3::::res://minigame-bigorna/bigorna-minigame.tscn<>uid://swb4dkk5ttiy::::res://icon.svg
 sprite_2d.gd::GDScript/GDScript::2253147701349637846::1760728349::0::1::::<>Sprite2D<><>0<>0<><>::
 tela_inicial.tscn::PackedScene/PackedScene::1158305176012749776::1761778710::0::1::::<><><>0<>0<><>::uid://bvhk4uwrvtru::::res://menuinicial.gd
-::res://forja_interior/::1761778984
+::res://forja_interior/::1761778988
 20909.jpg::CompressedTexture2D/CompressedTexture2D::6619889279801973941::1760728349::1761167110::1::::<><><>0<>0<>95ae39b89b035b0e3d46cab858731bbf<>res://.godot/imported/20909.jpg-e15c58f4f7195e8c8dfed24991ab1a04.ctex::
 animated_props.png::CompressedTexture2D/CompressedTexture2D::2841888821084119041::1760728349::1761167110::1::::<><><>0<>0<>f81f4a46b8ba6ca10df638d702847948<>res://.godot/imported/animated_props.png-bbaa8776af5197acddb6d6dccd14c92f.ctex::
 forja.gd::GDScript/GDScript::4727484033756364121::1761263035::0::1::::<>Node2D<><>0<>0<><>::
-forja.tscn::PackedScene::2370128626681177976::1761778988::0::1::::<><><>0<>0<><>::uid://2lejbc0srq6o::::res://forja_interior/grounds.png<>uid://b8ma8a4vfl0sj::::res://forja_interior/forja.gd<>uid://bgqvq1xr25wbh::::res://forja_interior/animated_props.png<>uid://dsjubx2st8ga3::::res://minigame-bigorna/bigorna-minigame.tscn<>uid://tw0ut7e31o8i::::res://forja_interior/pickup_items_animated.png<>uid://bn0xaux5qbwhg::::res://forja_interior/props.png<>uid://cf6qwcp8cmslv::::res://forja_interior/surground.png<>uid://co1o7lliathmd::::res://forja_interior/walls.png<>uid://8lvr8atrhxkk::::res://jogador/jogador.tscn<>uid://v20sj6otuh1k::::res://forja_interior/tile_map_layer.gd<>uid://cg8s2ahem447w::::res://minigame_snake/minigame_snake.tscn<>uid://ca7xjwoywjm6y::::res://Locais_forja/fornalha.tscn<>uid://b21w1xa04eitn::::res://Locais_forja/tempo_do_dia.tscn<>uid://bmh2mfcpoyusl::::res://itens/mãos/mao_de_mao.tscn<>uid://d340pnoaksmy2::::res://itens/itens basicos/carvão.tscn<>uid://dsappc1xym3pk::::res://UI/inventario.tscn<>uid://cbdecjq0wbcdx::::res://itens/couro.tscn<>uid://b5j8knq75bfqi::::res://itens/mãos/mao_tesoura.tscn
+forja.tscn::PackedScene::2370128626681177976::1761778988::0::1::::<><><>0<>0<><>::uid://2lejbc0srq6o::::res://forja_interior/grounds.png<>uid://b8ma8a4vfl0sj::::res://forja_interior/forja.gd<>uid://bgqvq1xr25wbh::::res://forja_interior/animated_props.png<>uid://dsjubx2st8ga3::::res://minigame-bigorna/bigorna-minigame.tscn<>uid://tw0ut7e31o8i::::res://forja_interior/pickup_items_animated.png<>uid://bn0xaux5qbwhg::::res://forja_interior/props.png<>uid://cf6qwcp8cmslv::::res://forja_interior/surground.png<>uid://co1o7lliathmd::::res://forja_interior/walls.png<>uid://8lvr8atrhxkk::::res://jogador/jogador.tscn<>uid://v20sj6otuh1k::::res://forja_interior/tile_map_layer.gd<>uid://cg8s2ahem447w::::res://minigame_snake/minigame_snake.tscn<>uid://ca7xjwoywjm6y::::res://Locais_forja/fornalha.tscn<>uid://b21w1xa04eitn::::res://Locais_forja/tempo_do_dia.tscn<>uid://bmh2mfcpoyusl::::res://itens/mãos/mao_de_mao.tscn<>uid://d340pnoaksmy2::::res://itens/itens basicos/carvão.tscn<>uid://dsappc1xym3pk::::res://UI/inventario.tscn<>uid://cbdecjq0wbcdx::::res://itens/materia prima/couro.tscn<>uid://b5j8knq75bfqi::::res://itens/mãos/mao_tesoura.tscn
 grounds.png::CompressedTexture2D/CompressedTexture2D::1918065930411328180::1760728349::1761167110::1::::<><><>0<>0<>1babf431b1026f65ffe2469886af1c44<>res://.godot/imported/grounds.png-ffa4f58d2a45ed6953a1fd5677adb407.ctex::
 minecart_and_rails.png::CompressedTexture2D/CompressedTexture2D::399282160527052453::1760728349::1761167110::1::::<><><>0<>0<>6392e39818b39530ac7c8f4536606ccc<>res://.godot/imported/minecart_and_rails.png-e5a20c15d86a7cf94445f30ada04f843.ctex::
 pickup_items_animated.png::CompressedTexture2D/CompressedTexture2D::1380559028006782258::1760728349::1761167110::1::::<><><>0<>0<>48cdacc3f3ae065fe8f95a0f12f437f1<>res://.godot/imported/pickup_items_animated.png-b6e47c4d20dffeb3bd5758281457e805.ctex::
@@ -25,25 +27,30 @@ props.png::CompressedTexture2D/CompressedTexture2D::3351882673054658644::1760728
 surground.png::CompressedTexture2D/CompressedTexture2D::5188792185023689267::1760728349::1761167110::1::::<><><>0<>0<>9e420fe77d515babb73d1ef3b3a363ca<>res://.godot/imported/surground.png-827a2a397cdab41741c8c8a45ce8c8fa.ctex::
 tile_map_layer.gd::GDScript/GDScript::1531254506129113322::1760728349::0::1::::<>TileMapLayer<><>0<>0<><>::
 walls.png::CompressedTexture2D/CompressedTexture2D::5810066778341835663::1760728349::1761167110::1::::<><><>0<>0<>620ee7564e5d83ac6298f6607fb88733<>res://.godot/imported/walls.png-82a6dc88aafd0ac4f70d1c74a02d32c5.ctex::
-::res://itens/::1761778984
-couro.tscn::PackedScene::4849470282437638157::1761778984::0::1::::<><><>0<>0<><>::uid://duouc8oy3bnv2::::res://itens/itens basicos/item_base.tscn<>uid://r8pvplvqjqmv::::res://item_base.gd<>uid://dpkdlqo0krxo4::::res://itens/itembase.png
+::res://itens/::1761778988
 itembase.png::CompressedTexture2D/CompressedTexture2D::8232941141052448285::1760728349::1761167110::1::::<><><>0<>0<>f9038ea6ff563ff4b867e565d63dbddb<>res://.godot/imported/itembase.png-9dd6c8fd7551f452714ff844ee659a04.ctex::
 tesoura_minigame2sheet.png::CompressedTexture2D/CompressedTexture2D::3300260521351259134::1761169356::1761169360::1::::<><><>0<>0<>d4dc20f7f151765080427ea7eb1121b1<>res://.godot/imported/tesoura_minigame2sheet.png-f3ca0c9b8365da6a504605590df43145.ctex::
-::res://itens/itens basicos/::1761778984
-carvão.gd::GDScript::2965306995707011463::1761168447::0::1::::<>Item<><>0<>0<><>::
-carvão.tscn::PackedScene::9185962043984577707::1761778984::0::1::::<><><>0<>0<><>::uid://duouc8oy3bnv2::::res://itens/itens basicos/item_base.tscn<>uid://biiof4751fqfv::::res://itens/itens basicos/carvão.gd
-dados_item.tscn::PackedScene::8777781842116966349::1761167658::0::1::::<><><>0<>0<><>::uid://cepttqhk4xqos::::res://dados_item.gd<>uid://dpkdlqo0krxo4::::res://itens/itembase.png
-item_base.gd::GDScript::5010454483850456492::1761238187::0::1::::Item<>Node2D<><>0<>0<><>::
-item_base.tscn::PackedScene::8593159879865666017::1761778984::0::1::::<><><>0<>0<><>::uid://cdndpoa80vcga::::res://itens/itens basicos/item_base.gd<>uid://dpkdlqo0krxo4::::res://itens/itembase.png
-item_coletado.gd::GDScript::1297364206945444020::1760728349::0::1::::<>DadosItens<><>0<>0<><>::
-item_coletado.tscn::PackedScene::4965788337663187367::1761778984::0::1::::<><><>0<>0<><>::uid://sqpntf8momdo::::res://itens/itens basicos/item_coletado.gd
-::res://itens/itens processados/::1761778958
-cabo.gd::GDScript::6975988900918333834::1761264691::0::1::::<>Item<><>0<>0<><>::
-cabo.tscn::PackedScene::6649189425182732718::1761778988::0::1::::<><><>0<>0<><>::uid://cbdecjq0wbcdx::::res://itens/couro.tscn<>uid://c6nhru2hhmflq::::res://itens/itens processados/cabo.gd
-::res://itens/materia prima/::1761778971
+::res://itens/itens basicos/::1762458879
+carvao.png::CompressedTexture2D::1478583184451645143::1762458879::1762458956::1::::<><><>0<>0<>0b4cf99290f71fb332f03becb13293a2<>res://.godot/imported/carvao.png-e90287872dfb1dabe26be36556456dd1.ctex::
+carvão.gd::GDScript/GDScript::2965306995707011463::1761168447::0::1::::<>Item<><>0<>0<><>::
+carvão.tscn::PackedScene/PackedScene::9185962043984577707::1761778984::0::1::::<><><>0<>0<><>::uid://duouc8oy3bnv2::::res://itens/itens basicos/item_base.tscn<>uid://biiof4751fqfv::::res://itens/itens basicos/carvão.gd
+dados_item.tscn::PackedScene/PackedScene::8777781842116966349::1761167658::0::1::::<><><>0<>0<><>::uid://cepttqhk4xqos::::res://dados_item.gd<>uid://dpkdlqo0krxo4::::res://itens/itembase.png
+item_base.gd::GDScript/GDScript::5010454483850456492::1761238187::0::1::::Item<>Node2D<><>0<>0<><>::
+item_base.tscn::PackedScene/PackedScene::8593159879865666017::1761778984::0::1::::<><><>0<>0<><>::uid://cdndpoa80vcga::::res://itens/itens basicos/item_base.gd<>uid://dpkdlqo0krxo4::::res://itens/itembase.png
+item_coletado.gd::GDScript/GDScript::1297364206945444020::1760728349::0::1::::<>DadosItens<><>0<>0<><>::
+item_coletado.tscn::PackedScene/PackedScene::4965788337663187367::1761778984::0::1::::<><><>0<>0<><>::uid://sqpntf8momdo::::res://itens/itens basicos/item_coletado.gd
+lamina.tscn::PackedScene::869089560716767234::1761779372::0::1::::<><><>0<>0<><>::uid://duouc8oy3bnv2::::res://itens/itens basicos/item_base.tscn<>uid://c76ft8rpax44o::::res://lamina.gd
+::res://itens/itens processados/::1761779260
+cabo.gd::GDScript/GDScript::6975988900918333834::1761264691::0::1::::<>Item<><>0<>0<><>::
+cabo.tscn::PackedScene::6649189425182732718::1761778988::0::1::::<><><>0<>0<><>::uid://cbdecjq0wbcdx::::res://itens/materia prima/couro.tscn<>uid://c6nhru2hhmflq::::res://itens/itens processados/cabo.gd
+lingote.tscn::PackedScene::386105851189122236::1761779260::0::1::::<><><>0<>0<><>::uid://duouc8oy3bnv2::::res://itens/itens basicos/item_base.tscn<>uid://pj4neap8padw::::res://lingote.gd
+::res://itens/materia prima/::1762458887
+couro.tscn::PackedScene::4849470282437638157::1761778984::0::1::::<><><>0<>0<><>::uid://duouc8oy3bnv2::::res://itens/itens basicos/item_base.tscn<>uid://r8pvplvqjqmv::::res://item_base.gd<>uid://dpkdlqo0krxo4::::res://itens/itembase.png
+lingote.png::CompressedTexture2D::9005645793353627118::1762458887::1762458956::1::::<><><>0<>0<>d1f80d44b17d9391ab2ba80c853906e6<>res://.godot/imported/lingote.png-4d5c9ea8d05ed396f0bc85286f306131.ctex::
+minerio.tscn::PackedScene::1688814556182708986::1761779381::0::1::::<><><>0<>0<><>::uid://duouc8oy3bnv2::::res://itens/itens basicos/item_base.tscn
 ::res://itens/mãos/::1761778984
 base_mao.gd::GDScript/GDScript::892242391796626290::1761238187::0::1::::base_mao<>Item<><>0<>0<><>::
-base_mao.tscn::PackedScene::4422315630409173216::1761778984::0::1::::<><><>0<>0<><>::uid://duouc8oy3bnv2::::res://itens/itens basicos/item_base.tscn<>uid://myhdpyrkkfrm::::res://itens/mãos/base_mao.gd
+base_mao.tscn::PackedScene/PackedScene::4422315630409173216::1761778984::0::1::::<><><>0<>0<><>::uid://duouc8oy3bnv2::::res://itens/itens basicos/item_base.tscn<>uid://myhdpyrkkfrm::::res://itens/mãos/base_mao.gd
 mao_de_mao.png::CompressedTexture2D/CompressedTexture2D::8916886064941398841::1761169347::1761778953::1::::<><><>0<>0<>b2b490d2bb2b0d110e40e1c93ae96940<>res://.godot/imported/mao_de_mao.png-1729c2960bc800f2793406a0df56dddc.ctex::
 mao_de_mao.tscn::PackedScene/PackedScene::3244798506367028031::1761778953::0::1::::<><><>0<>0<><>::uid://b4ag5lr6jisiy::::res://itens/mãos/base_mao.tscn<>uid://dbv14ptetn2dc::::res://mao_de_mao.gd<>uid://d0bn2tgnjq418::::res://itens/mãos/mao_de_mao.png
 mao_de_martelo.png::CompressedTexture2D/CompressedTexture2D::3952742233876167228::1761169350::1761778953::1::::<><><>0<>0<>354ee1f3743bc7ed20464a0e7c446429<>res://.godot/imported/mao_de_martelo.png-e374a7f355de1dcb3e34861e08ef7b42.ctex::
@@ -83,9 +90,9 @@ bloquinho_de_corte.tscn::PackedScene/PackedScene::5587562065642692297::176126288
 bloquinho_de_teste.gd::GDScript/GDScript::4671928948359011454::1760728349::0::1::::<>Bloquinho<><>0<>0<><>::
 bloquinho_de_teste.tscn::PackedScene/PackedScene::6086216288449415025::1761262347::0::1::::<><><>0<>0<><>::uid://b7td8tg8yqypa::::res://minigame_snake/bloquinho_de_teste.gd<>uid://b1dykupu1qhmu::::res://minigame_snake/tileset_minigame2.png
 minigame_snake.gd::GDScript/GDScript::6089970887360310867::1761778427::0::1::::<>Node2D<><>0<>0<><>::
-minigame_snake.tscn::PackedScene/PackedScene::5263240028416180658::1761778958::0::1::::<><><>0<>0<><>::uid://cs1a6v7sxgofr::::res://minigame_snake/minigame_snake.gd<>uid://c1y6gcg2vsjcg::::res://itens/cabo.tscn<>uid://csyhdft1atli4::::res://minigame_snake/bloquinho_de_teste.tscn<>uid://dx6o4at8dxu4k::::res://minigame_snake/bloquinho_de_borda.tscn<>uid://otyi7go1da57::::res://minigame_snake/bloquinho_de_corte.gd<>uid://bnaw2q0ycppg5::::res://itens/tesoura_minigame2sheet.png<>uid://b1dykupu1qhmu::::res://minigame_snake/tileset_minigame2.png
+minigame_snake.tscn::PackedScene::5263240028416180658::1761778958::0::1::::<><><>0<>0<><>::uid://cs1a6v7sxgofr::::res://minigame_snake/minigame_snake.gd<>uid://c1y6gcg2vsjcg::::res://itens/itens processados/cabo.tscn<>uid://csyhdft1atli4::::res://minigame_snake/bloquinho_de_teste.tscn<>uid://dx6o4at8dxu4k::::res://minigame_snake/bloquinho_de_borda.tscn<>uid://otyi7go1da57::::res://minigame_snake/bloquinho_de_corte.gd<>uid://bnaw2q0ycppg5::::res://itens/tesoura_minigame2sheet.png<>uid://b1dykupu1qhmu::::res://minigame_snake/tileset_minigame2.png
 tesoura_minigame2sheet.png::CompressedTexture2D/CompressedTexture2D::7621677284956566103::1760728349::1761167110::1::::<><><>0<>0<>55b3b036de1dbcea72753fc94dbd77e9<>res://.godot/imported/tesoura_minigame2sheet.png-5e161fb93ef91cb4678f2c12a6983e6a.ctex::
 tileset_minigame2.png::CompressedTexture2D/CompressedTexture2D::4218999891892726184::1761254827::1761254856::1::::<><><>0<>0<>1da90e9b1646d43cc5f387dd25766315<>res://.godot/imported/tileset_minigame2.png-78363aeb1de9be5f9536a4401c96dd94.ctex::
 ::res://UI/::1761778984
 inventario.gd::GDScript/GDScript::8365619349668500388::1761238919::0::1::::<>CanvasLayer<><>0<>0<><>::
-inventario.tscn::PackedScene::8423598924653162936::1761778984::0::1::::<><><>0<>0<><>::uid://drgmr75p123oa::::res://UI/inventario.gd<>uid://cc0p2qr1eocsl::::res://itens/itens basicos/item_coletado.tscn
+inventario.tscn::PackedScene/PackedScene::8423598924653162936::1761778984::0::1::::<><><>0<>0<><>::uid://drgmr75p123oa::::res://UI/inventario.gd<>uid://cc0p2qr1eocsl::::res://itens/itens basicos/item_coletado.tscn

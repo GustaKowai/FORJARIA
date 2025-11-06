@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dpkdlqo0krxo4" path="res://itens/itembase.png" id="2_k3csg"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b7m8k"]
-size = Vector2(22, 22)
+size = Vector2(91, 91)
 
 [node name="ItemBase" type="Node2D"]
 script = ExtResource("1_rpf84")

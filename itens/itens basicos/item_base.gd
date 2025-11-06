@@ -46,9 +46,10 @@ func _on_area_2d_body_entered(body: Node2D) -> void:
 
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+		print_debug("cliquei no item")
 		var ta_em_cima = area_2d.get_overlapping_bodies()
-		#print_debug(ta_em_cima)
+		print_debug(ta_em_cima)
 		for ferreiro in ta_em_cima:
-			#print_debug(ferreiro.is_in_group("jogador"))
+			print_debug(ferreiro.is_in_group("jogador"))
 			if ferreiro.is_in_group("jogador"):
 				_collect()

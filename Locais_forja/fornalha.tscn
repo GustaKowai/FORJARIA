@@ -44,7 +44,7 @@ animations = [{
 size = Vector2(18, 16)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_neqgh"]
-size = Vector2(14, 12)
+size = Vector2(21, 14)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2lij4"]
 
@@ -58,6 +58,7 @@ bg_color = Color(0, 0, 0, 1)
 bg_color = Color(0.80952, 0, 0.259371, 1)
 
 [node name="Fornalha" type="Node2D"]
+scale = Vector2(10, 10)
 script = ExtResource("1_uo0w2")
 variacao_temperatura = 5.0
 velocidade_queima = 0.1
@@ -86,7 +87,8 @@ shape = SubResource("RectangleShape2D_uo0w2")
 [node name="area_carvao" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_carvao"]
-position = Vector2(0, 20)
+position = Vector2(-7.62939e-07, 21)
+scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_neqgh")
 
 [node name="Combustivel" type="ProgressBar" parent="."]

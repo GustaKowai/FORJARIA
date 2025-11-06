@@ -161,22 +161,22 @@ sources/0 = SubResource("TileSetScenesCollectionSource_ruknq")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ruknq"]
 size = Vector2(70, 70)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_gs44j"]
-atlas = ExtResource("5_c25d2")
-region = Rect2(0, 0, 350, 210)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_wsanh"]
 atlas = ExtResource("5_c25d2")
 region = Rect2(350, 0, 350, 210)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gs44j"]
+atlas = ExtResource("5_c25d2")
+region = Rect2(0, 0, 350, 210)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_wsanh"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_gs44j")
+"texture": SubResource("AtlasTexture_wsanh")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_wsanh")
+"texture": SubResource("AtlasTexture_gs44j")
 }],
 "loop": true,
 "name": &"default",

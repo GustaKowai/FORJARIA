@@ -7,6 +7,8 @@ script = ExtResource("1_ghrro")
 speed = 2.0
 
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+path_desired_distance = 60.0
+target_desired_distance = 60.0
 path_postprocessing = 1
 radius = 50.0
 

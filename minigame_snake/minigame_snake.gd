@@ -17,7 +17,7 @@ func _ready() -> void:
 	tesoura.position = marker_2d.position
 	GameManager.mini_game_snake_end.connect(end_minigame)
 	GameManager.mini_game_snake_score.connect(change_score)
-	sprite_tesoura.speed_scale = 1/timer.wait_time
+	sprite_tesoura.speed_scale = 2/timer.wait_time
 	GameManager.direcao_tesoura = "d"
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
