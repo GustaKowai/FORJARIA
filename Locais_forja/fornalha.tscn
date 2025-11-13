@@ -88,7 +88,6 @@ shape = SubResource("RectangleShape2D_uo0w2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_carvao"]
 position = Vector2(-7.62939e-07, 21)
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_neqgh")
 
 [node name="Combustivel" type="ProgressBar" parent="."]
