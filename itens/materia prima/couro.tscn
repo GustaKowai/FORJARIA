@@ -2,13 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://duouc8oy3bnv2" path="res://itens/itens basicos/item_base.tscn" id="1_txri8"]
 [ext_resource type="Script" uid="uid://r8pvplvqjqmv" path="res://item_base.gd" id="2_4mfkw"]
-[ext_resource type="Texture2D" uid="uid://dpkdlqo0krxo4" path="res://itens/itembase.png" id="3_4mfkw"]
+[ext_resource type="Texture2D" uid="uid://d1ohnk5ukw6hg" path="res://itens/materia prima/couro.png" id="3_qk5fy"]
 
 [node name="couro" instance=ExtResource("1_txri8")]
 script = ExtResource("2_4mfkw")
-sprite = ExtResource("3_4mfkw")
+sprite = ExtResource("3_qk5fy")
 item_name = "couro"
 qualidade = 50.0
 
 [node name="Sprite2D" parent="Area2D" index="1"]
-modulate = Color(0.158472, 0.158472, 0.158472, 1)
+scale = Vector2(1, 1)
+texture = ExtResource("3_qk5fy")

@@ -29,8 +29,8 @@ func _process(delta):
 	#Obtem o vetor de input:
 	input_vector = Input.get_vector("ui_left","ui_right","ui_up","ui_down")
 	#play_run_iddle()
-	if not is_playing:
-		rotate_sprite()
+	#if not is_playing:
+		#rotate_sprite()
 	
 
 
@@ -41,6 +41,7 @@ func _input(event: InputEvent) -> void:
 	
 func _physics_process(_delta):
 	if is_playing: return
+	sprite.look_at(get_global_mouse_position())
 	var target_velocity:Vector2 = input_vector*speed*100.0
 	velocity = lerp(velocity,target_velocity,lerp_smoothness)
 	move_and_slide()
@@ -100,12 +101,12 @@ func play_run_iddle():
 			position_running = "up"
 			animation_player.play("Move Up")
 
-func rotate_sprite():
-	#girar sprite:
-	if input_vector.x < 0:
-		sprite.flip_h = false
-	elif input_vector.x > 0:
-		sprite.flip_h = true
+#func rotate_sprite():
+	##girar sprite:
+	#if input_vector.x < 0:
+		#sprite.flip_h = false
+	#elif input_vector.x > 0:
+		#sprite.flip_h = true
 
 func jogando():
 	is_playing = true

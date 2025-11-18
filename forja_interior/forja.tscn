@@ -898,6 +898,7 @@ minigame_bigorna = ExtResource("3_6p8tj")
 
 [node name="Tempo do dia" parent="CanvasLayer" instance=ExtResource("15_6p8tj")]
 position = Vector2(539, 11)
+valor_tempo = 8.0
 
 [node name="Inventário" parent="." instance=ExtResource("16_wtqya")]
 

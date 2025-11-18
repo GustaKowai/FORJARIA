@@ -1,11 +1,20 @@
-[gd_scene load_steps=3 format=3 uid="uid://c1y6gcg2vsjcg"]
+[gd_scene load_steps=6 format=3 uid="uid://c1y6gcg2vsjcg"]
 
 [ext_resource type="PackedScene" uid="uid://cbdecjq0wbcdx" path="res://itens/materia prima/couro.tscn" id="1_41aaf"]
 [ext_resource type="Script" uid="uid://c6nhru2hhmflq" path="res://itens/itens processados/cabo.gd" id="2_6mto5"]
+[ext_resource type="Texture2D" uid="uid://sh1nr0lo4nrv" path="res://espadas/cabocurto.png" id="3_tponk"]
+[ext_resource type="Texture2D" uid="uid://dpok1npgd6bxk" path="res://espadas/cabomedio.png" id="4_3qtqe"]
+[ext_resource type="Texture2D" uid="uid://bqs2qbxqhjue2" path="res://espadas/cabolongo.png" id="5_u4hsi"]
 
 [node name="cabo" instance=ExtResource("1_41aaf")]
 script = ExtResource("2_6mto5")
 pontuacao = 0.0
 tamanho = ""
+sprites_tamanhos = Array[Texture2D]([ExtResource("3_tponk"), ExtResource("4_3qtqe"), ExtResource("5_u4hsi")])
+dicionario = Dictionary[String, int]({
+"grande": 2,
+"médio": 1,
+"pequeno": 0
+})
 sprite = null
-item_name = ""
+item_name = "cabo"

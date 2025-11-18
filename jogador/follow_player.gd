@@ -36,7 +36,7 @@ func move():
 		if input_vector.x > 0:
 			sprite.flip_h = false
 		elif input_vector.x <0:
-			sprite.flip_h = true
+			sprite.flip_h = false
 	elif var_diff.y < 0:
 		position_running = "up"
 		#animation_player.play("Walk Up")

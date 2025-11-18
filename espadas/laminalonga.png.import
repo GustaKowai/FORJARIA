@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1knw2cmf1shy"
-path="res://.godot/imported/lingote.png-4d5c9ea8d05ed396f0bc85286f306131.ctex"
+uid="uid://2jc2xpdhes1e"
+path="res://.godot/imported/laminalonga.png-dcab63d65e444298a337f55e4898a9be.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://itens/materia prima/lingote.png"
-dest_files=["res://.godot/imported/lingote.png-4d5c9ea8d05ed396f0bc85286f306131.ctex"]
+source_file="res://espadas/laminalonga.png"
+dest_files=["res://.godot/imported/laminalonga.png-dcab63d65e444298a337f55e4898a9be.ctex"]
 
 [params]
 

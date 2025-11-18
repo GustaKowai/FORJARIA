@@ -21,7 +21,7 @@ func _on_area_2d_area_entered(area: Area2D) -> void:
 
 func cortar():
 	if cortado:
-		print_debug("morreu")
+		#print_debug("morreu")
 		GameManager.mini_game_snake_end.emit()
 	else:
 		#sprite_2d.modulate = cor
@@ -39,7 +39,7 @@ func cortar_sprite(entrada,saida):
 	sprite_corte.hframes = 6
 	sprite_corte.vframes = 6
 	#if posicao_de_entrada == "d" and GameManager.direcao_tesoura == "d" or posicao_de_entrada == "e" and GameManager.direcao_tesoura == "e":
-	print_debug(entrada,saida)
+	#print_debug(entrada,saida)
 	match [entrada,saida]:
 		["d","d"]:
 			sprite_corte.frame = 13

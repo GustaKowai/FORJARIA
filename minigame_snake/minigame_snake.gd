@@ -63,6 +63,7 @@ func gerar_item():
 	item_gerado.tamanho = tamanho_cabo
 	item_gerado.pontuacao = item_gerado.qualidade*GameManager.multiplicador_de_qualidade
 	GameManager.valor_do_couro = 0
+	item_gerado._ready()
 	GerenciadorItens.Item_coletado.emit(0,item_gerado)
 
 func change_score(pontos):

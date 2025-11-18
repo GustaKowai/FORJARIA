@@ -19,13 +19,14 @@ func _process(delta: float) -> void:
 	pass
 
 func AdicionaItem(slot:int,item:Item):
-	print_debug(slot,item)
+	#print_debug(slot,item)
 	var item_coletado:Item = item#.instantiate()
 	if item.item_name == "mao de mao":
 		inventory_2.show()
 	item_coletado.item_name = item.item_name
 	item_coletado.qualidade = item.qualidade
 	item_coletado.sprite = item.sprite
+	print_debug(item.sprite)
 	GerenciadorItens.inventario[slot] = item_coletado
 	if slot == 0:
 		item_1.texture_normal = item_coletado.sprite

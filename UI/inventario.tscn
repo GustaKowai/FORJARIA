@@ -32,21 +32,21 @@ mouse_filter = 0
 
 [node name="inventory1" type="ColorRect" parent="Control/VBoxContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(30, 30)
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 
 [node name="item1" type="TextureButton" parent="Control/VBoxContainer/inventory1"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
 offset_top = 4.0
-offset_right = 40.0
-offset_bottom = 34.0
+offset_right = 80.0
+offset_bottom = 84.0
 mouse_default_cursor_shape = 2
+stretch_mode = 0
 
 [node name="slot_mao" type="ColorRect" parent="Control/VBoxContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(30, 30)
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 color = Color(0.462291, 0.462291, 0.462291, 1)
 
@@ -60,7 +60,7 @@ offset_bottom = 34.0
 
 [node name="inventory2" type="ColorRect" parent="Control/VBoxContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(30, 30)
+custom_minimum_size = Vector2(80, 80)
 layout_mode = 2
 
 [node name="item2" type="TextureButton" parent="Control/VBoxContainer/inventory2"]
