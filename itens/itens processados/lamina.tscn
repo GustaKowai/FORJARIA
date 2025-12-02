@@ -1,0 +1,23 @@
+[gd_scene load_steps=9 format=3 uid="uid://mm81pqa6hoe1"]
+
+[ext_resource type="PackedScene" uid="uid://duouc8oy3bnv2" path="res://itens/itens basicos/item_base.tscn" id="1_cvu66"]
+[ext_resource type="Script" uid="uid://c76ft8rpax44o" path="res://lamina.gd" id="2_umpov"]
+[ext_resource type="Texture2D" uid="uid://xanqj142spcf" path="res://espadas/laminacurta.png" id="3_ojf0l"]
+[ext_resource type="Texture2D" uid="uid://rhnkwn0a1cb6" path="res://espadas/laminamedia.png" id="4_y1xv2"]
+[ext_resource type="Texture2D" uid="uid://2jc2xpdhes1e" path="res://espadas/laminalonga.png" id="5_loa4p"]
+[ext_resource type="Texture2D" uid="uid://bk5g2yo8do0rx" path="res://espadas/laminacurtamolde.png" id="6_4dpcw"]
+[ext_resource type="Texture2D" uid="uid://do6cj32agsn01" path="res://espadas/laminamediamolde.png" id="7_67cev"]
+[ext_resource type="Texture2D" uid="uid://b623lfoaxdmhv" path="res://espadas/laminalongamolde.png" id="8_rwspn"]
+
+[node name="lamina" instance=ExtResource("1_cvu66")]
+script = ExtResource("2_umpov")
+pontuacao = 0.0
+tamanho = ""
+sprites_tamanhos = Array[Texture2D]([ExtResource("3_ojf0l"), ExtResource("4_y1xv2"), ExtResource("5_loa4p")])
+dicionario = Dictionary[String, int]({
+"grande": 2,
+"médio": 1,
+"pequeno": 0
+})
+sprites_tamanhos_moldes = Array[Texture2D]([ExtResource("6_4dpcw"), ExtResource("7_67cev"), ExtResource("8_rwspn")])
+item_name = "lamina"

@@ -1,7 +1,8 @@
-Sprite2D
-TileMapLayer
 CollisionShape2D
+Sprite2D
 Area2D
+Espada
+TileMapLayer
 Camera2D
 Item
 Button
@@ -11,4 +12,3 @@ Label
 ItemList
 ColorRect
 TextureButton
-TextureRect

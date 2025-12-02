@@ -2,6 +2,9 @@ extends Node2D
 # variaveis dos minigames
 var corte_de_couro:bool = false
 var bigorna:bool = false
+var montagem:bool = false
+@onready var espada: Espada = $Montagem/Espada
+@onready var inventario: CanvasLayer = $Inventario
 
 @export var minigame_snake:PackedScene
 @export var minigame_bigorna:PackedScene
@@ -55,7 +58,7 @@ func _on_snake_input_event(viewport: Node, event: InputEvent, shape_idx: int) ->
 func _on_bigorna_body_entered(body: Node2D) -> void:
 	if body.is_in_group("jogador"):
 		bigorna = true
-		print_debug(body)
+		#print_debug(body)
 
 func _on_bigorna_body_exited(body: Node2D) -> void:
 	bigorna = false
@@ -72,3 +75,39 @@ func inicia_minigame(minigame):
 	var minigame_scene = minigame.instantiate()
 	window.add_child(minigame_scene)
 	window.visible = true
+
+
+func _on_montagem_body_entered(body: Node2D) -> void:
+	if body.is_in_group("jogador"):
+		montagem = true
+		#print_debug(body)
+
+
+func _on_montagem_body_exited(body: Node2D) -> void:
+	montagem = false
+
+
+func _on_montagem_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
+	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and montagem:
+		if GerenciadorItens.inventario[0] != null or GerenciadorItens.inventario[1] != null:
+			if GerenciadorItens.inventario[0] != null:
+				checa_material(GerenciadorItens.inventario[0],0)
+			else:
+				checa_material(GerenciadorItens.inventario[1],1)
+				espada._collect()
+		else:
+			espada._collect()
+
+func checa_material(item_tentando:Item,slot:int):
+	if item_tentando.item_name == "cabo" and espada.tamanho_cabo == "vazio":
+		espada.tamanho_cabo = item_tentando.tamanho
+		espada.cabo.texture = item_tentando.sprites_tamanhos_moldes[item_tentando.dicionario[item_tentando.tamanho]]
+	elif item_tentando.item_name == "lamina" and espada.tamanho_lamina == "vazio":
+		espada.tamanho_lamina = item_tentando.tamanho
+		espada.lamina.texture = item_tentando.sprites_tamanhos_moldes[item_tentando.dicionario[item_tentando.tamanho]]
+	else:
+		print_debug("Esse item não pode ser adicionado a espada")
+		return
+	espada.qualidade += item_tentando.qualidade
+	GerenciadorItens.inventario[slot] = null
+	inventario.RemoveItem(slot)
