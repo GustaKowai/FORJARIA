@@ -522,7 +522,6 @@ position = Vector2(510, 1100)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Montagem"]
 position = Vector2(14.8197, 0.0528564)
 rotation = 0.892661
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_fvg1a")
 
 [node name="Espada" parent="Montagem" instance=ExtResource("11_fvg1a")]
