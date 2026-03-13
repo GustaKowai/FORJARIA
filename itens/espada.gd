@@ -1,8 +1,8 @@
 extends Item
 class_name Espada
 
-@onready var cabo: Sprite2D = $Cabo
-@onready var lamina: Sprite2D = $Lamina
+@onready var cabo: Sprite2D = %Cabo
+@onready var lamina: Sprite2D = %Lamina
 
 @export var tamanho_cabo:String
 @export var tamanho_lamina:String
@@ -19,6 +19,7 @@ class_name Espada
 	#super()
 
 func _collect():
+	sprite_2d = $Area2D/Sprite2D
 	if tamanho_cabo == "vazio" or tamanho_lamina == "vazio":
 		print_debug("A espada está sem cabo ou lâmina")
 		return

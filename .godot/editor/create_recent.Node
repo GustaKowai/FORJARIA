@@ -1,5 +1,7 @@
-CollisionShape2D
+TextureRect
+PanelContainer
 Sprite2D
+CollisionShape2D
 Area2D
 Espada
 TileMapLayer
@@ -10,5 +12,3 @@ VBoxContainer
 Control
 Label
 ItemList
-ColorRect
-TextureButton

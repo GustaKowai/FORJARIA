@@ -44,6 +44,15 @@ offset_bottom = 84.0
 mouse_default_cursor_shape = 2
 stretch_mode = 0
 
+[node name="item1_imagem" type="PanelContainer" parent="Control/VBoxContainer/inventory1/item1"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 6.0
+offset_top = 3.0
+offset_right = 72.0
+offset_bottom = 69.0
+mouse_filter = 2
+
 [node name="slot_mao" type="ColorRect" parent="Control/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(80, 80)
@@ -58,6 +67,15 @@ offset_top = 4.0
 offset_right = 40.0
 offset_bottom = 34.0
 
+[node name="itemMao_imagem" type="PanelContainer" parent="Control/VBoxContainer/slot_mao/mao"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 7.0
+offset_top = 3.0
+offset_right = 73.0
+offset_bottom = 69.0
+mouse_filter = 2
+
 [node name="inventory2" type="ColorRect" parent="Control/VBoxContainer"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(80, 80)
@@ -70,6 +88,15 @@ layout_mode = 2
 offset_top = 4.0
 offset_right = 40.0
 offset_bottom = 34.0
+
+[node name="item2_imagem" type="PanelContainer" parent="Control/VBoxContainer/inventory2/item2"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 7.0
+offset_top = 1.0
+offset_right = 73.0
+offset_bottom = 67.0
+mouse_filter = 2
 
 [connection signal="pressed" from="Control/VBoxContainer/inventory1/item1" to="." method="_on_item_1_pressed"]
 [connection signal="pressed" from="Control/VBoxContainer/slot_mao/mao" to="." method="_on_mao_pressed"]

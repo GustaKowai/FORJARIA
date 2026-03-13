@@ -2,6 +2,7 @@ extends Node2D
 class_name Item
 
 #@onready var dados_item: DadosItens = $dados_item
+
 @onready var area_2d: Area2D = $Area2D
 @export var sprite:Texture2D
 @export var item_name: String# = "Item_Base"

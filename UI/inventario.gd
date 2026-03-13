@@ -6,7 +6,9 @@ extends CanvasLayer
 @onready var inventory_1: ColorRect = %inventory1
 @onready var slot_mao: ColorRect = %slot_mao
 @onready var inventory_2: ColorRect = %inventory2
-
+@onready var item_1_imagem: PanelContainer = %item1_imagem
+@onready var item_2_imagem: PanelContainer = %item2_imagem
+@onready var item_mao_imagem: PanelContainer = %itemMao_imagem
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	GerenciadorItens.Item_coletado.connect(AdicionaItem)
@@ -26,10 +28,12 @@ func AdicionaItem(slot:int,item:Item):
 	item_coletado.item_name = item.item_name
 	item_coletado.qualidade = item.qualidade
 	item_coletado.sprite = item.sprite
-	print_debug(item.sprite)
+	print_debug(item)
 	GerenciadorItens.inventario[slot] = item_coletado
 	if slot == 0:
-		item_1.texture_normal = item_coletado.sprite
+		#item_1.texture_normal = item_coletado.sprite
+		print_debug(item.sprite_2d)
+		item_1_imagem.add_child(item.sprite_2d)
 	if slot == 1:
 		item_2.texture_normal = item_coletado.sprite
 	if slot == 2:
