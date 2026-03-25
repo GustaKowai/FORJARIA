@@ -75,7 +75,13 @@ func inicia_minigame(minigame):
 	GameManager.mini_game_start.emit()
 	var minigame_scene = minigame.instantiate()
 	window.add_child(minigame_scene)
+	window.size = get_viewport().size
 	window.visible = true
+	minigame_scene.scale.x = window.size.x/1155.0
+	minigame_scene.scale.y = window.size.y/627.0
+	print_debug(window.size.x,window.size.y )
+	print_debug(minigame_scene.scale.x, minigame_scene.scale.y)
+	
 
 
 func _on_montagem_body_entered(body: Node2D) -> void:

@@ -29,25 +29,27 @@ func _collect():
 			if item_name == "espada":
 				GerenciadorItens.Item_coletado.emit(0,self.duplicate())
 				print_debug(item_name+" coletado no slot 0")
+				coletado = true
 				queue_free()
 			else:
 				item_name = "espada"
 				GerenciadorItens.Item_coletado.emit(0,self.duplicate())
 				print_debug(item_name+" coletado no slot 0")
+				coletado = true
 				libera_espada()
 			return
 	else:
 		print_debug("inventario cheio")
 	if GerenciadorItens.inventario[2] != null:
-		if GerenciadorItens.inventario[2].item_name == "mao de mao" and GerenciadorItens.inventario[1]==null:
+		if GerenciadorItens.inventario[2].item_name == "mao de mao" and GerenciadorItens.inventario[1]==null and !coletado:
 			if item_name == "espada":
-				GerenciadorItens.Item_coletado.emit(0,self.duplicate())
-				print_debug(item_name+" coletado no slot 0")
+				GerenciadorItens.Item_coletado.emit(1,self.duplicate())
+				print_debug(item_name+" coletado no slot 1")
 				queue_free()
 			else:
 				item_name = "espada"
-				GerenciadorItens.Item_coletado.emit(0,self.duplicate())
-				print_debug(item_name+" coletado no slot 0")
+				GerenciadorItens.Item_coletado.emit(1,self.duplicate())
+				print_debug(item_name+" coletado no slot 1")
 				libera_espada()
 			return
 	else:

@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 var tempo_do_dia:int
 var pedaco_tempo:float
 @export var valor_tempo:float = 5 #quantos segundos demora para passar 10 minutos no jogo

@@ -9,6 +9,7 @@ class_name Item
 @export var qualidade: float# = 50.0 
 @onready var sprite_2d: Sprite2D = $Area2D/Sprite2D
 var _self_scene:PackedScene
+var coletado:bool = false
 
 func _ready() -> void:
 	print_debug(sprite_2d)
@@ -25,12 +26,13 @@ func _collect():
 		if GerenciadorItens.inventario[0] == null:
 			GerenciadorItens.Item_coletado.emit(0,self.duplicate())
 			print_debug(item_name+" coletado no slot 0")
+			coletado = true
 			queue_free()
 			return
 	else:
 		print_debug("inventario cheio")
 	if GerenciadorItens.inventario[2] != null:
-		if GerenciadorItens.inventario[2].item_name == "mao de mao" and GerenciadorItens.inventario[1]==null:
+		if GerenciadorItens.inventario[2].item_name == "mao de mao" and GerenciadorItens.inventario[1]==null and !coletado:
 			GerenciadorItens.Item_coletado.emit(1,self.duplicate())
 			print_debug(item_name+" coletado no slot 1")
 			queue_free()

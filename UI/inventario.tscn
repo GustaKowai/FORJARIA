@@ -1,103 +1,193 @@
-[gd_scene load_steps=3 format=3 uid="uid://dsappc1xym3pk"]
+[gd_scene load_steps=8 format=3 uid="uid://dsappc1xym3pk"]
 
 [ext_resource type="Script" uid="uid://drgmr75p123oa" path="res://UI/inventario.gd" id="1_x7tli"]
 [ext_resource type="PackedScene" uid="uid://cc0p2qr1eocsl" path="res://itens/itens basicos/item_coletado.tscn" id="2_poxva"]
+[ext_resource type="Texture2D" uid="uid://bj27pejw2xrji" path="res://UI/UI sprites/UI/maos.png" id="3_j3gc7"]
+[ext_resource type="Texture2D" uid="uid://36hhjyeypcor" path="res://UI/UI sprites/UI/slotmaodemao.png" id="4_rn01n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j3gc7"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rn01n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b2sca"]
 
 [node name="Inventário" type="CanvasLayer"]
 script = ExtResource("1_x7tli")
 item_coletado_scene = ExtResource("2_poxva")
 
+[node name="Inventorio" type="TextureRect" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -410.0
+offset_top = -210.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+texture = ExtResource("3_j3gc7")
+
+[node name="InventorioExpandido" type="TextureRect" parent="."]
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -570.0
+offset_top = -160.0
+offset_right = -350.0
+grow_horizontal = 0
+grow_vertical = 0
+mouse_filter = 2
+texture = ExtResource("4_rn01n")
+
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 11
+anchors_preset = 3
 anchor_left = 1.0
+anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 0
-grow_vertical = 2
+grow_vertical = 0
 size_flags_horizontal = 8
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+[node name="VBoxContainer" type="HBoxContainer" parent="Control"]
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -40.0
-offset_top = -40.0
+offset_left = -248.0
+offset_top = -80.0
 grow_horizontal = 0
 grow_vertical = 0
 mouse_filter = 0
-
-[node name="inventory1" type="ColorRect" parent="Control/VBoxContainer"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(80, 80)
-layout_mode = 2
-
-[node name="item1" type="TextureButton" parent="Control/VBoxContainer/inventory1"]
-unique_name_in_owner = true
-layout_mode = 2
-offset_top = 4.0
-offset_right = 80.0
-offset_bottom = 84.0
-mouse_default_cursor_shape = 2
-stretch_mode = 0
-
-[node name="item1_imagem" type="PanelContainer" parent="Control/VBoxContainer/inventory1/item1"]
-unique_name_in_owner = true
-layout_mode = 0
-offset_left = 6.0
-offset_top = 3.0
-offset_right = 72.0
-offset_bottom = 69.0
-mouse_filter = 2
-
-[node name="slot_mao" type="ColorRect" parent="Control/VBoxContainer"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(80, 80)
-layout_mode = 2
-color = Color(0.462291, 0.462291, 0.462291, 1)
-
-[node name="mao" type="TextureButton" parent="Control/VBoxContainer/slot_mao"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(30, 30)
-layout_mode = 2
-offset_top = 4.0
-offset_right = 40.0
-offset_bottom = 34.0
-
-[node name="itemMao_imagem" type="PanelContainer" parent="Control/VBoxContainer/slot_mao/mao"]
-unique_name_in_owner = true
-layout_mode = 2
-offset_left = 7.0
-offset_top = 3.0
-offset_right = 73.0
-offset_bottom = 69.0
-mouse_filter = 2
+alignment = 2
 
 [node name="inventory2" type="ColorRect" parent="Control/VBoxContainer"]
 unique_name_in_owner = true
-custom_minimum_size = Vector2(80, 80)
+custom_minimum_size = Vector2(150, 80)
 layout_mode = 2
+color = Color(1, 1, 1, 0)
 
 [node name="item2" type="TextureButton" parent="Control/VBoxContainer/inventory2"]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(30, 30)
 layout_mode = 2
-offset_top = 4.0
-offset_right = 40.0
-offset_bottom = 34.0
+offset_top = 47.0
+offset_right = 132.0
+offset_bottom = 190.0
 
 [node name="item2_imagem" type="PanelContainer" parent="Control/VBoxContainer/inventory2/item2"]
 unique_name_in_owner = true
-layout_mode = 2
-offset_left = 7.0
-offset_top = 1.0
-offset_right = 73.0
-offset_bottom = 67.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.0
+offset_top = -55.0
+offset_right = 66.0
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
 mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_j3gc7")
 
-[connection signal="pressed" from="Control/VBoxContainer/inventory1/item1" to="." method="_on_item_1_pressed"]
-[connection signal="pressed" from="Control/VBoxContainer/slot_mao/mao" to="." method="_on_mao_pressed"]
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Control/VBoxContainer/inventory2/item2/item2_imagem"]
+layout_mode = 2
+stretch = true
+
+[node name="item2_viewport" type="SubViewport" parent="Control/VBoxContainer/inventory2/item2/item2_imagem/SubViewportContainer"]
+unique_name_in_owner = true
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(121, 110)
+render_target_update_mode = 4
+
+[node name="slot_mao" type="ColorRect" parent="Control/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(150, 200)
+layout_mode = 2
+color = Color(0.462745, 0.462745, 0.462745, 0)
+
+[node name="mao" type="TextureButton" parent="Control/VBoxContainer/slot_mao"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(30, 30)
+layout_mode = 2
+offset_top = 47.0
+offset_right = 143.0
+offset_bottom = 190.0
+
+[node name="itemMao_imagem" type="PanelContainer" parent="Control/VBoxContainer/slot_mao/mao"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -55.0
+offset_top = -55.0
+offset_right = 55.0
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_rn01n")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Control/VBoxContainer/slot_mao/mao/itemMao_imagem"]
+layout_mode = 2
+stretch = true
+
+[node name="itemMao_viewport" type="SubViewport" parent="Control/VBoxContainer/slot_mao/mao/itemMao_imagem/SubViewportContainer"]
+unique_name_in_owner = true
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(110, 110)
+render_target_update_mode = 4
+
+[node name="inventory1" type="ColorRect" parent="Control/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(250, 200)
+layout_mode = 2
+color = Color(1, 1, 1, 0)
+
+[node name="item1" type="TextureButton" parent="Control/VBoxContainer/inventory1"]
+unique_name_in_owner = true
+layout_mode = 2
+offset_left = 22.0
+offset_top = 4.0
+offset_right = 209.0
+offset_bottom = 179.0
+mouse_default_cursor_shape = 2
+stretch_mode = 0
+
+[node name="item1_imagem" type="PanelContainer" parent="Control/VBoxContainer/inventory1/item1"]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 6.0
+offset_top = -1.0
+offset_right = 187.0
+offset_bottom = 175.0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_b2sca")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Control/VBoxContainer/inventory1/item1/item1_imagem"]
+layout_mode = 2
+stretch = true
+
+[node name="item1_viewport" type="SubViewport" parent="Control/VBoxContainer/inventory1/item1/item1_imagem/SubViewportContainer"]
+unique_name_in_owner = true
+transparent_bg = true
+handle_input_locally = false
+size = Vector2i(181, 176)
+render_target_update_mode = 4
+
 [connection signal="pressed" from="Control/VBoxContainer/inventory2/item2" to="." method="_on_item_2_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/slot_mao/mao" to="." method="_on_mao_pressed"]
+[connection signal="pressed" from="Control/VBoxContainer/inventory1/item1" to="." method="_on_item_1_pressed"]

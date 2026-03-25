@@ -1,4 +1,8 @@
 TextureRect
+HBoxContainer
+Control
+SubViewport
+SubViewportContainer
 PanelContainer
 Sprite2D
 CollisionShape2D
@@ -8,7 +12,3 @@ TileMapLayer
 Camera2D
 Item
 Button
-VBoxContainer
-Control
-Label
-ItemList
