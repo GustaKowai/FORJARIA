@@ -32,8 +32,10 @@ func AdicionaItem(slot:int,item:Item):
 	GerenciadorItens.inventario[slot] = item_coletado
 	if slot == 0:
 		#item_1.texture_normal = item_coletado.sprite
-		print_debug(item.sprite_2d)
-		item_1_imagem.add_child(item.sprite_2d)
+		print_debug(item.sprite_2d,item.get_child(0).get_child(1))
+		item_1_imagem = get_node("%item1_imagem")
+		print_debug(item_1_imagem)
+		item_1_imagem.add_child(item.get_child(0).get_child(1).duplicate())
 	if slot == 1:
 		item_2.texture_normal = item_coletado.sprite
 	if slot == 2:
@@ -41,10 +43,16 @@ func AdicionaItem(slot:int,item:Item):
 
 func RemoveItem(slot):
 	if slot == 0:
+		for children in item_1_imagem.get_children():
+			children.queue_free()
 		item_1.texture_normal = null
 	if slot == 1:
+		for children in item_2_imagem.get_children():
+			children.queue_free()
 		item_2.texture_normal = null
 	if slot == 2:
+		for children in item_mao_imagem.get_children():
+			children.queue_free()
 		mao.texture_normal = null
 		inventory_2.hide()
 

@@ -11,7 +11,7 @@ class_name Item
 var _self_scene:PackedScene
 
 func _ready() -> void:
-	#print_debug(sprite)
+	print_debug(sprite_2d)
 	#item_name = dados_item.item_name
 	#qualidade = dados_item.qualidade
 	_self_scene = PackedScene.new()
