@@ -61,3 +61,19 @@ func libera_espada():
 	cabo.texture = null
 	tamanho_lamina = "vazio"
 	lamina.texture = null
+	
+func _on_area_2d_body_entered(body: Node2D) -> void:
+	if body.is_in_group("jogador"):
+		#modulate = Color(1.5,1.5,1.5)
+		if item_name == "espada":
+			seta_item.visible = true
+		print_debug("Da pra pegar")
+		#_collect()
+		pass
+	
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	if body.is_in_group("jogador"):
+		#modulate = Color(1,1,1)
+		seta_item.visible = false
+		print_debug("Saiu do range")
+	pass # Replace with function body.

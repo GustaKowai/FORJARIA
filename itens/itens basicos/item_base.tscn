@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://duouc8oy3bnv2"]
+[gd_scene load_steps=5 format=3 uid="uid://duouc8oy3bnv2"]
 
 [ext_resource type="Script" uid="uid://cdndpoa80vcga" path="res://itens/itens basicos/item_base.gd" id="1_rpf84"]
 [ext_resource type="Texture2D" uid="uid://dpkdlqo0krxo4" path="res://itens/itembase.png" id="2_k3csg"]
+[ext_resource type="PackedScene" uid="uid://c5ndwov0111bj" path="res://UI/seta_item.tscn" id="3_4obre"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b7m8k"]
 size = Vector2(91, 91)
@@ -18,5 +19,10 @@ shape = SubResource("RectangleShape2D_b7m8k")
 texture_filter = 1
 texture = ExtResource("2_k3csg")
 
+[node name="Marker2D" type="Marker2D" parent="."]
+
+[node name="Seta_item" parent="." instance=ExtResource("3_4obre")]
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="input_event" from="Area2D" to="." method="_on_area_2d_input_event"]

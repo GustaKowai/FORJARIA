@@ -46,12 +46,12 @@ func AdicionaItem(slot:int,item:Item):
 		#item_2.texture_normal = item_coletado.sprite
 		item_2_imagem.add_child(sprite)
 		sprite.position = item_2_imagem.size / 2
-		sprite.scale = Vector2(0.5,0.5)
+		#sprite.scale = Vector2(0.5,0.5)
 	if slot == 2:
 		#mao.texture_normal = item_coletado.sprite
 		item_mao_imagem.add_child(sprite)
 		sprite.position = item_mao_imagem.size / 2
-		sprite.scale = Vector2(0.5,0.5)
+		#sprite.scale = Vector2(0.5,0.5)
 
 func RemoveItem(slot):
 	if slot == 0:

@@ -6,20 +6,29 @@
 
 [node name="Tempo do dia" type="Control"]
 layout_mode = 3
-anchors_preset = 0
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+grow_horizontal = 0
 script = ExtResource("1_l058s")
 
 [node name="time_elapsed" type="Label" parent="."]
-offset_left = 1.0
-offset_top = 58.0
-offset_right = 42.0
-offset_bottom = 81.0
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -42.0
+offset_top = 59.0
+offset_right = -1.0
+offset_bottom = 82.0
+grow_horizontal = 0
 text = "06:00"
-metadata/_edit_use_anchors_ = true
 
 [node name="clock" type="TextureProgressBar" parent="."]
-offset_right = 1290.0
-offset_bottom = 50.0
+layout_mode = 0
+offset_left = -1290.0
+offset_top = 4.0
+offset_bottom = 54.0
 max_value = 720.0
 stretch_margin_top = 2
 texture_under = ExtResource("2_gt36e")

@@ -9,6 +9,10 @@ var montagem:bool = false
 @export var minigame_snake:PackedScene
 @export var minigame_bigorna:PackedScene
 @onready var window: Window = $Window
+@onready var seta_maquina_montagem: Node2D = $Montagem/Seta_maquina_montagem
+@onready var seta_maquina_snake: Node2D = $snake/Seta_maquina_snake
+@onready var saida_escada_para_baixo: Marker2D = $"Escada para baixo/saida escada para baixo"
+@onready var saida_escada_para_cima: Marker2D = $"Escada para cima/saida escada para cima"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -43,10 +47,12 @@ func close_minigame():
 func _on_snake_body_entered(body: Node2D) -> void:
 	if body.is_in_group("jogador"):
 		corte_de_couro = true
+		seta_maquina_snake.visible = true
 		print_debug(body)
 
 func _on_snake_body_exited(body: Node2D) -> void:
 	corte_de_couro = false
+	seta_maquina_snake.visible = false
 
 func _on_snake_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and corte_de_couro:
@@ -59,6 +65,7 @@ func _on_snake_input_event(viewport: Node, event: InputEvent, shape_idx: int) ->
 func _on_bigorna_body_entered(body: Node2D) -> void:
 	if body.is_in_group("jogador"):
 		bigorna = true
+		
 		#print_debug(body)
 
 func _on_bigorna_body_exited(body: Node2D) -> void:
@@ -86,12 +93,14 @@ func inicia_minigame(minigame):
 
 func _on_montagem_body_entered(body: Node2D) -> void:
 	if body.is_in_group("jogador"):
+		seta_maquina_montagem.visible = true
 		montagem = true
 		#print_debug(body)
 
 
 func _on_montagem_body_exited(body: Node2D) -> void:
 	montagem = false
+	seta_maquina_montagem.visible = false
 
 
 func _on_montagem_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
@@ -118,3 +127,12 @@ func checa_material(item_tentando:Item,slot:int):
 	espada.qualidade += item_tentando.qualidade
 	GerenciadorItens.inventario[slot] = null
 	inventario.RemoveItem(slot)
+
+
+func _on_escada_para_baixo_body_entered(body: Node2D) -> void:
+	body.global_position = saida_escada_para_cima.global_position
+
+
+func _on_escada_para_cima_body_entered(body: Node2D) -> void:
+	body.global_position = saida_escada_para_baixo.global_position
+	pass # Replace with function body.

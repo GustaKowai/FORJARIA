@@ -1,0 +1,54 @@
+[gd_scene load_steps=5 format=3 uid="uid://c5ndwov0111bj"]
+
+[ext_resource type="Texture2D" uid="uid://c2w5s6nccnto6" path="res://UI/UI sprites/UI/seta itens.png" id="1_8x6mf"]
+
+[sub_resource type="Animation" id="Animation_txywy"]
+resource_name = "move"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(0, -31), Vector2(0, -77), Vector2(0, -31)]
+}
+
+[sub_resource type="Animation" id="Animation_2r5a4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, -31)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p5o55"]
+_data = {
+&"RESET": SubResource("Animation_2r5a4"),
+&"move": SubResource("Animation_txywy")
+}
+
+[node name="Seta_item" type="Node2D"]
+visible = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+root_node = NodePath("../SetaItens")
+libraries = {
+&"": SubResource("AnimationLibrary_p5o55")
+}
+autoplay = "move"
+
+[node name="SetaItens" type="Sprite2D" parent="."]
+position = Vector2(1, -31)
+texture = ExtResource("1_8x6mf")

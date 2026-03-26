@@ -8,6 +8,9 @@ class_name Item
 @export var item_name: String# = "Item_Base"
 @export var qualidade: float# = 50.0 
 @onready var sprite_2d: Sprite2D = $Area2D/Sprite2D
+@onready var marker_2d: Marker2D = $Marker2D
+@onready var seta_item: Node2D = $Seta_item
+
 var _self_scene:PackedScene
 var coletado:bool = false
 
@@ -18,6 +21,7 @@ func _ready() -> void:
 	_self_scene = PackedScene.new()
 	_self_scene.pack(self)
 	sprite = sprite_2d.texture
+
 	pass
 	
 func _collect():
@@ -43,8 +47,19 @@ func _collect():
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
 	if body.is_in_group("jogador"):
+		#modulate = Color(1.5,1.5,1.5)
+		seta_item.visible = true
+		#print_debug("Da pra pegar")
 		#_collect()
 		pass
+
+
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	if body.is_in_group("jogador"):
+		#modulate = Color(1,1,1)
+		#print_debug("Saiu do range")
+		seta_item.visible = false
+	pass # Replace with function body.
 
 
 func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
