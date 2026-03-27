@@ -84,7 +84,7 @@ func _on_bigorna_body_exited(body: Node2D) -> void:
 
 func _on_bigorna_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
 	if Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT) and bigorna:
-		checa_itens("minerio","mao martelo", minigame_bigorna)
+		checa_itens("minerioQuente","mao martelo", minigame_bigorna)
 
 #endregion
 

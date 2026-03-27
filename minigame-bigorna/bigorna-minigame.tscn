@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=3 uid="uid://dsjubx2st8ga3"]
+[gd_scene load_steps=6 format=3 uid="uid://dsjubx2st8ga3"]
 
-[ext_resource type="Texture2D" uid="uid://b3o2drtsg5k6h" path="res://minigame-bigorna/malibus.png" id="4_uaajk"]
+[ext_resource type="PackedScene" uid="uid://mm81pqa6hoe1" path="res://itens/itens processados/lamina.tscn" id="2_tfcti"]
+[ext_resource type="Texture2D" uid="uid://pt3c71cqtq56" path="res://minigame-bigorna/acertobigornabrancco.png" id="4_tfcti"]
 [ext_resource type="Texture2D" uid="uid://bxbws0p678h0d" path="res://minigame-bigorna/bigorna.png" id="5_5ck6h"]
 [ext_resource type="Script" uid="uid://sr4do0lolpmp" path="res://minigame-bigorna/minigameforja.gd" id="5_uaajk"]
 [ext_resource type="Texture2D" uid="uid://bd3kr415as4p" path="res://minigame-bigorna/acertobigorna.png" id="6_uaajk"]
@@ -9,23 +10,20 @@
 
 [node name="minigameforja" type="Control" parent="."]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+anchors_preset = 0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 script = ExtResource("5_uaajk")
+lamina = ExtResource("2_tfcti")
 
 [node name="barraalvo" type="TextureRect" parent="minigameforja"]
 unique_name_in_owner = true
 layout_mode = 0
 offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = 142.857
 scale = Vector2(2, 2)
 texture = ExtResource("5_5ck6h")
-expand_mode = 5
+expand_mode = 3
 
 [node name="indicadormartelo" type="TextureRect" parent="minigameforja/barraalvo"]
 unique_name_in_owner = true
@@ -33,7 +31,7 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 scale = Vector2(1, 0.2)
-texture = ExtResource("4_uaajk")
+texture = ExtResource("4_tfcti")
 expand_mode = 1
 
 [node name="medidorbigorna" type="TextureRect" parent="minigameforja"]
@@ -43,3 +41,35 @@ offset_right = 340.0
 offset_bottom = 1017.0
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("6_uaajk")
+
+[node name="Button" type="Button" parent="minigameforja"]
+layout_mode = 0
+offset_left = 124.0
+offset_top = 127.0
+offset_right = 200.0
+offset_bottom = 158.0
+text = "Martelar"
+
+[node name="ItemList" type="ItemList" parent="."]
+offset_left = 259.0
+offset_top = 111.0
+offset_right = 364.0
+offset_bottom = 216.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+item_count = 3
+item_0/text = "pequeno"
+item_1/text = "médio"
+item_2/text = "grande"
+
+[node name="restantes" type="Label" parent="."]
+offset_left = 143.0
+offset_top = 162.0
+offset_right = 183.0
+offset_bottom = 185.0
+text = "0"
+
+[connection signal="button_down" from="minigameforja/Button" to="minigameforja" method="_on_button_button_down"]
+[connection signal="button_up" from="minigameforja/Button" to="minigameforja" method="_on_button_button_up"]
+[connection signal="pressed" from="minigameforja/Button" to="minigameforja" method="_on_button_pressed"]
+[connection signal="item_clicked" from="ItemList" to="minigameforja" method="_on_item_list_item_clicked"]

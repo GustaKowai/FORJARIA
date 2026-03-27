@@ -1,4 +1,4 @@
-[gd_scene load_steps=48 format=4 uid="uid://81dw4cg2wxdw"]
+[gd_scene load_steps=49 format=4 uid="uid://81dw4cg2wxdw"]
 
 [ext_resource type="Texture2D" uid="uid://2lejbc0srq6o" path="res://forja_interior/grounds.png" id="1_iked2"]
 [ext_resource type="Script" uid="uid://b8ma8a4vfl0sj" path="res://forja_interior/forja.gd" id="1_lld1g"]
@@ -37,6 +37,7 @@
 [ext_resource type="Texture2D" uid="uid://butrn2fcet72" path="res://forja_interior/forja_sub/drive-download-20260326T184351Z-3-001/BARRIIIILS_1.png" id="25_btcsk"]
 [ext_resource type="PackedScene" uid="uid://csnc45le7bkut" path="res://Locais_forja/fonte_carvao.tscn" id="36_lvf4l"]
 [ext_resource type="PackedScene" uid="uid://dm1txswhxg4im" path="res://Locais_forja/fonte_minerio.tscn" id="37_cija0"]
+[ext_resource type="PackedScene" uid="uid://cxnem2dmutv01" path="res://itens/mãos/mao_martelo.tscn" id="38_yppbg"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_6p8tj"]
 vertices = PackedVector2Array(5, 5, -5, 5, -5, -5, 5, -5)
@@ -686,6 +687,9 @@ position = Vector2(4144, 49)
 
 [node name="fonte_minerio" parent="." instance=ExtResource("37_cija0")]
 position = Vector2(4032, 363)
+
+[node name="mao_martelo" parent="." instance=ExtResource("38_yppbg")]
+position = Vector2(4840, 1195)
 
 [connection signal="body_entered" from="snake" to="." method="_on_snake_body_entered"]
 [connection signal="body_exited" from="snake" to="." method="_on_snake_body_exited"]

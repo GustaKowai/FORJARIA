@@ -10,6 +10,7 @@ script = ExtResource("2_ossw6")
 minerio_frio = ExtResource("3_24e5i")
 sprite = ExtResource("3_8f4a6")
 item_name = "minerioQuente"
+qualidade = 50.0
 
 [node name="CollisionShape2D" parent="Area2D" index="0"]
 position = Vector2(1.5, 1.5)

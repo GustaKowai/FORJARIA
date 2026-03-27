@@ -4,12 +4,15 @@ signal minigame_finalizado(qualidade_minigame_bonus: float)
 
 @onready var barra_alvo: TextureRect = %barraalvo
 @onready var indicador_martelo: TextureRect = %indicadormartelo
+@onready var item_list: ItemList = $"../ItemList"
+@onready var restantes: Label = $"../restantes"
 
+@export var lamina:PackedScene
 # Configurações do minigame
 var velocidade_indicador: float = 200.0
 var direcao_indicador: int = 1
 var marteladas_restantes: int = 5
-
+var tamanho_lamina:String
 # Variável para acumular a pontuação do minigame (de 0 a 100 por martelada)
 var pontuacao_total_minigame: float = 0.0
 
@@ -24,13 +27,14 @@ var zona_vermelha_y_min: float = 0
 var zona_vermelha_y_max: float = 340 # O resto da barra (ou o total)
 
 func _ready():
-	indicador_martelo.position.y = barra_alvo.size.y / 2
+	indicador_martelo.position.y = barra_alvo.size.y
 	visible = false
 	#iniciar("seila")
-func iniciar(laminas_escolhidas: String):
+func iniciar():
 	visible = true
 	pontuacao_total_minigame = 0.0
 	marteladas_restantes = 5 # Será definido pelo material e lâmina no futuro
+	restantes.text = "5"
 	direcao_indicador = 1
 	indicador_martelo.position.y = 0 
 
@@ -38,18 +42,22 @@ func _process(delta):
 	if marteladas_restantes > 0 and visible:
 		indicador_martelo.position.y += velocidade_indicador * direcao_indicador * delta
 		var topo_barra = 0
-		var base_barra = barra_alvo.size.y - indicador_martelo.size.y
+		var base_barra = barra_alvo.size.y #- indicador_martelo.size.y
 
 		if indicador_martelo.position.y <= topo_barra:
+			#print_debug("topo = ",indicador_martelo.position.y)
 			indicador_martelo.position.y = topo_barra
 			direcao_indicador = 1
 		elif indicador_martelo.position.y >= base_barra:
+			#print_debug("base = ",indicador_martelo.position.y)
 			indicador_martelo.position.y = base_barra
 			direcao_indicador = -1
 
 
 		if Input.is_action_just_pressed("interagir"): 
 			marteladas_restantes -= 1
+			restantes.text = str(marteladas_restantes)
+			#print_debug("martelado",marteladas_restantes)
 			calcular_pontuacao_martelada()
 
 	elif marteladas_restantes <= 0 and visible:
@@ -69,12 +77,46 @@ func calcular_pontuacao_martelada():
 	else:
 		pontuacao_dessa_martelada = 25.0 # OK
 	pontuacao_total_minigame += pontuacao_dessa_martelada
-
+	print_debug(pontuacao_dessa_martelada)
+	print_debug(pontuacao_total_minigame)
 
 func finalizar_minigame():
 	var resultado_medio = pontuacao_total_minigame / 5.0 # Divida pelo número total de marteladas
 	emit_signal("minigame_finalizado", resultado_medio)
+	gerar_item()
 	GameManager.exit_minigame.emit()
 	visible = false
 	# Se quiser, pode liberar a cena aqui: queue_free()
 	# Mas talvez seja melhor mantê-la e reusar para performance, apenas escondendo.
+
+
+func _on_item_list_item_clicked(index: int, at_position: Vector2, mouse_button_index: int) -> void:
+	match index:
+		0:
+			tamanho_lamina = "pequeno"
+		1:
+			tamanho_lamina = "médio"
+		2:
+			tamanho_lamina = "grande"
+	iniciar()
+	item_list.hide()
+
+
+func gerar_item():
+	var item_gerado:Item = lamina.instantiate()
+	item_gerado.qualidade = pontuacao_total_minigame / 5.0
+	item_gerado.name = "lamina"
+	item_gerado.tamanho = tamanho_lamina
+	item_gerado.pontuacao = item_gerado.qualidade*GameManager.multiplicador_de_qualidade
+	item_gerado._ready()
+	GerenciadorItens.Item_coletado.emit(0,item_gerado)
+
+
+
+
+func _on_button_button_down() -> void:
+	Input.action_press("interagir")
+
+
+func _on_button_button_up() -> void:
+	Input.action_release("interagir")
