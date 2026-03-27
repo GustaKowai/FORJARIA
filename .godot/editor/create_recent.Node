@@ -1,5 +1,10 @@
-Label
+BoxContainer
 Button
+Container
+CenterContainer
+TextureRect
+Label
+VBoxContainer
 Camera2D
 ProgressBar
 CollisionShape2D
@@ -7,8 +12,3 @@ Area2D
 Marker2D
 AudioStreamPlayer
 AnimatedSprite2D
-TextureRect
-PanelContainer
-Panel
-Control
-TileMapLayer

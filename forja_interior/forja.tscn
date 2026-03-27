@@ -513,7 +513,6 @@ position = Vector2(725, 700)
 texture = ExtResource("9_fkm0j")
 
 [node name="DetalhesExpandidoForja" type="Sprite2D" parent="terreo"]
-visible = false
 position = Vector2(725, 700)
 texture = ExtResource("10_xyxbd")
 
