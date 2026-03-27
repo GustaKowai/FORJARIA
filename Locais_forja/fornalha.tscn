@@ -50,10 +50,11 @@ size = Vector2(135, 113.001)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_neqgh"]
 size = Vector2(153.5, 113)
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2lij4"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_neqgh"]
+bg_color = Color(1, 1, 1, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xa8b7"]
-bg_color = Color(0.374139, 0.374139, 0.374139, 1)
+bg_color = Color(0, 0, 0, 1)
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hrqor"]
 bg_color = Color(0, 0, 0, 1)
@@ -67,6 +68,7 @@ variacao_temperatura = 1.0
 velocidade_queima = 0.1
 
 [node name="forja" type="AnimatedSprite2D" parent="."]
+visible = false
 sprite_frames = SubResource("SpriteFrames_xa8b7")
 frame_progress = 0.49278
 
@@ -92,11 +94,12 @@ position = Vector2(143, 49)
 shape = SubResource("RectangleShape2D_neqgh")
 
 [node name="Combustivel" type="ProgressBar" parent="."]
-offset_left = -150.0
-offset_top = -205.0
-offset_right = -120.0
-offset_bottom = 35.0
-theme_override_styles/background = SubResource("StyleBoxFlat_2lij4")
+modulate = Color(1, 1, 1, 0.462745)
+offset_left = -179.0
+offset_top = -186.0
+offset_right = -153.0
+offset_bottom = 22.0
+theme_override_styles/background = SubResource("StyleBoxFlat_neqgh")
 theme_override_styles/fill = SubResource("StyleBoxFlat_xa8b7")
 max_value = 1000.0
 value = 400.0
@@ -104,10 +107,11 @@ fill_mode = 3
 show_percentage = false
 
 [node name="Temperatura" type="ProgressBar" parent="."]
-offset_left = 76.0
-offset_top = -185.0
-offset_right = 102.0
-offset_bottom = 23.0
+modulate = Color(1, 1, 1, 0.427451)
+offset_left = -207.0
+offset_top = -188.0
+offset_right = -181.0
+offset_bottom = 20.0
 theme_override_styles/background = SubResource("StyleBoxFlat_hrqor")
 theme_override_styles/fill = SubResource("StyleBoxFlat_078eb")
 value = 40.0

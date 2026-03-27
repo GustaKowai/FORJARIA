@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dm1txswhxg4im"]
+
+[ext_resource type="Script" uid="uid://dl3sscol8gtn8" path="res://fonte_carvao.gd" id="1_mln5t"]
+[ext_resource type="PackedScene" uid="uid://b8lxq04bmmtb8" path="res://itens/itens basicos/minerio.tscn" id="2_mln5t"]
+[ext_resource type="PackedScene" uid="uid://cpv6qrwer5s7j" path="res://UI/seta_maquina.tscn" id="3_jmaw5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_asmhk"]
+radius = 128.016
+
+[node name="fonte_minerio" type="Area2D"]
+script = ExtResource("1_mln5t")
+carvao = ExtResource("2_mln5t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_asmhk")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(170, 4)
+
+[node name="Seta_maquina" parent="." instance=ExtResource("3_jmaw5")]
+position = Vector2(-2, -7)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="input_event" from="." to="." method="_on_input_event"]

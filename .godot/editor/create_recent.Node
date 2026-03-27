@@ -1,12 +1,12 @@
+Marker2D
+CollisionShape2D
+Area2D
 AudioStreamPlayer
 AnimatedSprite2D
 TextureRect
 PanelContainer
 Panel
 Control
-Marker2D
-CollisionShape2D
-Area2D
 TileMapLayer
 AnimationPlayer
 Sprite2D

@@ -14,6 +14,9 @@ const MUSICA_TEMA_FORJA_MEDIEVAL = preload("res://SFX/Musica tema forja medieval
 @onready var window: Window = $Window
 @onready var seta_maquina_montagem: Node2D = $Montagem/Seta_maquina_montagem
 @onready var seta_maquina_snake: Node2D = $snake/Seta_maquina_snake
+@onready var seta_maquina_bigorna: Node2D = $bigorna/Seta_maquina_bigorna
+
+
 @onready var saida_escada_para_baixo: Marker2D = $"Escada para baixo/saida escada para baixo"
 @onready var saida_escada_para_cima: Marker2D = $"Escada para cima/saida escada para cima"
 
@@ -70,11 +73,13 @@ func _on_snake_input_event(viewport: Node, event: InputEvent, shape_idx: int) ->
 
 func _on_bigorna_body_entered(body: Node2D) -> void:
 	if body.is_in_group("jogador"):
+		seta_maquina_bigorna.visible = true
 		bigorna = true
 		
 		#print_debug(body)
 
 func _on_bigorna_body_exited(body: Node2D) -> void:
+	seta_maquina_bigorna.visible = false
 	bigorna = false
 
 func _on_bigorna_input_event(viewport: Node, event: InputEvent, shape_idx: int) -> void:
