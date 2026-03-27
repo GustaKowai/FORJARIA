@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://ca7xjwoywjm6y"]
+[gd_scene load_steps=18 format=3 uid="uid://ca7xjwoywjm6y"]
 
 [ext_resource type="Script" uid="uid://ng2hyh2ecm84" path="res://Locais_forja/fornalha.gd" id="1_uo0w2"]
 [ext_resource type="Texture2D" uid="uid://bgqvq1xr25wbh" path="res://forja_interior/animated_props.png" id="1_wbdil"]
+[ext_resource type="PackedScene" uid="uid://5ydy60s1tr1f" path="res://itens/itens processados/minerioQuente.tscn" id="2_2lij4"]
 [ext_resource type="Texture2D" uid="uid://103d2c06112m" path="res://forja_interior/forja_sub/drive-download-20260326T184351Z-3-001/Forja_o_Forno.png" id="3_uo0w2"]
 [ext_resource type="PackedScene" uid="uid://cpv6qrwer5s7j" path="res://UI/seta_maquina.tscn" id="4_neqgh"]
 
@@ -62,13 +63,17 @@ bg_color = Color(0, 0, 0, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_078eb"]
 bg_color = Color(0.80952, 0, 0.259371, 1)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2lij4"]
+size = Vector2(99.5, 99.5)
+
 [node name="Fornalha" type="Node2D"]
 script = ExtResource("1_uo0w2")
 variacao_temperatura = 1.0
 velocidade_queima = 0.1
+velocidade_minerio = 2.0
+minerioQuente = ExtResource("2_2lij4")
 
 [node name="forja" type="AnimatedSprite2D" parent="."]
-visible = false
 sprite_frames = SubResource("SpriteFrames_xa8b7")
 frame_progress = 0.49278
 
@@ -127,9 +132,33 @@ position = Vector2(109, -94)
 [node name="SetaMinerio" parent="." instance=ExtResource("4_neqgh")]
 position = Vector2(-60, 113)
 
+[node name="Area_minerio" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area_minerio"]
+position = Vector2(-91.25, 126.25)
+shape = SubResource("RectangleShape2D_2lij4")
+
+[node name="Area_minerio2" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area_minerio2"]
+position = Vector2(-91.25, 126.25)
+shape = SubResource("RectangleShape2D_2lij4")
+
+[node name="Minerio" type="ProgressBar" parent="Area_minerio2"]
+offset_left = -219.0
+offset_top = 44.0
+offset_right = 37.0
+offset_bottom = 71.0
+
 [connection signal="body_entered" from="soprador/area soprador" to="." method="_on_area_soprador_body_entered"]
 [connection signal="body_exited" from="soprador/area soprador" to="." method="_on_area_soprador_body_exited"]
 [connection signal="input_event" from="soprador/area soprador" to="." method="_on_area_soprador_input_event"]
 [connection signal="body_entered" from="area_carvao" to="." method="_on_area_carvao_body_entered"]
 [connection signal="body_exited" from="area_carvao" to="." method="_on_area_carvao_body_exited"]
 [connection signal="input_event" from="area_carvao" to="." method="_on_area_carvao_input_event"]
+[connection signal="body_entered" from="Area_minerio" to="." method="_on_area_minerio_body_entered"]
+[connection signal="body_exited" from="Area_minerio" to="." method="_on_area_minerio_body_exited"]
+[connection signal="input_event" from="Area_minerio" to="." method="_on_area_minerio_input_event"]
+[connection signal="body_entered" from="Area_minerio2" to="." method="_on_area_minerio_body_entered"]
+[connection signal="body_exited" from="Area_minerio2" to="." method="_on_area_minerio_body_exited"]
+[connection signal="input_event" from="Area_minerio2" to="." method="_on_area_minerio_input_event"]

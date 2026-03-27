@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://5ydy60s1tr1f"]
+
+[ext_resource type="PackedScene" uid="uid://duouc8oy3bnv2" path="res://itens/itens basicos/item_base.tscn" id="1_8f4a6"]
+[ext_resource type="Script" uid="uid://pbv44k717w5d" path="res://itens/itens processados/minerio_quente.gd" id="2_ossw6"]
+[ext_resource type="Texture2D" uid="uid://bkfrjtrgch6ih" path="res://itens/itens processados/lingoteincandescente.png" id="3_8f4a6"]
+[ext_resource type="Texture2D" uid="uid://52j2x3lao8xr" path="res://itens/itens processados/lingotepronto.png" id="3_24e5i"]
+
+[node name="minerioQuente" instance=ExtResource("1_8f4a6")]
+script = ExtResource("2_ossw6")
+minerio_frio = ExtResource("3_24e5i")
+sprite = ExtResource("3_8f4a6")
+item_name = "minerioQuente"
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+position = Vector2(1.5, 1.5)
+
+[node name="Sprite2D" parent="Area2D" index="1"]
+texture = ExtResource("3_8f4a6")
