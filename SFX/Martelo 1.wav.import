@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dlqb3bywh240c"
+path="res://.godot/imported/Martelo 1.wav-a762cad4ce80b2c54eb33ee75efaf7b0.sample"
+
+[deps]
+
+source_file="res://SFX/Martelo 1.wav"
+dest_files=["res://.godot/imported/Martelo 1.wav-a762cad4ce80b2c54eb33ee75efaf7b0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -6,7 +6,9 @@ var montagem:bool = false
 @onready var espada: Espada = $Montagem/Espada
 @onready var inventario: CanvasLayer = $Inventario
 @onready var terreo: TileMapLayer = $terreo
-
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
+const AMBIENCE = preload("res://SFX/ambience.wav")
+const MUSICA_TEMA_FORJA_MEDIEVAL = preload("res://SFX/Musica tema forja medieval.wav")
 @export var minigame_snake:PackedScene
 @export var minigame_bigorna:PackedScene
 @onready var window: Window = $Window
@@ -20,6 +22,8 @@ func _ready() -> void:
 	corte_de_couro = false
 	GameManager.exit_minigame.connect(close_minigame)
 	terreo.position = Vector2(0,0)
+	audio_stream_player.stream = MUSICA_TEMA_FORJA_MEDIEVAL
+	audio_stream_player.play()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -133,8 +137,12 @@ func checa_material(item_tentando:Item,slot:int):
 
 func _on_escada_para_baixo_body_entered(body: Node2D) -> void:
 	body.global_position = saida_escada_para_cima.global_position
+	audio_stream_player.stream = AMBIENCE
+	audio_stream_player.play()
 
 
 func _on_escada_para_cima_body_entered(body: Node2D) -> void:
 	body.global_position = saida_escada_para_baixo.global_position
+	audio_stream_player.stream = MUSICA_TEMA_FORJA_MEDIEVAL
+	audio_stream_player.play()
 	pass # Replace with function body.

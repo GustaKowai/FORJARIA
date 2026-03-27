@@ -33,3 +33,5 @@ position = Vector2(0, 1)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource("RectangleShape2D_wq8wa")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]

@@ -1,5 +1,8 @@
 extends Node2D
 
+const PASSO_MADEIRA = preload("res://SFX/Passo madeira.wav")
+const PASSO_PEDRA = preload("res://SFX/Passo pedra.wav")
+
 @export var speed = 0.5
 var jogador:Jogador
 var sprite:Sprite2D
@@ -9,6 +12,8 @@ var position_running = "side"
 var nav_agent:NavigationAgent2D
 var knockback_direction:Vector2 = Vector2(0,0)
 var ponto_final_alcancado:bool = true
+var passos:Resource
+
 
 func _ready():
 	jogador = get_parent()

@@ -6,6 +6,10 @@ var carvao:bool
 @onready var forja_sprite: AnimatedSprite2D = $forja
 @export var variacao_temperatura:float
 @export var velocidade_queima:float
+@onready var seta_soprador: Node2D = $SetaSoprador
+@onready var seta_minerio: Node2D = $SetaMinerio
+@onready var seta_carvao: Node2D = $SetaCarvao
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -20,11 +24,13 @@ func _process(delta: float) -> void:
 #region soprador da forja
 func _on_area_soprador_body_entered(body: Node2D) -> void:
 	if body.is_in_group("jogador"):
+		seta_soprador.visible = true
 		soprador = true
 		print_debug(body)
 
 
 func _on_area_soprador_body_exited(body: Node2D) -> void:
+	seta_soprador.visible = false
 	soprador = false
 
 
@@ -38,11 +44,13 @@ func _on_area_soprador_input_event(viewport: Node, event: InputEvent, shape_idx:
 #region colocar carvao
 func _on_area_carvao_body_entered(body: Node2D) -> void:
 	if body.is_in_group("jogador"):
+		seta_carvao.visible = true
 		carvao = true
 		print_debug(body)
 
 
 func _on_area_carvao_body_exited(body: Node2D) -> void:
+	seta_carvao.visible = false
 	carvao = false
 
 

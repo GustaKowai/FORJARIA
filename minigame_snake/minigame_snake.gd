@@ -6,6 +6,8 @@ extends Node2D
 @onready var score_label: Label = %score_label
 @onready var item_list: ItemList = $ItemList
 @export var cabo:PackedScene
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
+
 var tamanho_cabo:String
 var tamanho_tesoura:int = 70
 var vector_position:Vector2 = Vector2(1,0)
@@ -26,7 +28,7 @@ func _process(delta: float) -> void:
 
 func _on_timer_timeout() -> void:
 	tesoura.position+=vector_position*tamanho_tesoura
-
+	audio_stream_player.play()
 
 func _on_cima_pressed() -> void:
 	if vector_position.y == 0 :

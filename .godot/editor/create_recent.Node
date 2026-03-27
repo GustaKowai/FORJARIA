@@ -1,3 +1,9 @@
+AudioStreamPlayer
+AnimatedSprite2D
+TextureRect
+PanelContainer
+Panel
+Control
 Marker2D
 CollisionShape2D
 Area2D
@@ -5,10 +11,4 @@ TileMapLayer
 AnimationPlayer
 Sprite2D
 WorldEnvironment
-TextureRect
 HBoxContainer
-Control
-SubViewport
-SubViewportContainer
-PanelContainer
-Espada

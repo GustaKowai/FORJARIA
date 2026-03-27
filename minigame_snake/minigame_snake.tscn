@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://cg8s2ahem447w"]
+[gd_scene load_steps=26 format=4 uid="uid://cg8s2ahem447w"]
 
 [ext_resource type="Script" uid="uid://cs1a6v7sxgofr" path="res://minigame_snake/minigame_snake.gd" id="1_ruknq"]
 [ext_resource type="PackedScene" uid="uid://c1y6gcg2vsjcg" path="res://itens/itens processados/cabo.tscn" id="2_wsanh"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://otyi7go1da57" path="res://minigame_snake/bloquinho_de_corte.gd" id="4_gs44j"]
 [ext_resource type="Texture2D" uid="uid://bnaw2q0ycppg5" path="res://itens/tesoura_minigame2sheet.png" id="5_c25d2"]
 [ext_resource type="Texture2D" uid="uid://b1dykupu1qhmu" path="res://minigame_snake/tileset_minigame2.png" id="5_wsanh"]
+[ext_resource type="AudioStream" uid="uid://c4yjve5d5qlrn" path="res://SFX/Tesoura+couro.wav" id="8_b02j3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kvak8"]
 
@@ -273,6 +274,9 @@ item_count = 3
 item_0/text = "pequeno"
 item_1/text = "médio"
 item_2/text = "grande"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_b02j3")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="pressed" from="Control/cima" to="." method="_on_cima_pressed"]

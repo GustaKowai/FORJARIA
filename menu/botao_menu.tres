@@ -1,0 +1,35 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://ct70tqofj7ee1"]
+
+[ext_resource type="Texture2D" uid="uid://cyoy54narfa8i" path="res://menu/barraselecao.png" id="1_ocuub"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ocuub"]
+texture = ExtResource("1_ocuub")
+texture_margin_right = 85.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_gsj2i"]
+texture = ExtResource("1_ocuub")
+texture_margin_right = 85.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qv8ba"]
+texture = ExtResource("1_ocuub")
+texture_margin_right = 85.0
+texture_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c1k7g"]
+texture = ExtResource("1_ocuub")
+texture_margin_right = 85.0
+texture_margin_bottom = 20.0
+
+[resource]
+Button/colors/font_color = Color(0, 0, 0, 1)
+Button/colors/font_focus_color = Color(0.94902, 0, 0, 1)
+Button/colors/font_hover_color = Color(1, 0, 0, 1)
+Button/colors/font_hover_pressed_color = Color(1, 0, 0, 1)
+Button/colors/font_pressed_color = Color(1, 0.529412, 0, 1)
+Button/font_sizes/font_size = 55
+Button/styles/focus = SubResource("StyleBoxTexture_ocuub")
+Button/styles/hover = SubResource("StyleBoxTexture_gsj2i")
+Button/styles/normal = SubResource("StyleBoxTexture_qv8ba")
+Button/styles/pressed = SubResource("StyleBoxTexture_c1k7g")
