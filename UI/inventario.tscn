@@ -106,7 +106,7 @@ stretch = true
 unique_name_in_owner = true
 transparent_bg = true
 handle_input_locally = false
-size = Vector2i(121, 110)
+size = Vector2i(2, 2)
 render_target_update_mode = 4
 
 [node name="slot_mao" type="ColorRect" parent="Control/VBoxContainer"]
@@ -148,7 +148,7 @@ stretch = true
 unique_name_in_owner = true
 transparent_bg = true
 handle_input_locally = false
-size = Vector2i(110, 110)
+size = Vector2i(2, 2)
 render_target_update_mode = 4
 
 [node name="inventory1" type="ColorRect" parent="Control/VBoxContainer"]
@@ -185,7 +185,7 @@ stretch = true
 unique_name_in_owner = true
 transparent_bg = true
 handle_input_locally = false
-size = Vector2i(181, 176)
+size = Vector2i(2, 2)
 render_target_update_mode = 4
 
 [connection signal="pressed" from="Control/VBoxContainer/inventory2/item2" to="." method="_on_item_2_pressed"]

@@ -5,6 +5,7 @@ var bigorna:bool = false
 var montagem:bool = false
 @onready var espada: Espada = $Montagem/Espada
 @onready var inventario: CanvasLayer = $Inventario
+@onready var terreo: TileMapLayer = $terreo
 
 @export var minigame_snake:PackedScene
 @export var minigame_bigorna:PackedScene
@@ -18,6 +19,7 @@ var montagem:bool = false
 func _ready() -> void:
 	corte_de_couro = false
 	GameManager.exit_minigame.connect(close_minigame)
+	terreo.position = Vector2(0,0)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
