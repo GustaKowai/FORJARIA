@@ -46,7 +46,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uo0w2"]
-size = Vector2(135, 113.001)
+size = Vector2(104.298, 92.8098)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_neqgh"]
 size = Vector2(153.5, 113)
@@ -89,13 +89,15 @@ scale = Vector2(69.5675, 57.637)
 skew = -0.113841
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="soprador/area soprador"]
-position = Vector2(93.4998, -118.501)
+position = Vector2(88.3493, -100.865)
+rotation = -0.704928
 shape = SubResource("RectangleShape2D_uo0w2")
 
 [node name="area_carvao" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="area_carvao"]
-position = Vector2(143, 49)
+position = Vector2(130, 37)
+rotation = 0.343012
 shape = SubResource("RectangleShape2D_neqgh")
 
 [node name="Combustivel" type="ProgressBar" parent="."]

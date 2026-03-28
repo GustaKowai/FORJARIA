@@ -1,3 +1,10 @@
+WorldEnvironment
+CollisionShape2D
+Area2D
+CanvasLayer
+MarginContainer
+NinePatchRect
+PanelContainer
 BoxContainer
 Button
 Container
@@ -6,9 +13,3 @@ TextureRect
 Label
 VBoxContainer
 Camera2D
-ProgressBar
-CollisionShape2D
-Area2D
-Marker2D
-AudioStreamPlayer
-AnimatedSprite2D

@@ -1,4 +1,4 @@
-[gd_scene load_steps=49 format=4 uid="uid://81dw4cg2wxdw"]
+[gd_scene load_steps=52 format=4 uid="uid://81dw4cg2wxdw"]
 
 [ext_resource type="Texture2D" uid="uid://2lejbc0srq6o" path="res://forja_interior/grounds.png" id="1_iked2"]
 [ext_resource type="Script" uid="uid://b8ma8a4vfl0sj" path="res://forja_interior/forja.gd" id="1_lld1g"]
@@ -38,6 +38,7 @@
 [ext_resource type="PackedScene" uid="uid://csnc45le7bkut" path="res://Locais_forja/fonte_carvao.tscn" id="36_lvf4l"]
 [ext_resource type="PackedScene" uid="uid://dm1txswhxg4im" path="res://Locais_forja/fonte_minerio.tscn" id="37_cija0"]
 [ext_resource type="PackedScene" uid="uid://cxnem2dmutv01" path="res://itens/mãos/mao_martelo.tscn" id="38_yppbg"]
+[ext_resource type="PackedScene" uid="uid://b8ayde71hj108" path="res://hud/lista_de_pedidos.tscn" id="39_1unkw"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_6p8tj"]
 vertices = PackedVector2Array(5, 5, -5, 5, -5, -5, 5, -5)
@@ -477,6 +478,14 @@ size = Vector2(339.693, 184.225)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iipqu"]
 size = Vector2(79, 174)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1unkw"]
+size = Vector2(286.656, 177.289)
+
+[sub_resource type="Environment" id="Environment_1unkw"]
+background_mode = 3
+background_canvas_max_layer = 4
+glow_enabled = true
+
 [node name="Forja" type="Node2D"]
 script = ExtResource("1_lld1g")
 minigame_snake = ExtResource("8_slqol")
@@ -690,6 +699,21 @@ position = Vector2(4032, 363)
 [node name="mao_martelo" parent="." instance=ExtResource("38_yppbg")]
 position = Vector2(4840, 1195)
 
+[node name="Lista de pedidos" type="CanvasLayer" parent="."]
+
+[node name="Lista de pedidos" parent="Lista de pedidos" instance=ExtResource("39_1unkw")]
+
+[node name="pedidos" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pedidos"]
+position = Vector2(1369.31, 524.929)
+rotation = 1.2976
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_1unkw")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_1unkw")
+
 [connection signal="body_entered" from="snake" to="." method="_on_snake_body_entered"]
 [connection signal="body_exited" from="snake" to="." method="_on_snake_body_exited"]
 [connection signal="input_event" from="snake" to="." method="_on_snake_input_event"]
@@ -701,3 +725,5 @@ position = Vector2(4840, 1195)
 [connection signal="input_event" from="Montagem" to="." method="_on_montagem_input_event"]
 [connection signal="body_entered" from="Escada para baixo" to="." method="_on_escada_para_baixo_body_entered"]
 [connection signal="body_entered" from="Escada para cima" to="." method="_on_escada_para_cima_body_entered"]
+[connection signal="body_entered" from="pedidos" to="." method="_on_pedidos_body_entered"]
+[connection signal="body_exited" from="pedidos" to="." method="_on_pedidos_body_exited"]

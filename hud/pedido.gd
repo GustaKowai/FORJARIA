@@ -1,6 +1,6 @@
-extends BoxContainer
+extends MarginContainer
 
-@onready var texto_do_pedido: Label = $"TextureRect/CenterContainer/Texto do pedido"
+@onready var texto_do_pedido: Label = $"PanelContainer/CenterContainer/Texto do pedido"
 var lamina_tamanho
 var cabo_tamanho
 func _ready() -> void:
@@ -22,3 +22,15 @@ func resultado_sorteio(sorteio):
 			resultado = "grande"
 			
 	return resultado
+
+
+func _on_panel_container_mouse_entered() -> void:
+	modulate = Color(2.0,1.1,1.1)
+
+
+func _on_panel_container_mouse_exited() -> void:
+	modulate = Color(1.0,1.0,1.0)
+
+
+func _on_panel_container_gui_input(event: InputEvent) -> void:
+	pass # Replace with function body.

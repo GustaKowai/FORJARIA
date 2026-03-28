@@ -15,6 +15,8 @@ const MUSICA_TEMA_FORJA_MEDIEVAL = preload("res://SFX/Musica tema forja medieval
 @onready var seta_maquina_montagem: Node2D = $Montagem/Seta_maquina_montagem
 @onready var seta_maquina_snake: Node2D = $snake/Seta_maquina_snake
 @onready var seta_maquina_bigorna: Node2D = $bigorna/Seta_maquina_bigorna
+@onready var lista_de_pedidos: Control = $"Lista de pedidos/Lista de pedidos"
+
 
 
 @onready var saida_escada_para_baixo: Marker2D = $"Escada para baixo/saida escada para baixo"
@@ -101,7 +103,7 @@ func inicia_minigame(minigame):
 	print_debug(minigame_scene.scale.x, minigame_scene.scale.y)
 	
 
-
+#region montagem
 func _on_montagem_body_entered(body: Node2D) -> void:
 	if body.is_in_group("jogador"):
 		seta_maquina_montagem.visible = true
@@ -139,7 +141,9 @@ func checa_material(item_tentando:Item,slot:int):
 	GerenciadorItens.inventario[slot] = null
 	inventario.RemoveItem(slot)
 
+#endregion
 
+#region escadas
 func _on_escada_para_baixo_body_entered(body: Node2D) -> void:
 	body.global_position = saida_escada_para_cima.global_position
 	audio_stream_player.stream = AMBIENCE
@@ -151,3 +155,18 @@ func _on_escada_para_cima_body_entered(body: Node2D) -> void:
 	audio_stream_player.stream = MUSICA_TEMA_FORJA_MEDIEVAL
 	audio_stream_player.play()
 	pass # Replace with function body.
+#endregion
+
+
+#region pedidos
+func _on_pedidos_body_entered(body: Node2D) -> void:
+	#lista_de_pedidos.position.x = 0
+	var tween = create_tween()
+	tween.tween_property(lista_de_pedidos, "position:x", 0, 1.0)
+
+
+func _on_pedidos_body_exited(body: Node2D) -> void:
+	var tween = create_tween()
+	tween.tween_property(lista_de_pedidos, "position:x", -1000, 1.0)
+
+#endregion
