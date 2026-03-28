@@ -1,9 +1,10 @@
-[gd_scene load_steps=52 format=4 uid="uid://81dw4cg2wxdw"]
+[gd_scene load_steps=53 format=4 uid="uid://81dw4cg2wxdw"]
 
 [ext_resource type="Texture2D" uid="uid://2lejbc0srq6o" path="res://forja_interior/grounds.png" id="1_iked2"]
 [ext_resource type="Script" uid="uid://b8ma8a4vfl0sj" path="res://forja_interior/forja.gd" id="1_lld1g"]
 [ext_resource type="PackedScene" uid="uid://dsjubx2st8ga3" path="res://minigame-bigorna/bigorna-minigame.tscn" id="3_6p8tj"]
 [ext_resource type="AudioStream" uid="uid://dgcj57rkjr6p6" path="res://SFX/ambience.wav" id="4_s24td"]
+[ext_resource type="PackedScene" uid="uid://b2nobvox65m55" path="res://UI/pontuação_e_dinheiro.tscn" id="6_2xgge"]
 [ext_resource type="Texture2D" uid="uid://bm6argbd4uuh8" path="res://forja_interior/Térreo_Forja-sprites/Térreo_Forja/Xao_(chão)_expandido_forja.png" id="7_wtqya"]
 [ext_resource type="PackedScene" uid="uid://8lvr8atrhxkk" path="res://jogador/jogador.tscn" id="7_yxeog"]
 [ext_resource type="Texture2D" uid="uid://cq8rw256a4ocp" path="res://forja_interior/Térreo_Forja-sprites/Térreo_Forja/The_Wall_expandido_forja.png" id="8_fhfks"]
@@ -503,6 +504,8 @@ size_flags_horizontal = 0
 size_flags_vertical = 0
 valor_tempo = 0.5
 
+[node name="Pontuação e dinheiro" parent="CanvasLayer" instance=ExtResource("6_2xgge")]
+
 [node name="Inventario" parent="." instance=ExtResource("16_wtqya")]
 
 [node name="terreo" type="TileMapLayer" parent="."]
@@ -708,7 +711,6 @@ position = Vector2(4840, 1195)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="pedidos"]
 position = Vector2(1369.31, 524.929)
 rotation = 1.2976
-scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_1unkw")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]

@@ -9,6 +9,10 @@ var jogador:Jogador
 var multiplicador_de_qualidade:float
 var direcao_tesoura:String #c = cima, b = baixo, e = esquerda, d = direita
 var valor_do_couro:int
+var fama:int = 0
+var ouro:int = 0
+signal muda_ouro
+signal muda_fama
 #var player_position
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
