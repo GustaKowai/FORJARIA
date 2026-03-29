@@ -9,6 +9,8 @@ var paciencia_cliente:float = 5
 var velocidade_paciencia:float = 0.1
 @onready var acerto: AudioStreamPlayer = $Acerto
 @onready var erro: AudioStreamPlayer = $erro
+@onready var paciencia_barra: ProgressBar = %paciencia_barra
+
 
 func _ready() -> void:
 	GameManager.fim_do_dia.connect(fim_do_dia)
@@ -23,6 +25,19 @@ func _process(delta: float) -> void:
 	if paciencia_cliente >= 1.1:
 		paciencia_cliente -=delta*velocidade_paciencia
 		paciencia.text = str(ceil(paciencia_cliente))
+		paciencia_barra.value = ceil(paciencia_cliente)
+		var fill = paciencia_barra.get_theme_stylebox("fill")
+		match paciencia_barra.value:
+			5.0:
+				fill.bg_color = Color.BLUE
+			4.0:
+				fill.bg_color = Color.GREEN
+			3.0:
+				fill.bg_color = Color.YELLOW
+			2.0:
+				fill.bg_color = Color.ORANGE
+			_:
+				fill.bg_color = Color.RED
 	else:
 		paciencia_cliente = 1
 		paciencia.text = "1"

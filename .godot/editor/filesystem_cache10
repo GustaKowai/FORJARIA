@@ -179,7 +179,7 @@ minigame_snake.gd::GDScript::6089970887360310867::1774805375::0::1::::<>Node2D<>
 minigame_snake.tscn::PackedScene::5263240028416180658::1774818551::0::1::::<><><>0<>0<><>::uid://cs1a6v7sxgofr::::res://minigame_snake/minigame_snake.gd<>uid://c1y6gcg2vsjcg::::res://itens/itens processados/cabo.tscn<>uid://csyhdft1atli4::::res://minigame_snake/bloquinho_de_teste.tscn<>uid://dx6o4at8dxu4k::::res://minigame_snake/bloquinho_de_borda.tscn<>uid://otyi7go1da57::::res://minigame_snake/bloquinho_de_corte.gd<>uid://bnaw2q0ycppg5::::res://itens/tesoura_minigame2sheet.png<>uid://b1dykupu1qhmu::::res://minigame_snake/tileset_minigame2.png<>uid://c4yjve5d5qlrn::::res://SFX/Tesoura+couro.wav
 tesoura_minigame2sheet.png::CompressedTexture2D/CompressedTexture2D::7621677284956566103::1774805375::1774805447::1::::<><><>0<>0<>55b3b036de1dbcea72753fc94dbd77e9<>res://.godot/imported/tesoura_minigame2sheet.png-5e161fb93ef91cb4678f2c12a6983e6a.ctex::
 tileset_minigame2.png::CompressedTexture2D/CompressedTexture2D::4218999891892726184::1774805375::1774805447::1::::<><><>0<>0<>1da90e9b1646d43cc5f387dd25766315<>res://.godot/imported/tileset_minigame2.png-78363aeb1de9be5f9536a4401c96dd94.ctex::
-::res://SFX/::1774818991
+::res://SFX/::1774818997
 Acertei o pedido.wav::AudioStreamWAV::3404978503797848866::1774740364::1774818997::1::::<><><>0<>0<>f13a0d7fdcb7d0a48c7f205019862e13<>res://.godot/imported/Acertei o pedido.wav-67e3d7bc3fa70cd9294accf800d59dd4.sample::
 ambience.mp3::AudioStreamMP3/AudioStreamMP3::5876439356381280597::1774805349::1774805446::1::::<><><>0<>0<>acdd9614dcf7fccec114c72d94259aa3<>res://.godot/imported/ambience.mp3-acbbc5da9ccd62f6f390320e053bc594.mp3str::
 ambience.wav::AudioStreamWAV/AudioStreamWAV::7585125602643627569::1774805357::1774805454::1::::<><><>0<>0<>834cf9fc53bdebb8d21a30eda58c21e4<>res://.godot/imported/ambience.wav-030c4ae9b256bdfe5f2f6b78cca73e41.sample::
@@ -217,11 +217,11 @@ pontuação_e_dinheiro.tscn::PackedScene::4309209322120637962::1774818532::0::1:
 seta_item.tscn::PackedScene::6905565794713634915::1774805358::0::1::::<><><>0<>0<><>::uid://c2w5s6nccnto6::::res://UI/UI sprites/UI/seta itens.png
 seta_maquina.tscn::PackedScene::5870937681358491921::1774805358::0::1::::<><><>0<>0<><>::uid://bsd58qtvo5qko::::res://UI/UI sprites/UI/seta maquinas.png
 ::res://UI/UI sprites/::1774805357
-::res://UI/UI sprites/UI/::1774805447
+::res://UI/UI sprites/UI/::1774820205
 gold.png::CompressedTexture2D/CompressedTexture2D::4300015354401348838::1774805357::1774805447::1::::<><><>0<>0<>b0af6d0de5688f6d45f7b530a397f886<>res://.godot/imported/gold.png-18f16ad6b43f0fde36d2e6bb9a29f0fc.ctex::
 maos.png::CompressedTexture2D/CompressedTexture2D::3075828431505331430::1774805357::1774805447::1::::<><><>0<>0<>0855ae64ce6d2f53f1e509f2440faac1<>res://.godot/imported/maos.png-5b7f64649703c044eddea23aea8fbc24.ctex::
 NEXT.png::CompressedTexture2D/CompressedTexture2D::1570794353407176304::1774805357::1774805447::1::::<><><>0<>0<>9b8777821109582eb3e638ed31a16216<>res://.godot/imported/NEXT.png-abc5a2898cf203f89e1e4a2cefde45f8.ctex::
-papelpedido.png::CompressedTexture2D/CompressedTexture2D::3908261203951303567::1774805357::1774805447::1::::<><><>0<>0<>4925d33cdfa8411905fa28b3f10ecb8a<>res://.godot/imported/papelpedido.png-6b7f401de3742004a0d54c35fa33e79f.ctex::
+papelpedido.png::CompressedTexture2D/CompressedTexture2D::3908261203951303567::1774820187::1774820209::1::::<><><>0<>0<>4925d33cdfa8411905fa28b3f10ecb8a<>res://.godot/imported/papelpedido.png-6b7f401de3742004a0d54c35fa33e79f.ctex::
 seta itens.png::CompressedTexture2D/CompressedTexture2D::6715211758676062415::1774805357::1774805447::1::::<><><>0<>0<>b63beec8eb630daba07c967c4ad59ccd<>res://.godot/imported/seta itens.png-133aa2305dbdba36ff0c7c73c8d4e217.ctex::
 seta maquinas.png::CompressedTexture2D/CompressedTexture2D::3657894314120655570::1774805357::1774805447::1::::<><><>0<>0<>1dbe592994935de2a892c2379088dda1<>res://.godot/imported/seta maquinas.png-1cae379fc5047af892af5d118065a943.ctex::
 slotmaodemao.png::CompressedTexture2D/CompressedTexture2D::2029721361747322733::1774805357::1774805447::1::::<><><>0<>0<>18586f81bb658381e0fbc52af661bbe6<>res://.godot/imported/slotmaodemao.png-707147be2b822c314d79649b15399fc0.ctex::
