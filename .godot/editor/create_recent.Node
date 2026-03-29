@@ -1,8 +1,10 @@
+TextureRect
+Panel
+ColorRect
 Label
 AnimatedSprite2D
 AudioStreamPlayer
 HBoxContainer
-TextureRect
 VBoxContainer
 Control
 WorldEnvironment
@@ -10,5 +12,3 @@ CollisionShape2D
 Area2D
 CanvasLayer
 MarginContainer
-NinePatchRect
-PanelContainer

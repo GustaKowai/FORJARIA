@@ -1,10 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://dsjubx2st8ga3"]
+[gd_scene load_steps=8 format=3 uid="uid://dsjubx2st8ga3"]
 
 [ext_resource type="PackedScene" uid="uid://mm81pqa6hoe1" path="res://itens/itens processados/lamina.tscn" id="2_tfcti"]
 [ext_resource type="Texture2D" uid="uid://pt3c71cqtq56" path="res://minigame-bigorna/acertobigornabrancco.png" id="4_tfcti"]
 [ext_resource type="Texture2D" uid="uid://bxbws0p678h0d" path="res://minigame-bigorna/bigorna.png" id="5_5ck6h"]
 [ext_resource type="Script" uid="uid://sr4do0lolpmp" path="res://minigame-bigorna/minigameforja.gd" id="5_uaajk"]
 [ext_resource type="Texture2D" uid="uid://bd3kr415as4p" path="res://minigame-bigorna/acertobigorna.png" id="6_uaajk"]
+
+[sub_resource type="Gradient" id="Gradient_tfcti"]
+offsets = PackedFloat32Array(0, 0.25, 0.4, 0.5, 0.6, 0.75, 1)
+colors = PackedColorArray(1, 0, 0, 1, 1, 0.564706, 0, 1, 1, 1, 0, 1, 0, 1, 0.309804, 1, 1, 1, 0.00784314, 1, 1, 0.564706, 0, 1, 1, 0, 0, 1)
+metadata/_snap_enabled = true
+metadata/_snap_count = 20
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5ck6h"]
+gradient = SubResource("Gradient_tfcti")
+fill_from = Vector2(0.518519, 1)
+fill_to = Vector2(0.509259, 0.0231481)
+metadata/_snap_enabled = true
 
 [node name="Node2D" type="Node2D"]
 
@@ -20,8 +32,26 @@ size_flags_vertical = 3
 script = ExtResource("5_uaajk")
 lamina = ExtResource("2_tfcti")
 
+[node name="Feedback" type="Label" parent="minigameforja"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -97.0
+offset_top = -12.0
+offset_right = -7.0
+offset_bottom = 11.0
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset = Vector2(90, 12.5)
+text = "Muito bom!"
+horizontal_alignment = 2
+
 [node name="barraalvo" type="TextureRect" parent="minigameforja"]
 unique_name_in_owner = true
+clip_children = 2
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 142.857
@@ -31,14 +61,33 @@ expand_mode = 3
 
 [node name="indicadormartelo" type="TextureRect" parent="minigameforja/barraalvo"]
 unique_name_in_owner = true
-layout_mode = 0
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_top = -71.4285
 offset_right = 40.0
-offset_bottom = 40.0
+offset_bottom = -31.4285
+grow_vertical = 2
 scale = Vector2(1, 0.2)
+pivot_offset = Vector2(0, 20.8043)
 texture = ExtResource("4_tfcti")
 expand_mode = 1
 
+[node name="ColorRect" type="TextureRect" parent="minigameforja/barraalvo"]
+modulate = Color(1, 1, 1, 0.360784)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(128, 68.5)
+texture = SubResource("GradientTexture2D_5ck6h")
+expand_mode = 5
+
 [node name="medidorbigorna" type="TextureRect" parent="minigameforja"]
+visible = false
 layout_mode = 0
 offset_top = 17.0
 offset_right = 340.0

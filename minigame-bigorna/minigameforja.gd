@@ -6,6 +6,7 @@ signal minigame_finalizado(qualidade_minigame_bonus: float)
 @onready var indicador_martelo: TextureRect = %indicadormartelo
 @onready var item_list: ItemList = $"../ItemList"
 @onready var restantes: Label = $"../restantes"
+@onready var feedback: Label = $Feedback
 
 @export var lamina:PackedScene
 # Configurações do minigame
@@ -29,6 +30,16 @@ var zona_vermelha_y_max: float = 340 # O resto da barra (ou o total)
 func _ready():
 	indicador_martelo.position.y = barra_alvo.size.y
 	visible = false
+	var meio_barra = (barra_alvo.size.y)/2
+	feedback.position.y = meio_barra
+	zona_verde_y_min = meio_barra-meio_barra/10
+	zona_verde_y_max = meio_barra+meio_barra/10
+	zona_amarela_y_min = meio_barra-3*meio_barra/10
+	zona_amarela_y_max = meio_barra+3*meio_barra/10
+	zona_laranja_y_min = meio_barra-6*meio_barra/10
+	zona_laranja_y_max = meio_barra+6*meio_barra/10
+	zona_vermelha_y_min = 0
+	zona_vermelha_y_max = meio_barra+meio_barra
 	#iniciar("seila")
 func iniciar():
 	visible = true
@@ -41,8 +52,8 @@ func iniciar():
 func _process(delta):
 	if marteladas_restantes > 0 and visible:
 		indicador_martelo.position.y += velocidade_indicador * direcao_indicador * delta
-		var topo_barra = 0
-		var base_barra = barra_alvo.size.y #- indicador_martelo.size.y
+		var topo_barra = 0-indicador_martelo.size.y/2
+		var base_barra = barra_alvo.size.y - indicador_martelo.size.y/2
 
 		if indicador_martelo.position.y <= topo_barra:
 			#print_debug("topo = ",indicador_martelo.position.y)
@@ -52,6 +63,16 @@ func _process(delta):
 			#print_debug("base = ",indicador_martelo.position.y)
 			indicador_martelo.position.y = base_barra
 			direcao_indicador = -1
+			
+		var pos_y_indicador = indicador_martelo.position.y + (indicador_martelo.size.y / 2)
+		if pos_y_indicador >= zona_verde_y_min and pos_y_indicador <= zona_verde_y_max:
+			indicador_martelo.modulate = Color.GREEN
+		elif pos_y_indicador >= zona_amarela_y_min and pos_y_indicador <= zona_amarela_y_max:
+			indicador_martelo.modulate = Color.YELLOW
+		elif pos_y_indicador >= zona_laranja_y_min and pos_y_indicador <= zona_laranja_y_max:
+			indicador_martelo.modulate = Color.ORANGE
+		else:
+			indicador_martelo.modulate = Color.RED
 
 
 		if Input.is_action_just_pressed("interagir"): 
@@ -70,12 +91,21 @@ func calcular_pontuacao_martelada():
 	var pontuacao_dessa_martelada: float = 0.0
 	if pos_y_indicador >= zona_verde_y_min and pos_y_indicador <= zona_verde_y_max:
 		pontuacao_dessa_martelada = 100.0 # Perfeito!
+		feedback.text = "PERFEITO"
+		feedback.global_position.y = indicador_martelo.global_position.y
 	elif pos_y_indicador >= zona_amarela_y_min and pos_y_indicador <= zona_amarela_y_max:
 		pontuacao_dessa_martelada = 75.0 # Muito bom
+		feedback.text = "Muito bom."
+		feedback.global_position.y = indicador_martelo.global_position.y
+		
 	elif pos_y_indicador >= zona_laranja_y_min and pos_y_indicador <= zona_laranja_y_max:
 		pontuacao_dessa_martelada = 50.0 # Bom
+		feedback.text = "Bom"
+		feedback.global_position.y = indicador_martelo.global_position.y
 	else:
 		pontuacao_dessa_martelada = 25.0 # OK
+		feedback.text = "Ok..."
+		feedback.global_position.y = indicador_martelo.global_position.y
 	pontuacao_total_minigame += pontuacao_dessa_martelada
 	print_debug(pontuacao_dessa_martelada)
 	print_debug(pontuacao_total_minigame)
