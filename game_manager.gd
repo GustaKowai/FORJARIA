@@ -6,6 +6,8 @@ signal mini_game_start()
 signal exit_minigame()
 signal chama_cliente()
 signal pedido_entrou_saiu(int)
+signal mao_animacao(String)
+var mao_em_uso:String
 var is_game_over:bool = false
 var jogador:Jogador
 var multiplicador_de_qualidade:float

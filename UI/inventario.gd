@@ -81,6 +81,8 @@ func _on_mao_pressed() -> void:
 func click_inventory(slot:int):
 	if GerenciadorItens.active_slot == slot and GerenciadorItens.inventario[slot] != null:
 		drop_item(slot)
+		if slot == 2:
+			GameManager.mao_animacao.emit("nada")
 	else:
 		GerenciadorItens.active_slot = slot
 		match slot:

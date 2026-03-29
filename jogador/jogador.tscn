@@ -1,8 +1,66 @@
-[gd_scene load_steps=6 format=3 uid="uid://8lvr8atrhxkk"]
+[gd_scene load_steps=11 format=3 uid="uid://8lvr8atrhxkk"]
 
 [ext_resource type="Script" uid="uid://djburygob550n" path="res://jogador/jogador.gd" id="1_gw4iw"]
-[ext_resource type="Texture2D" uid="uid://bnepxan1ort1d" path="res://jogador/personagem.png" id="2_5aga6"]
+[ext_resource type="Texture2D" uid="uid://whiglb1btihn" path="res://jogador/animacoesplayer/walk.png" id="2_wq8wa"]
+[ext_resource type="Texture2D" uid="uid://d56vap8aii3n" path="res://jogador/animacoesplayer/maodemao.png" id="2_y4kwd"]
 [ext_resource type="PackedScene" uid="uid://bc4bylx0blnya" path="res://jogador/follow_player.tscn" id="3_wq8wa"]
+
+[sub_resource type="Animation" id="Animation_wq8wa"]
+resource_name = "Move"
+length = 0.8
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_y4kwd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_p68hw"]
+resource_name = "Idle"
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lhpuy"]
+_data = {
+&"Idle": SubResource("Animation_p68hw"),
+&"Move": SubResource("Animation_wq8wa"),
+&"RESET": SubResource("Animation_y4kwd")
+}
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wq8wa"]
 radius = 60.0333
@@ -16,9 +74,19 @@ script = ExtResource("1_gw4iw")
 [node name="Timer" type="Timer" parent="."]
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_lhpuy")
+}
+autoplay = "Idle"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-texture = ExtResource("2_5aga6")
+texture = ExtResource("2_wq8wa")
+vframes = 4
+
+[node name="Maos" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(20, 0)
+texture = ExtResource("2_y4kwd")
+vframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2.38419e-07, 4)

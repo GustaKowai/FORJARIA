@@ -4,6 +4,11 @@ extends CharacterBody2D
 @onready var animation_player: AnimationPlayer = $AnimationPlayer
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var dash_timer: Timer = $Timer
+@onready var maos: Sprite2D = $Sprite2D/Maos
+const MAODEMAO = preload("res://jogador/animacoesplayer/maodemao.png")
+const MARTELO = preload("res://jogador/animacoesplayer/martelo.png")
+const TESOURA = preload("res://jogador/animacoesplayer/tesoura.png")
+
 @export_category("Movement")
 @export var speed:float = 3.0
 @export_range(0,1) var lerp_smoothness:float = 0.5
@@ -23,12 +28,13 @@ func _ready():
 	GameManager.mini_game_start.connect(jogando)
 	GameManager.exit_minigame.connect(nao_jogando)
 	GerenciadorItens.drop_item.connect(drop_item)
+	GameManager.mao_animacao.connect(muda_mao)
 	
 func _process(delta):
 	#GameManager.player_position = global_position
 	#Obtem o vetor de input:
 	input_vector = Input.get_vector("ui_left","ui_right","ui_up","ui_down")
-	#play_run_iddle()
+	play_run_iddle()
 	#if not is_playing:
 		#rotate_sprite()
 	
@@ -83,23 +89,10 @@ func recharg_stamina(delta):
 #Funções de movimento:	
 func play_run_iddle():
 #Checa se o personagem está correndo
-	if input_vector.is_zero_approx():
-		if position_running == "down":
-			animation_player.play("Idle Down")
-		elif position_running == "up":
-			animation_player.play("Idle Up")
-		elif position_running == "side":
-			animation_player.play("Idle Side") 	
+	if velocity.is_zero_approx():
+		animation_player.play("Idle") 	
 	else:
-		if abs(input_vector.x) >= abs(input_vector.y):
-			position_running = "side"
-			animation_player.play("Move Side")
-		elif input_vector.y > 0:
-			position_running = "down"
-			animation_player.play("Move Down")
-		else:
-			position_running = "up"
-			animation_player.play("Move Up")
+		animation_player.play("Move")
 
 #func rotate_sprite():
 	##girar sprite:
@@ -122,3 +115,14 @@ func drop_item(slot):
 	get_parent().add_child(objeto)
 	GerenciadorItens.inventario[slot] = null
 	GerenciadorItens.item_dropado.emit(slot)
+
+func muda_mao(mao):
+	match mao:
+		"mao tesoura":
+			maos.texture = TESOURA
+		"mao martelo":
+			maos.texture = MARTELO
+		"mao de mao":
+			maos.texture = MAODEMAO
+		_:
+			maos.texture = null 

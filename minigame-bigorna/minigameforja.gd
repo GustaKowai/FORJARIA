@@ -32,6 +32,7 @@ func _ready():
 	visible = false
 	var meio_barra = (barra_alvo.size.y)/2
 	feedback.position.y = meio_barra
+	feedback.visible = false
 	zona_verde_y_min = meio_barra-meio_barra/10
 	zona_verde_y_max = meio_barra+meio_barra/10
 	zona_amarela_y_min = meio_barra-3*meio_barra/10
@@ -77,6 +78,7 @@ func _process(delta):
 
 		if Input.is_action_just_pressed("interagir"): 
 			marteladas_restantes -= 1
+			feedback.visible = true
 			restantes.text = str(marteladas_restantes)
 			#print_debug("martelado",marteladas_restantes)
 			calcular_pontuacao_martelada()

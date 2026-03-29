@@ -6,6 +6,7 @@ func _collect():
 		GerenciadorItens.Item_coletado.emit(2,self.duplicate())
 		print_debug(item_name+" coletado")
 		print_debug(GerenciadorItens.inventario)
+		GameManager.mao_animacao.emit(item_name)
 		queue_free()
 	else:
 		print_debug("mao ocupada")

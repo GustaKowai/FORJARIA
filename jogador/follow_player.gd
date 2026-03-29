@@ -34,22 +34,22 @@ func move():
 	var input_vector = normalize_diffe 
 	jogador.velocity = input_vector * speed * 100.0
 	#Determinar qual animação será usada:
-	if abs(var_diff.x) >= abs(var_diff.y):
-		position_running = "side"
-		#animation_player.play("Walk Side")
-		#girar sprite:
-		if input_vector.x > 0:
-			sprite.flip_h = false
-		elif input_vector.x <0:
-			sprite.flip_h = false
-	elif var_diff.y < 0:
-		position_running = "up"
-		#animation_player.play("Walk Up")
-	else:
-		position_running = "down"
+	#if abs(var_diff.x) >= abs(var_diff.y):
+		#position_running = "side"
+		##animation_player.play("Walk Side")
+		##girar sprite:
+		#if input_vector.x > 0:
+			#sprite.flip_h = false
+		#elif input_vector.x <0:
+			#sprite.flip_h = false
+	#elif var_diff.y < 0:
+		#position_running = "up"
+		##animation_player.play("Walk Up")
+	#else:
+		#position_running = "down"
 		#animation_player.play("Walk Down")
 		
-	jogador.position_running = position_running
+	#jogador.position_running = position_running
 	jogador.move_and_slide()
 	
 func make_path(): #Calcula e cria o melhor caminho até o jogador, desviando de obstáculos
