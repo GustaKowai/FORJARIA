@@ -1,8 +1,7 @@
-[gd_scene load_steps=11 format=3 uid="uid://8lvr8atrhxkk"]
+[gd_scene load_steps=10 format=3 uid="uid://8lvr8atrhxkk"]
 
 [ext_resource type="Script" uid="uid://djburygob550n" path="res://jogador/jogador.gd" id="1_gw4iw"]
 [ext_resource type="Texture2D" uid="uid://whiglb1btihn" path="res://jogador/animacoesplayer/walk.png" id="2_wq8wa"]
-[ext_resource type="Texture2D" uid="uid://d56vap8aii3n" path="res://jogador/animacoesplayer/maodemao.png" id="2_y4kwd"]
 [ext_resource type="PackedScene" uid="uid://bc4bylx0blnya" path="res://jogador/follow_player.tscn" id="3_wq8wa"]
 
 [sub_resource type="Animation" id="Animation_wq8wa"]
@@ -85,7 +84,6 @@ vframes = 4
 
 [node name="Maos" type="Sprite2D" parent="Sprite2D"]
 position = Vector2(20, 0)
-texture = ExtResource("2_y4kwd")
 vframes = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
