@@ -494,7 +494,7 @@ minigame_bigorna = ExtResource("3_6p8tj")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_s24td")
-volume_db = -31.2
+volume_db = 0.5
 autoplay = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

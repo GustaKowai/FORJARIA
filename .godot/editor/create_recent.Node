@@ -1,5 +1,6 @@
-HBoxContainer
 Label
+AudioStreamPlayer
+HBoxContainer
 TextureRect
 VBoxContainer
 Control
@@ -11,4 +12,3 @@ MarginContainer
 NinePatchRect
 PanelContainer
 BoxContainer
-Button

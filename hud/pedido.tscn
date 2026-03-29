@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://d2qjrgqjbgw8m"]
+[gd_scene load_steps=6 format=3 uid="uid://d2qjrgqjbgw8m"]
 
 [ext_resource type="Texture2D" uid="uid://bvxgqxvilx7kt" path="res://UI/UI sprites/UI/papelpedido.png" id="1_6j5q0"]
 [ext_resource type="Script" uid="uid://d3p6f8kr6shvr" path="res://hud/pedido.gd" id="1_nppye"]
+[ext_resource type="AudioStream" uid="uid://kg68egb0imkb" path="res://SFX/Entregar pedido.wav" id="3_lfca5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6j5q0"]
 font_size = 46
@@ -50,6 +51,11 @@ layout_mode = 2
 size_flags_horizontal = 8
 text = "0"
 label_settings = SubResource("LabelSettings_nppye")
+
+[node name="Acerto" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_lfca5")
+
+[node name="erro" type="AudioStreamPlayer" parent="."]
 
 [connection signal="gui_input" from="PanelContainer" to="." method="_on_panel_container_gui_input"]
 [connection signal="mouse_entered" from="PanelContainer" to="." method="_on_panel_container_mouse_entered"]

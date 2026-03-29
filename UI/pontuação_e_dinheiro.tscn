@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://b2nobvox65m55"]
+[gd_scene load_steps=7 format=3 uid="uid://b2nobvox65m55"]
 
 [ext_resource type="Texture2D" uid="uid://b2i7videebvpm" path="res://UI/UI sprites/UI/gold.png" id="1_v5lgi"]
 [ext_resource type="Script" uid="uid://ywvppiu3jimg" path="res://UI/pontuação_e_dinheiro.gd" id="1_vuiec"]
@@ -8,6 +8,9 @@
 font_size = 32
 
 [sub_resource type="LabelSettings" id="LabelSettings_j2ce0"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_vuiec"]
 font_size = 32
 
 [node name="Pontuação e dinheiro" type="Control"]
@@ -45,3 +48,7 @@ texture = ExtResource("2_vuiec")
 layout_mode = 2
 text = "0"
 label_settings = SubResource("LabelSettings_j2ce0")
+
+[node name="fama_ganha" type="Label" parent="VBoxContainer/fama"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_vuiec")

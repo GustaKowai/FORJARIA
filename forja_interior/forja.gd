@@ -29,6 +29,7 @@ func _ready() -> void:
 	terreo.position = Vector2(0,0)
 	audio_stream_player.stream = MUSICA_TEMA_FORJA_MEDIEVAL
 	audio_stream_player.play()
+	lista_de_pedidos.position.x = -1000
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -148,25 +149,28 @@ func _on_escada_para_baixo_body_entered(body: Node2D) -> void:
 	body.global_position = saida_escada_para_cima.global_position
 	audio_stream_player.stream = AMBIENCE
 	audio_stream_player.play()
+	audio_stream_player.volume_db = 1
 
 
 func _on_escada_para_cima_body_entered(body: Node2D) -> void:
 	body.global_position = saida_escada_para_baixo.global_position
 	audio_stream_player.stream = MUSICA_TEMA_FORJA_MEDIEVAL
 	audio_stream_player.play()
+	audio_stream_player.volume_db = 0.2
 	pass # Replace with function body.
 #endregion
 
 
 #region pedidos
 func _on_pedidos_body_entered(body: Node2D) -> void:
-	#lista_de_pedidos.position.x = 0
-	var tween = create_tween()
-	tween.tween_property(lista_de_pedidos, "position:x", 0, 1.0)
+	if body.is_in_group("jogador"):
+		var tween = create_tween()
+		tween.tween_property(lista_de_pedidos, "position:x", 0, 1.0)
 
 
 func _on_pedidos_body_exited(body: Node2D) -> void:
-	var tween = create_tween()
-	tween.tween_property(lista_de_pedidos, "position:x", -1000, 1.0)
+	if body.is_in_group("jogador"):
+		var tween = create_tween()
+		tween.tween_property(lista_de_pedidos, "position:x", -1000, 1.0)
 
 #endregion
