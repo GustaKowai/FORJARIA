@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://b8ayde71hj108"]
+[gd_scene load_steps=3 format=3 uid="uid://b8ayde71hj108"]
 
 [ext_resource type="PackedScene" uid="uid://d2qjrgqjbgw8m" path="res://hud/pedido.tscn" id="1_d6w4p"]
+[ext_resource type="Script" uid="uid://cinbyxu38lpgy" path="res://hud/lista_de_pedidos.gd" id="1_llbs4"]
 
 [node name="Lista de pedidos" type="Control"]
 layout_mode = 3
@@ -8,6 +9,8 @@ anchors_preset = 4
 anchor_top = 0.5
 anchor_bottom = 0.5
 grow_vertical = 2
+script = ExtResource("1_llbs4")
+pedido = ExtResource("1_d6w4p")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1

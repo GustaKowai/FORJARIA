@@ -31,7 +31,7 @@ layout_mode = 2
 [node name="Texto do pedido" type="Label" parent="PanelContainer/CenterContainer"]
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
-text = "aaaaaaa aaaa aaaaaaaaaaa aaaaaaaaaaa aaaaaaaaaa aaaaaaaaaaa aaaaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaaaaaaaaa aaa"
+text = "aaaaaaa aaaa aaaaaaaaaaa aaaaaaaaaaa aaaaaaaaaa "
 label_settings = SubResource("LabelSettings_6j5q0")
 autowrap_mode = 2
 

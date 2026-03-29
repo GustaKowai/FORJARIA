@@ -4,7 +4,6 @@ extends MarginContainer
 var lamina_tamanho:String
 var cabo_tamanho:String
 
-
 func _ready() -> void:
 	var lamina = randi_range(1,3)
 	var cabo = randi_range(1,3)
@@ -37,10 +36,18 @@ func _on_panel_container_gui_input(event: InputEvent) -> void:
 		if GerenciadorItens.inventario[0] != null:
 			if GerenciadorItens.inventario[0].item_name == "espada":
 				var espada:Espada = GerenciadorItens.inventario[0]
+				GerenciadorItens.inventario[0] = null
+				GerenciadorItens.item_dropado.emit(0)
 				if espada.tamanho_cabo == cabo_tamanho and espada.tamanho_lamina == lamina_tamanho:
 					print_debug("Está correto")
 					print_debug(espada.qualidade)
 					GameManager.fama += espada.qualidade
 					GameManager.muda_fama.emit()
+					GameManager.pedido_entrou_saiu.emit(-1)
+					queue_free()
 				else:
 					print_debug("Está errado")
+					GameManager.fama -= 100
+					GameManager.muda_fama.emit()
+					GameManager.pedido_entrou_saiu.emit(-1)
+					queue_free()
