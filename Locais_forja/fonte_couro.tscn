@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dioae4c61x763"]
+
+[ext_resource type="Script" uid="uid://dl3sscol8gtn8" path="res://fonte_carvao.gd" id="1_avyni"]
+[ext_resource type="PackedScene" uid="uid://cbdecjq0wbcdx" path="res://itens/materia prima/couro.tscn" id="2_avyni"]
+[ext_resource type="PackedScene" uid="uid://cpv6qrwer5s7j" path="res://UI/seta_maquina.tscn" id="3_lh7bf"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_asmhk"]
+radius = 84.0
+
+[node name="fonte_minerio" type="Area2D"]
+script = ExtResource("1_avyni")
+carvao = ExtResource("2_avyni")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_asmhk")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(102, 49)
+
+[node name="Seta_maquina" parent="." instance=ExtResource("3_lh7bf")]
+position = Vector2(-2, -7)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="input_event" from="." to="." method="_on_input_event"]

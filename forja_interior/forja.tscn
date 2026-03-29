@@ -1,4 +1,4 @@
-[gd_scene load_steps=65 format=4 uid="uid://81dw4cg2wxdw"]
+[gd_scene load_steps=66 format=4 uid="uid://81dw4cg2wxdw"]
 
 [ext_resource type="Texture2D" uid="uid://2lejbc0srq6o" path="res://forja_interior/grounds.png" id="1_iked2"]
 [ext_resource type="Script" uid="uid://b8ma8a4vfl0sj" path="res://forja_interior/forja.gd" id="1_lld1g"]
@@ -44,6 +44,7 @@
 [ext_resource type="PackedScene" uid="uid://dm1txswhxg4im" path="res://Locais_forja/fonte_minerio.tscn" id="37_cija0"]
 [ext_resource type="PackedScene" uid="uid://cxnem2dmutv01" path="res://itens/mãos/mao_martelo.tscn" id="38_yppbg"]
 [ext_resource type="PackedScene" uid="uid://b8ayde71hj108" path="res://hud/lista_de_pedidos.tscn" id="39_1unkw"]
+[ext_resource type="PackedScene" uid="uid://dioae4c61x763" path="res://Locais_forja/fonte_couro.tscn" id="45_brwrp"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_6p8tj"]
 vertices = PackedVector2Array(5, 5, -5, 5, -5, -5, 5, -5)
@@ -561,11 +562,11 @@ autoplay = true
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Tela fim dia" parent="CanvasLayer" instance=ExtResource("5_btcsk")]
+visible = false
 
 [node name="Tempo do dia" parent="CanvasLayer" instance=ExtResource("15_6p8tj")]
 size_flags_horizontal = 0
 size_flags_vertical = 0
-valor_tempo = 0.1
 
 [node name="Pontuação e dinheiro" parent="CanvasLayer" instance=ExtResource("6_2xgge")]
 
@@ -794,6 +795,9 @@ environment = SubResource("Environment_1unkw")
 
 [node name="Entrada inicio do dia" type="Marker2D" parent="."]
 position = Vector2(1247, 1327)
+
+[node name="fonte_minerio2" parent="." instance=ExtResource("45_brwrp")]
+position = Vector2(-67, 244)
 
 [connection signal="body_entered" from="snake" to="." method="_on_snake_body_entered"]
 [connection signal="body_exited" from="snake" to="." method="_on_snake_body_exited"]
