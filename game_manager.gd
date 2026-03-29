@@ -7,6 +7,8 @@ signal exit_minigame()
 signal chama_cliente()
 signal pedido_entrou_saiu(int)
 signal mao_animacao(String)
+signal fim_do_dia()
+signal comeco_do_dia()
 var mao_em_uso:String
 var is_game_over:bool = false
 var jogador:Jogador
@@ -15,6 +17,7 @@ var direcao_tesoura:String #c = cima, b = baixo, e = esquerda, d = direita
 var valor_do_couro:int
 var fama:int = 0
 var ouro:int = 0
+var posicao_comeco_dia:Vector2
 signal muda_ouro(int)
 signal muda_fama(int)
 #var player_position

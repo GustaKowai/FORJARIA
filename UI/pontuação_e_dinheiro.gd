@@ -12,8 +12,6 @@ func muda_ouro(mudanca):
 
 func muda_fama(mudanca):
 	fama_label.text = str(GameManager.fama)
-	var tween = create_tween()
-	tween.tween_property(fama_ganha,"modulate:a",1,1)
 	if mudanca > 0:
 		fama_ganha.text = "+" + str(mudanca)
 		fama_ganha.label_settings.font_color = Color(0, 1, 0)
@@ -22,4 +20,5 @@ func muda_fama(mudanca):
 		fama_ganha.text = str(mudanca)
 		fama_ganha.label_settings.font_color = Color(1,0,0)
 	var tween2 = create_tween()
+	tween2.tween_property(fama_ganha,"modulate:a",1,1)
 	tween2.tween_property(fama_ganha,"modulate:a",0,5)

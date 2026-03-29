@@ -15,6 +15,7 @@ extends CanvasLayer
 func _ready() -> void:
 	GerenciadorItens.Item_coletado.connect(AdicionaItem)
 	GerenciadorItens.item_dropado.connect(RemoveItem)
+	GameManager.fim_do_dia.connect(fim_dia)
 	inventory_2.hide()
 	inventorio_expandido.hide()
 	GerenciadorItens.active_slot = 2
@@ -116,3 +117,8 @@ func drop_item(slot):
 			2:
 				slot_mao.modulate = Color.WHITE
 	
+func fim_dia():
+	click_inventory(0)
+	click_inventory(0)
+	click_inventory(2)
+	click_inventory(2)

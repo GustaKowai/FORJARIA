@@ -10,3 +10,6 @@ func _collect():
 		queue_free()
 	else:
 		print_debug("mao ocupada")
+
+func termina_dia():
+	pass

@@ -18,6 +18,7 @@ const MUSICA_TEMA_FORJA_MEDIEVAL = preload("res://SFX/Musica tema forja medieval
 @onready var lista_de_pedidos: Control = $"Lista de pedidos/Lista de pedidos"
 @onready var forja_terreo: AnimatedSprite2D = $terreo/Forja_terreo
 @onready var fornalha: Node2D = $Fornalha
+@onready var entrada_inicio_do_dia: Marker2D = $"Entrada inicio do dia"
 
 
 
@@ -32,6 +33,7 @@ func _ready() -> void:
 	audio_stream_player.stream = MUSICA_TEMA_FORJA_MEDIEVAL
 	audio_stream_player.play()
 	lista_de_pedidos.position.x = -1000
+	GameManager.posicao_comeco_dia = entrada_inicio_do_dia.global_position
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

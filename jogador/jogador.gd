@@ -29,6 +29,7 @@ func _ready():
 	GameManager.exit_minigame.connect(nao_jogando)
 	GerenciadorItens.drop_item.connect(drop_item)
 	GameManager.mao_animacao.connect(muda_mao)
+	GameManager.comeco_do_dia.connect(comeco_dia)
 	
 func _process(delta):
 	#GameManager.player_position = global_position
@@ -126,3 +127,7 @@ func muda_mao(mao):
 			maos.texture = MAODEMAO
 		_:
 			maos.texture = null 
+			print_debug("larguei a mao de verdade")
+
+func comeco_dia():
+	global_position = GameManager.posicao_comeco_dia

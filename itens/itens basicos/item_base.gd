@@ -21,6 +21,7 @@ func _ready() -> void:
 	_self_scene = PackedScene.new()
 	_self_scene.pack(self)
 	sprite = sprite_2d.texture
+	GameManager.fim_do_dia.connect(termina_dia)
 
 	pass
 	
@@ -71,3 +72,6 @@ func _on_area_2d_input_event(viewport: Node, event: InputEvent, shape_idx: int) 
 			#print_debug(ferreiro.is_in_group("jogador"))
 			if ferreiro.is_in_group("jogador"):
 				_collect()
+
+func termina_dia():
+	queue_free()

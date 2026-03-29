@@ -11,6 +11,7 @@ var velocidade_paciencia:float = 0.1
 @onready var erro: AudioStreamPlayer = $erro
 
 func _ready() -> void:
+	GameManager.fim_do_dia.connect(fim_do_dia)
 	var lamina = randi_range(1,3)
 	var cabo = randi_range(1,3)
 	lamina_tamanho = resultado_sorteio(lamina)
@@ -67,3 +68,10 @@ func _on_panel_container_gui_input(event: InputEvent) -> void:
 					erro.play()
 					GameManager.pedido_entrou_saiu.emit(-1)
 					queue_free()
+
+func fim_do_dia():
+	print_debug("Você não fez meu pedido!!")
+	GameManager.fama -= 100*(6-floor(paciencia_cliente))
+	GameManager.muda_fama.emit(-10*(6-floor(paciencia_cliente)))
+	GameManager.pedido_entrou_saiu.emit(-1)
+	queue_free()
