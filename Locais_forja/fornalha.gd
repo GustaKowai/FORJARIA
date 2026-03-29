@@ -14,6 +14,7 @@ var minerio:bool
 @onready var seta_soprador: Node2D = $SetaSoprador
 @onready var seta_minerio: Node2D = $SetaMinerio
 @onready var seta_carvao: Node2D = $SetaCarvao
+@onready var alerta: Label = $alerta
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -24,7 +25,12 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	temperatura.value -= variacao_temperatura*delta
 	combustivel.value -= temperatura.value*velocidade_queima*delta
-	forja_sprite.speed_scale = temperatura.value/100
+	forja_sprite.speed_scale = combustivel.value/500.0
+	var intensidade_fogo = temperatura.value/50
+	forja_sprite.modulate = Color(intensidade_fogo,intensidade_fogo,intensidade_fogo)
+	if combustivel.value == 0:
+		forja_sprite.modulate = Color(0,0,0)
+		alerta.visible = true
 	if minerio_processado.value > 0 and minerio_processado.value <= 100:
 		minerio_processado.value += temperatura.value*velocidade_minerio*delta
 
@@ -66,6 +72,7 @@ func _on_area_carvao_input_event(viewport: Node, event: InputEvent, shape_idx: i
 		if GerenciadorItens.inventario[0].item_name == "carvão":
 			if combustivel.value < 1000:
 				combustivel.value += 200
+				alerta.visible = false
 				GerenciadorItens.inventario[0] = null
 				GerenciadorItens.item_dropado.emit(0)
 #endregion

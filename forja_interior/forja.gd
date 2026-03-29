@@ -16,6 +16,8 @@ const MUSICA_TEMA_FORJA_MEDIEVAL = preload("res://SFX/Musica tema forja medieval
 @onready var seta_maquina_snake: Node2D = $snake/Seta_maquina_snake
 @onready var seta_maquina_bigorna: Node2D = $bigorna/Seta_maquina_bigorna
 @onready var lista_de_pedidos: Control = $"Lista de pedidos/Lista de pedidos"
+@onready var forja_terreo: AnimatedSprite2D = $terreo/Forja_terreo
+@onready var fornalha: Node2D = $Fornalha
 
 
 
@@ -33,7 +35,8 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	forja_terreo.speed_scale = fornalha.forja_sprite.speed_scale
+	forja_terreo.modulate = fornalha.forja_sprite.modulate*0.8
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("interagir"):
