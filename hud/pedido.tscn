@@ -1,9 +1,13 @@
-[gd_scene load_steps=4 format=3 uid="uid://d2qjrgqjbgw8m"]
+[gd_scene load_steps=5 format=3 uid="uid://d2qjrgqjbgw8m"]
 
 [ext_resource type="Texture2D" uid="uid://bvxgqxvilx7kt" path="res://UI/UI sprites/UI/papelpedido.png" id="1_6j5q0"]
 [ext_resource type="Script" uid="uid://d3p6f8kr6shvr" path="res://hud/pedido.gd" id="1_nppye"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6j5q0"]
+font_size = 46
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_nppye"]
 font_size = 46
 font_color = Color(0, 0, 0, 1)
 
@@ -28,12 +32,24 @@ patch_margin_bottom = 28
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 2
 
-[node name="Texto do pedido" type="Label" parent="PanelContainer/CenterContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/CenterContainer"]
+layout_mode = 2
+
+[node name="Texto do pedido" type="Label" parent="PanelContainer/CenterContainer/HBoxContainer"]
+unique_name_in_owner = true
 custom_minimum_size = Vector2(200, 50)
 layout_mode = 2
+size_flags_horizontal = 3
 text = "aaaaaaa aaaa aaaaaaaaaaa aaaaaaaaaaa aaaaaaaaaa "
 label_settings = SubResource("LabelSettings_6j5q0")
 autowrap_mode = 2
+
+[node name="paciencia" type="Label" parent="PanelContainer/CenterContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 8
+text = "0"
+label_settings = SubResource("LabelSettings_nppye")
 
 [connection signal="gui_input" from="PanelContainer" to="." method="_on_panel_container_gui_input"]
 [connection signal="mouse_entered" from="PanelContainer" to="." method="_on_panel_container_mouse_entered"]

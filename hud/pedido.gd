@@ -1,8 +1,12 @@
 extends MarginContainer
 
-@onready var texto_do_pedido: Label = $"PanelContainer/CenterContainer/Texto do pedido"
+@onready var texto_do_pedido: Label = %"Texto do pedido"
+@onready var paciencia: Label = %paciencia
+
 var lamina_tamanho:String
 var cabo_tamanho:String
+var paciencia_cliente:float = 5
+var velocidade_paciencia:float = 0.1
 
 func _ready() -> void:
 	var lamina = randi_range(1,3)
@@ -11,6 +15,14 @@ func _ready() -> void:
 	cabo_tamanho = resultado_sorteio(cabo)
 	
 	texto_do_pedido.text = "Eu quero uma lamina de tamanho "+lamina_tamanho+" e um cabo "+cabo_tamanho
+	
+func _process(delta: float) -> void:
+	if paciencia_cliente >= 1.1:
+		paciencia_cliente -=delta*velocidade_paciencia
+		paciencia.text = str(ceil(paciencia_cliente))
+	else:
+		paciencia_cliente = 1
+		paciencia.text = "1"
 	
 func resultado_sorteio(sorteio):
 	var resultado
@@ -41,13 +53,13 @@ func _on_panel_container_gui_input(event: InputEvent) -> void:
 				if espada.tamanho_cabo == cabo_tamanho and espada.tamanho_lamina == lamina_tamanho:
 					print_debug("Está correto")
 					print_debug(espada.qualidade)
-					GameManager.fama += espada.qualidade
+					GameManager.fama += espada.qualidade*ceil(paciencia_cliente)
 					GameManager.muda_fama.emit()
 					GameManager.pedido_entrou_saiu.emit(-1)
 					queue_free()
 				else:
 					print_debug("Está errado")
-					GameManager.fama -= 100
+					GameManager.fama -= 100*(6-floor(paciencia_cliente))
 					GameManager.muda_fama.emit()
 					GameManager.pedido_entrou_saiu.emit(-1)
 					queue_free()

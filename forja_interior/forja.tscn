@@ -502,7 +502,6 @@ autoplay = true
 [node name="Tempo do dia" parent="CanvasLayer" instance=ExtResource("15_6p8tj")]
 size_flags_horizontal = 0
 size_flags_vertical = 0
-valor_tempo = 0.5
 
 [node name="Pontuação e dinheiro" parent="CanvasLayer" instance=ExtResource("6_2xgge")]
 

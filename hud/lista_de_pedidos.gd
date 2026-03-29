@@ -7,6 +7,7 @@ var numero_cliente:int = 0
 func _ready() -> void:
 	GameManager.chama_cliente.connect(chama_cliente)
 	GameManager.pedido_entrou_saiu.connect(pedido_pedido_entrou_saiu)
+	position.x = -1000
 func chama_cliente():
 	if numero_cliente < 5:
 		var pedido_scene = pedido.instantiate()

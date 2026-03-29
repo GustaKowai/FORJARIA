@@ -1,6 +1,6 @@
-TextureRect
-Label
 HBoxContainer
+Label
+TextureRect
 VBoxContainer
 Control
 WorldEnvironment
