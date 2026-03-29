@@ -2,13 +2,13 @@
 
 importer="wav"
 type="AudioStreamWAV"
-uid="uid://bv21kg3pmbnx7"
-path="res://.godot/imported/Passo Pedra.wav-0d62fcaec927ba760fe5fac7197f33dc.sample"
+uid="uid://bpe32rmt21hl2"
+path="res://.godot/imported/Fole.wav-e1f025e3555d3d0ace0da52c3393fff0.sample"
 
 [deps]
 
-source_file="res://SFX/Passo Pedra.wav"
-dest_files=["res://.godot/imported/Passo Pedra.wav-0d62fcaec927ba760fe5fac7197f33dc.sample"]
+source_file="res://SFX/Fole.wav"
+dest_files=["res://.godot/imported/Fole.wav-e1f025e3555d3d0ace0da52c3393fff0.sample"]
 
 [params]
 

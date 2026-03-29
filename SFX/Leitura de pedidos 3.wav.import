@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://22c7lh7qo25c"
+path="res://.godot/imported/Leitura de pedidos 3.wav-bc001f200f0a4389af9023eb19fd22ef.sample"
+
+[deps]
+
+source_file="res://SFX/Leitura de pedidos 3.wav"
+dest_files=["res://.godot/imported/Leitura de pedidos 3.wav-bc001f200f0a4389af9023eb19fd22ef.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

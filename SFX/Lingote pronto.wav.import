@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://uwtd46iyyq0f"
+path="res://.godot/imported/Lingote pronto.wav-d42a14f66d51a78b71041cfe8cd8f74d.sample"
+
+[deps]
+
+source_file="res://SFX/Lingote pronto.wav"
+dest_files=["res://.godot/imported/Lingote pronto.wav-d42a14f66d51a78b71041cfe8cd8f74d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

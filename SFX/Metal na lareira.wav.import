@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d2gxojvldlh74"
+path="res://.godot/imported/Metal na lareira.wav-011874fbb9daba877614ecc03f846bec.sample"
+
+[deps]
+
+source_file="res://SFX/Metal na lareira.wav"
+dest_files=["res://.godot/imported/Metal na lareira.wav-011874fbb9daba877614ecc03f846bec.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

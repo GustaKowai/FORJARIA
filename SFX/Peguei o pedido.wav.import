@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://1daj6yjplq0l"
+path="res://.godot/imported/Peguei o pedido.wav-2caf0c1ae7473727df076d78b0794646.sample"
+
+[deps]
+
+source_file="res://SFX/Peguei o pedido.wav"
+dest_files=["res://.godot/imported/Peguei o pedido.wav-2caf0c1ae7473727df076d78b0794646.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
