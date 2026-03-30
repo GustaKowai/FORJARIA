@@ -1,92 +1,364 @@
-[gd_scene load_steps=2 format=3 uid="uid://bs0tu8f5j5sje"]
+[gd_scene load_steps=44 format=3 uid="uid://bs0tu8f5j5sje"]
 
 [ext_resource type="Script" uid="uid://btrcfq5sw4uih" path="res://tela_fim_dia.gd" id="1_56jpf"]
+[ext_resource type="Texture2D" uid="uid://cptojhnhcx735" path="res://UI/UI sprites/UI/Sprite-tela_Fim_Dia-Sheet.png" id="2_lgqeo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tlfml"]
+atlas = ExtResource("2_lgqeo")
+region = Rect2(0, 0, 560, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b64b8"]
+atlas = ExtResource("2_lgqeo")
+region = Rect2(565, 0, 560, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8bbel"]
+atlas = ExtResource("2_lgqeo")
+region = Rect2(1130, 0, 560, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xnc62"]
+atlas = ExtResource("2_lgqeo")
+region = Rect2(1695, 0, 560, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kjpis"]
+atlas = ExtResource("2_lgqeo")
+region = Rect2(2260, 0, 560, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sust5"]
+atlas = ExtResource("2_lgqeo")
+region = Rect2(2825, 0, 560, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a5jja"]
+atlas = ExtResource("2_lgqeo")
+region = Rect2(3390, 0, 560, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5hdge"]
+atlas = ExtResource("2_lgqeo")
+region = Rect2(3955, 0, 560, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t8a76"]
+atlas = ExtResource("2_lgqeo")
+region = Rect2(4520, 0, 560, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_theij"]
+atlas = ExtResource("2_lgqeo")
+region = Rect2(5085, 0, 560, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v5ng8"]
+atlas = ExtResource("2_lgqeo")
+region = Rect2(5650, 0, 560, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1j5v1"]
+atlas = ExtResource("2_lgqeo")
+region = Rect2(6215, 0, 560, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8ttk5"]
+atlas = ExtResource("2_lgqeo")
+region = Rect2(6780, 0, 560, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iycqb"]
+atlas = ExtResource("2_lgqeo")
+region = Rect2(7345, 0, 560, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ubgoy"]
+atlas = ExtResource("2_lgqeo")
+region = Rect2(7910, 0, 560, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mr7py"]
+atlas = ExtResource("2_lgqeo")
+region = Rect2(8475, 0, 560, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pugtd"]
+atlas = ExtResource("2_lgqeo")
+region = Rect2(9040, 0, 560, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xxjkr"]
+atlas = ExtResource("2_lgqeo")
+region = Rect2(9605, 0, 560, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sno8m"]
+atlas = ExtResource("2_lgqeo")
+region = Rect2(10170, 0, 560, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3kgcf"]
+atlas = ExtResource("2_lgqeo")
+region = Rect2(10735, 0, 560, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kc4j7"]
+atlas = ExtResource("2_lgqeo")
+region = Rect2(11300, 0, 560, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t25w3"]
+atlas = ExtResource("2_lgqeo")
+region = Rect2(11865, 0, 560, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idk4m"]
+atlas = ExtResource("2_lgqeo")
+region = Rect2(12430, 0, 560, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oh2jp"]
+atlas = ExtResource("2_lgqeo")
+region = Rect2(12995, 0, 560, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yp2ju"]
+atlas = ExtResource("2_lgqeo")
+region = Rect2(13560, 0, 560, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e0vac"]
+atlas = ExtResource("2_lgqeo")
+region = Rect2(14125, 0, 560, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bdaub"]
+atlas = ExtResource("2_lgqeo")
+region = Rect2(14690, 0, 560, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xcomu"]
+atlas = ExtResource("2_lgqeo")
+region = Rect2(15255, 0, 560, 317)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8u8d6"]
+atlas = ExtResource("2_lgqeo")
+region = Rect2(15820, 0, 560, 317)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_56jpf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tlfml")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b64b8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8bbel")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xnc62")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kjpis")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sust5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a5jja")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5hdge")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t8a76")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_theij")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v5ng8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1j5v1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8ttk5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iycqb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ubgoy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mr7py")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pugtd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xxjkr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sno8m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3kgcf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kc4j7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t25w3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idk4m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oh2jp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yp2ju")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e0vac")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bdaub")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xcomu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8u8d6")
+}],
+"loop": false,
+"name": &"default",
+"speed": 12.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_lgqeo"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_tlfml"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_b64b8"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8bbel"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xnc62"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_kjpis"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_sust5"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_a5jja"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_5hdge"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_t8a76"]
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_theij"]
+font_color = Color(0, 0, 0, 1)
 
 [node name="Tela fim dia" type="Control"]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -571.0
+offset_bottom = -571.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(2, 2)
 script = ExtResource("1_56jpf")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="bg_final" type="AnimatedSprite2D" parent="."]
+position = Vector2(280, 535)
+sprite_frames = SubResource("SpriteFrames_56jpf")
+frame = 28
+frame_progress = 1.0
+
+[node name="Info_container" type="VBoxContainer" parent="."]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -40.5
-offset_top = -20.0
-offset_right = 40.5
-offset_bottom = 20.0
+offset_left = -751.0
+offset_top = -92.0
+offset_right = -597.0
+offset_bottom = 101.0
 grow_horizontal = 2
 grow_vertical = 2
+alignment = 1
 
-[node name="Label" type="Label" parent="VBoxContainer"]
+[node name="Label" type="Label" parent="Info_container"]
 layout_mode = 2
 text = "Fim do dia"
+label_settings = SubResource("LabelSettings_lgqeo")
+horizontal_alignment = 1
 
-[node name="ouro" type="HBoxContainer" parent="VBoxContainer"]
+[node name="ouro" type="HBoxContainer" parent="Info_container"]
 layout_mode = 2
+alignment = 1
 
-[node name="Label" type="Label" parent="VBoxContainer/ouro"]
+[node name="Label" type="Label" parent="Info_container/ouro"]
 layout_mode = 2
 text = "ouro ganho:"
-horizontal_alignment = 2
+label_settings = SubResource("LabelSettings_tlfml")
 
-[node name="ouro_n" type="Label" parent="VBoxContainer/ouro"]
+[node name="ouro_n" type="Label" parent="Info_container/ouro"]
 unique_name_in_owner = true
 layout_mode = 2
+label_settings = SubResource("LabelSettings_b64b8")
 
-[node name="fama" type="HBoxContainer" parent="VBoxContainer"]
+[node name="fama" type="HBoxContainer" parent="Info_container"]
 layout_mode = 2
+alignment = 1
 
-[node name="Label" type="Label" parent="VBoxContainer/fama"]
+[node name="Label" type="Label" parent="Info_container/fama"]
 layout_mode = 2
 text = "fama ganha:"
+label_settings = SubResource("LabelSettings_8bbel")
 
-[node name="fama_n" type="Label" parent="VBoxContainer/fama"]
+[node name="fama_n" type="Label" parent="Info_container/fama"]
 unique_name_in_owner = true
 layout_mode = 2
+label_settings = SubResource("LabelSettings_xnc62")
 
-[node name="acertos" type="HBoxContainer" parent="VBoxContainer"]
+[node name="acertos" type="HBoxContainer" parent="Info_container"]
 layout_mode = 2
+alignment = 1
 
-[node name="Label" type="Label" parent="VBoxContainer/acertos"]
+[node name="Label" type="Label" parent="Info_container/acertos"]
 layout_mode = 2
 text = "Pedidos corretos:"
+label_settings = SubResource("LabelSettings_kjpis")
 
-[node name="acertos_n" type="Label" parent="VBoxContainer/acertos"]
+[node name="acertos_n" type="Label" parent="Info_container/acertos"]
 unique_name_in_owner = true
 layout_mode = 2
+label_settings = SubResource("LabelSettings_sust5")
 
-[node name="erros" type="HBoxContainer" parent="VBoxContainer"]
+[node name="erros" type="HBoxContainer" parent="Info_container"]
 layout_mode = 2
+alignment = 1
 
-[node name="Label" type="Label" parent="VBoxContainer/erros"]
+[node name="Label" type="Label" parent="Info_container/erros"]
 layout_mode = 2
 text = "Pedidos incorretos:"
+label_settings = SubResource("LabelSettings_a5jja")
 
-[node name="erros_n" type="Label" parent="VBoxContainer/erros"]
+[node name="erros_n" type="Label" parent="Info_container/erros"]
 unique_name_in_owner = true
 layout_mode = 2
+label_settings = SubResource("LabelSettings_5hdge")
 
-[node name="perdidos" type="HBoxContainer" parent="VBoxContainer"]
+[node name="perdidos" type="HBoxContainer" parent="Info_container"]
 layout_mode = 2
+alignment = 1
 
-[node name="Label" type="Label" parent="VBoxContainer/perdidos"]
+[node name="Label" type="Label" parent="Info_container/perdidos"]
 layout_mode = 2
 text = "Pedidos perdidos:"
+label_settings = SubResource("LabelSettings_t8a76")
 
-[node name="perdidos_n" type="Label" parent="VBoxContainer/perdidos"]
+[node name="perdidos_n" type="Label" parent="Info_container/perdidos"]
 unique_name_in_owner = true
 layout_mode = 2
+label_settings = SubResource("LabelSettings_theij")
 
-[node name="Button" type="Button" parent="VBoxContainer"]
+[node name="Button" type="Button" parent="Info_container"]
 layout_mode = 2
 text = "Começar novo dia"
 
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="animation_finished" from="bg_final" to="." method="_on_bg_final_animation_finished"]
+[connection signal="pressed" from="Info_container/Button" to="." method="_on_button_pressed"]

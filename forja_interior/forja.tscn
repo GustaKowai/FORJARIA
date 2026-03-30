@@ -562,6 +562,7 @@ autoplay = true
 
 [node name="Tela fim dia" parent="CanvasLayer" instance=ExtResource("5_btcsk")]
 visible = false
+z_index = 1
 
 [node name="Tempo do dia" parent="CanvasLayer" instance=ExtResource("15_6p8tj")]
 size_flags_horizontal = 0

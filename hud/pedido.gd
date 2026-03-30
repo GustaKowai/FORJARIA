@@ -18,8 +18,23 @@ func _ready() -> void:
 	var cabo = randi_range(1,3)
 	lamina_tamanho = resultado_sorteio(lamina)
 	cabo_tamanho = resultado_sorteio(cabo)
+	var texto = randi_range(1,5)
+	print_debug(texto)
+	match texto:
+		1:
+			texto_do_pedido.text = "Eu quero uma lamina de tamanho "+lamina_tamanho+" e um cabo "+ cabo_tamanho
+		2:
+			texto_do_pedido.text = "Eu quero uma arma com um cabo "+cabo_tamanho+" e uma lamina de tamanho "+ lamina_tamanho
+		3:
+			texto_do_pedido.text = "Lâmina: "+lamina_tamanho+"\n Cabo: "+cabo_tamanho
+		4:
+			texto_do_pedido.text = "Bom dia! Hoje está um belo dia, não é mesmo? \n Eu gostaria de fazer uma encomenda com o senhor. Eu gostaria de uma lâmina de tamanho" +lamina_tamanho+ " e com um cabo "+ cabo_tamanho
+		5:
+			texto_do_pedido.text = "Eu quero uma arma. O cabo pode ser " + cabo_tamanho + " e a lâmina de um tamanho...hum..."+lamina_tamanho+"...eu acho?"
+		_:
+			texto_do_pedido.text = "Eu quero uma lamina de tamanho "+lamina_tamanho+" e um cabo "+cabo_tamanho
 	
-	texto_do_pedido.text = "Eu quero uma lamina de tamanho "+lamina_tamanho+" e um cabo "+cabo_tamanho
+	
 	
 func _process(delta: float) -> void:
 	if paciencia_cliente >= 1.1:

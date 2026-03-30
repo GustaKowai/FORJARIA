@@ -28,6 +28,7 @@ var zona_vermelha_y_min: float = 0
 var zona_vermelha_y_max: float = 340 # O resto da barra (ou o total)
 
 func _ready():
+	GameManager.fim_do_dia.connect(finalizar_minigame)
 	indicador_martelo.position.y = barra_alvo.size.y
 	visible = false
 	var meio_barra = (barra_alvo.size.y)/2

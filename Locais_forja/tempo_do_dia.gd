@@ -6,6 +6,7 @@ var time_elapsed_string:String
 @onready var time_elapsed: Label = $time_elapsed
 @onready var clock: TextureProgressBar = $clock
 var hours_back = 0
+var terminar_dia:bool = true
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	GameManager.comeco_do_dia.connect(comecar_novo_dia)
@@ -14,8 +15,10 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if clock.value == clock.max_value:
+		if terminar_dia:
 			GameManager.fim_do_dia.emit()
-			return
+			terminar_dia = false
+		return
 	pedaco_tempo += delta
 	if pedaco_tempo >= valor_tempo:
 		pedaco_tempo = 0
@@ -31,6 +34,7 @@ func _process(delta: float) -> void:
 		clock.value = minutes_elapsed
 
 func comecar_novo_dia():
+	terminar_dia = true
 	tempo_do_dia = 0
 	clock.value = 0
 	hours_back = 0
