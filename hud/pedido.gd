@@ -26,21 +26,25 @@ func _process(delta: float) -> void:
 		paciencia_cliente -=delta*velocidade_paciencia
 		paciencia.text = str(ceil(paciencia_cliente))
 		paciencia_barra.value = ceil(paciencia_cliente)
-		var fill = paciencia_barra.get_theme_stylebox("fill")
-		match paciencia_barra.value:
-			5.0:
-				fill.bg_color = Color.BLUE
-			4.0:
-				fill.bg_color = Color.GREEN
-			3.0:
-				fill.bg_color = Color.YELLOW
-			2.0:
-				fill.bg_color = Color.ORANGE
-			_:
-				fill.bg_color = Color.RED
+		#print_debug(paciencia_barra.value)
+		#var fill = paciencia_barra.get_theme_stylebox("fill")
+		#match paciencia_barra.value:
+			#5.0:
+				#fill.bg_color = Color.BLUE
+			#4.0:
+				#fill.bg_color = Color.GREEN
+			#3.0:
+				#fill.bg_color = Color.YELLOW
+			#2.0:
+				#fill.bg_color = Color.ORANGE
+			#_:
+				#fill.bg_color = Color.RED
 	else:
 		paciencia_cliente = 1
 		paciencia.text = "1"
+		paciencia_barra.value = ceil(paciencia_cliente)
+		#var fill = paciencia_barra.get_theme_stylebox("fill")
+		#fill.bg_color = Color.RED
 	
 func resultado_sorteio(sorteio):
 	var resultado
@@ -70,23 +74,37 @@ func _on_panel_container_gui_input(event: InputEvent) -> void:
 				GerenciadorItens.item_dropado.emit(0)
 				if espada.tamanho_cabo == cabo_tamanho and espada.tamanho_lamina == lamina_tamanho:
 					print_debug("Está correto")
+					GameManager.pedidos_corretos += 1
 					print_debug(espada.qualidade)
 					GameManager.fama += espada.qualidade*ceil(paciencia_cliente)
 					GameManager.muda_fama.emit(int(espada.qualidade*ceil(paciencia_cliente)))
+					GameManager.ouro += espada.qualidade*ceil(paciencia_cliente)
+					GameManager.muda_ouro.emit(int(espada.qualidade*ceil(paciencia_cliente)))
 					acerto.play()
 					GameManager.pedido_entrou_saiu.emit(-1)
-					queue_free()
+					modulate = Color.GREEN
 				else:
 					print_debug("Está errado")
+					GameManager.pedidos_errados += 1
 					GameManager.fama -= 100*(6-floor(paciencia_cliente))
 					GameManager.muda_fama.emit(-100*(6-floor(paciencia_cliente)))
 					erro.play()
 					GameManager.pedido_entrou_saiu.emit(-1)
-					queue_free()
+					modulate = Color.RED
+					
 
 func fim_do_dia():
 	print_debug("Você não fez meu pedido!!")
+	GameManager.pedidos_incompletos += 1
 	GameManager.fama -= 100*(6-floor(paciencia_cliente))
 	GameManager.muda_fama.emit(-10*(6-floor(paciencia_cliente)))
 	GameManager.pedido_entrou_saiu.emit(-1)
+	queue_free()
+
+
+func _on_acerto_finished() -> void:
+	queue_free()
+
+
+func _on_erro_finished() -> void:
 	queue_free()

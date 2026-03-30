@@ -1,4 +1,4 @@
-[gd_scene load_steps=66 format=4 uid="uid://81dw4cg2wxdw"]
+[gd_scene load_steps=65 format=4 uid="uid://81dw4cg2wxdw"]
 
 [ext_resource type="Texture2D" uid="uid://2lejbc0srq6o" path="res://forja_interior/grounds.png" id="1_iked2"]
 [ext_resource type="Script" uid="uid://b8ma8a4vfl0sj" path="res://forja_interior/forja.gd" id="1_lld1g"]
@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://bffscy41xi7st" path="res://forja_interior/Térreo_Forja-sprites/Térreo_Forja/Movis_(móveis)_expandido_forja.png" id="9_fkm0j"]
 [ext_resource type="Texture2D" uid="uid://bnq66fupnmtq1" path="res://forja_interior/Térreo_Forja-sprites/Térreo_Forja/bgterreo.png" id="9_xqu5v"]
 [ext_resource type="Texture2D" uid="uid://bms0q7radmkoc" path="res://forja_interior/forja_sub/drive-download-20260326T184351Z-3-001/The_Expandido_SubForja.png" id="10_iipqu"]
-[ext_resource type="Texture2D" uid="uid://8oc30bvsqf8u" path="res://forja_interior/Térreo_Forja-sprites/Térreo_Forja/Detalhes_expandido_forja.png" id="10_xyxbd"]
 [ext_resource type="PackedScene" uid="uid://dl05qrqcb11or" path="res://itens/espada.tscn" id="11_fvg1a"]
 [ext_resource type="Texture2D" uid="uid://ijk1et3kfjl4" path="res://forja_interior/forja_sub/drive-download-20260326T184351Z-3-001/Xao_Expandido_Subforja.png" id="11_xyxbd"]
 [ext_resource type="PackedScene" uid="uid://cpv6qrwer5s7j" path="res://UI/seta_maquina.tscn" id="12_fkm0j"]
@@ -556,7 +555,7 @@ minigame_bigorna = ExtResource("3_6p8tj")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_s24td")
-volume_db = 0.5
+volume_db = -3.0
 autoplay = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
@@ -591,10 +590,6 @@ texture = ExtResource("8_fhfks")
 [node name="Movis(móveis)" type="Sprite2D" parent="terreo"]
 position = Vector2(725, 700)
 texture = ExtResource("9_fkm0j")
-
-[node name="DetalhesExpandidoForja" type="Sprite2D" parent="terreo"]
-position = Vector2(725, 700)
-texture = ExtResource("10_xyxbd")
 
 [node name="DetalhesExpandidosFinal" type="Sprite2D" parent="terreo"]
 position = Vector2(690, 680)

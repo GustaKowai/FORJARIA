@@ -1,11 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://d2qjrgqjbgw8m"]
+[gd_scene load_steps=10 format=3 uid="uid://d2qjrgqjbgw8m"]
 
 [ext_resource type="Texture2D" uid="uid://bvxgqxvilx7kt" path="res://UI/UI sprites/UI/papelpedido.png" id="1_6j5q0"]
 [ext_resource type="Script" uid="uid://d3p6f8kr6shvr" path="res://hud/pedido.gd" id="1_nppye"]
-[ext_resource type="AudioStream" uid="uid://kg68egb0imkb" path="res://SFX/Entregar pedido.wav" id="3_lfca5"]
+[ext_resource type="AudioStream" uid="uid://bornq7iock4ws" path="res://SFX/Acertei o pedido.wav" id="3_lfca5"]
+[ext_resource type="AudioStream" uid="uid://ckppj4c8gio1b" path="res://SFX/Errei o pedido.wav" id="4_0dfex"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lfca5"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6j5q0"]
-font_size = 46
+font_size = 40
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_nppye"]
@@ -15,7 +18,7 @@ font_color = Color(0, 0, 0, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lfca5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0dfex"]
-bg_color = Color(1, 0.334283, 0.345812, 1)
+bg_color = Color(0.718733, 0.569146, 0.0444583, 1)
 
 [node name="Pedido" type="MarginContainer"]
 custom_minimum_size = Vector2(900, 0)
@@ -25,6 +28,7 @@ script = ExtResource("1_nppye")
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxEmpty_lfca5")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="PanelContainer"]
 layout_mode = 2
@@ -67,14 +71,17 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_0dfex")
 max_value = 5.0
 value = 3.0
 rounded = true
-allow_greater = true
 fill_mode = 3
+show_percentage = false
 
 [node name="Acerto" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_lfca5")
 
 [node name="erro" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_0dfex")
 
 [connection signal="gui_input" from="PanelContainer" to="." method="_on_panel_container_gui_input"]
 [connection signal="mouse_entered" from="PanelContainer" to="." method="_on_panel_container_mouse_entered"]
 [connection signal="mouse_exited" from="PanelContainer" to="." method="_on_panel_container_mouse_exited"]
+[connection signal="finished" from="Acerto" to="." method="_on_acerto_finished"]
+[connection signal="finished" from="erro" to="." method="_on_erro_finished"]

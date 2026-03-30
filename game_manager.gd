@@ -18,6 +18,9 @@ var valor_do_couro:int
 var fama:int = 0
 var ouro:int = 0
 var posicao_comeco_dia:Vector2
+var pedidos_corretos:int = 0
+var pedidos_errados:int = 0
+var pedidos_incompletos:int = 0
 signal muda_ouro(int)
 signal muda_fama(int)
 #var player_position

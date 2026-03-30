@@ -2,12 +2,11 @@
 
 [ext_resource type="Script" uid="uid://djburygob550n" path="res://jogador/jogador.gd" id="1_gw4iw"]
 [ext_resource type="Texture2D" uid="uid://whiglb1btihn" path="res://jogador/animacoesplayer/walk.png" id="2_wq8wa"]
-[ext_resource type="Texture2D" uid="uid://d56vap8aii3n" path="res://jogador/animacoesplayer/maodemao.png" id="2_y4kwd"]
 [ext_resource type="PackedScene" uid="uid://bc4bylx0blnya" path="res://jogador/follow_player.tscn" id="3_wq8wa"]
+[ext_resource type="AudioStream" uid="uid://bhciybrmiuja5" path="res://SFX/Passo madeira.wav" id="5_p68hw"]
 
-[sub_resource type="Animation" id="Animation_wq8wa"]
-resource_name = "Move"
-length = 0.8
+[sub_resource type="Animation" id="Animation_p68hw"]
+resource_name = "Idle"
 loop_mode = 1
 step = 0.1
 tracks/0/type = "value"
@@ -17,10 +16,51 @@ tracks/0/path = NodePath("Sprite2D:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+
+[sub_resource type="Animation" id="Animation_wq8wa"]
+resource_name = "Move"
+length = 0.66
+loop_mode = 1
+step = 0.16
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.333333, 0.5),
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3]
+}
+tracks/1/type = "method"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("AudioStreamPlayer")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.333333, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"values": [{
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop"
+}, {
+"args": [0.0],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop"
+}]
 }
 
 [sub_resource type="Animation" id="Animation_y4kwd"]
@@ -50,28 +90,26 @@ tracks/1/keys = {
 "values": [0]
 }
 
-[sub_resource type="Animation" id="Animation_p68hw"]
-resource_name = "Idle"
-loop_mode = 1
-step = 0.1
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_lhpuy"]
+_data = {
+&"Idle": SubResource("Animation_p68hw"),
+&"Move": SubResource("Animation_wq8wa"),
+&"RESET": SubResource("Animation_y4kwd")
+}
+
+[sub_resource type="Animation" id="Animation_5xdrh"]
+length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [1]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_lhpuy"]
-_data = {
-&"Idle": SubResource("Animation_p68hw"),
-&"Move": SubResource("Animation_wq8wa"),
-&"RESET": SubResource("Animation_y4kwd")
+"values": [0]
 }
 
 [sub_resource type="Animation" id="Animation_lhpuy"]
@@ -90,21 +128,6 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [0, 1]
-}
-
-[sub_resource type="Animation" id="Animation_5xdrh"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [0]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_kgcij"]
@@ -136,7 +159,6 @@ vframes = 4
 
 [node name="Maos" type="Sprite2D" parent="Sprite2D"]
 position = Vector2(20, 0)
-texture = ExtResource("2_y4kwd")
 vframes = 2
 
 [node name="maoAnimation" type="AnimationPlayer" parent="Sprite2D/Maos"]
@@ -160,3 +182,4 @@ position = Vector2(0, 1)
 shape = SubResource("RectangleShape2D_wq8wa")
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_p68hw")

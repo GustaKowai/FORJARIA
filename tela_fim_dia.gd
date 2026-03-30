@@ -13,6 +13,9 @@ func _process(delta: float) -> void:
 
 func _on_button_pressed() -> void:
 	GameManager.comeco_do_dia.emit()
+	GameManager.pedidos_corretos = 0
+	GameManager.pedidos_errados = 0
+	GameManager.pedidos_incompletos = 0
 	hide()
 
 func fim_do_dia():

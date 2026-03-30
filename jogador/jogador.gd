@@ -5,6 +5,7 @@ extends CharacterBody2D
 @onready var sprite: Sprite2D = $Sprite2D
 @onready var dash_timer: Timer = $Timer
 @onready var maos: Sprite2D = $Sprite2D/Maos
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 const MAODEMAO = preload("res://jogador/animacoesplayer/maodemao.png")
 const MARTELO = preload("res://jogador/animacoesplayer/martelo.png")
 const TESOURA = preload("res://jogador/animacoesplayer/tesoura.png")
@@ -91,6 +92,7 @@ func recharg_stamina(delta):
 func play_run_iddle():
 #Checa se o personagem está correndo
 	if velocity.is_zero_approx():
+		animation_player.stop()
 		animation_player.play("Idle") 	
 	else:
 		animation_player.play("Move")
@@ -128,6 +130,7 @@ func muda_mao(mao):
 		_:
 			maos.texture = null 
 			print_debug("larguei a mao de verdade")
+			audio_stream_player.play()
 
 func comeco_dia():
 	global_position = GameManager.posicao_comeco_dia

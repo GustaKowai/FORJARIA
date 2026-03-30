@@ -9,6 +9,8 @@ var montagem:bool = false
 @onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 const AMBIENCE = preload("res://SFX/ambience.wav")
 const MUSICA_TEMA_FORJA_MEDIEVAL = preload("res://SFX/Musica tema forja medieval.wav")
+const PASSO_PEDRA = preload("res://SFX/Passo Pedra.wav")
+const PASSO_MADEIRA = preload("res://SFX/Passo madeira.wav")
 @export var minigame_snake:PackedScene
 @export var minigame_bigorna:PackedScene
 @onready var window: Window = $Window
@@ -152,16 +154,18 @@ func checa_material(item_tentando:Item,slot:int):
 #region escadas
 func _on_escada_para_baixo_body_entered(body: Node2D) -> void:
 	body.global_position = saida_escada_para_cima.global_position
+	body.audio_stream_player.stream = PASSO_PEDRA
 	audio_stream_player.stream = AMBIENCE
 	audio_stream_player.play()
-	audio_stream_player.volume_db = 1
+	audio_stream_player.volume_db = 0
 
 
 func _on_escada_para_cima_body_entered(body: Node2D) -> void:
 	body.global_position = saida_escada_para_baixo.global_position
+	body.audio_stream_player.stream = PASSO_PEDRA
 	audio_stream_player.stream = MUSICA_TEMA_FORJA_MEDIEVAL
 	audio_stream_player.play()
-	audio_stream_player.volume_db = 0.2
+	audio_stream_player.volume_db = -10
 	pass # Replace with function body.
 #endregion
 

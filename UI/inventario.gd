@@ -99,12 +99,12 @@ func click_inventory(slot:int):
 				inventory_1.modulate = Color.WHITE
 				inventory_2.modulate = Color.WHITE
 				slot_mao.modulate = Color.RED
-		print_debug("clicado ",slot,inventory_1.modulate)
+		#print_debug("clicado ",slot,inventory_1.modulate)
 
 func drop_item(slot):
 	#print_debug(slot, GerenciadorItens.inventario[2].item_name, GerenciadorItens.inventario[1])
 	if slot == 2 and GerenciadorItens.inventario[2].item_name == "mao de mao" and GerenciadorItens.inventario[1] != null:
-		print_debug("larguei a mao")
+		#print_debug("larguei a mao")
 		GerenciadorItens.drop_item.emit(1)
 	GerenciadorItens.drop_item.emit(slot)
 	GerenciadorItens.active_slot =5

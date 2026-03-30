@@ -1,10 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://b2nobvox65m55"]
+[gd_scene load_steps=8 format=3 uid="uid://b2nobvox65m55"]
 
 [ext_resource type="Texture2D" uid="uid://b2i7videebvpm" path="res://UI/UI sprites/UI/gold.png" id="1_v5lgi"]
 [ext_resource type="Script" uid="uid://ywvppiu3jimg" path="res://UI/pontuação_e_dinheiro.gd" id="1_vuiec"]
 [ext_resource type="Texture2D" uid="uid://wm50vb0pbcps" path="res://UI/UI sprites/UI/NEXT.png" id="2_vuiec"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_5ryhk"]
+font_size = 32
+
+[sub_resource type="LabelSettings" id="LabelSettings_3qhjy"]
 font_size = 32
 
 [sub_resource type="LabelSettings" id="LabelSettings_j2ce0"]
@@ -36,6 +39,10 @@ texture = ExtResource("1_v5lgi")
 layout_mode = 2
 text = "0"
 label_settings = SubResource("LabelSettings_5ryhk")
+
+[node name="ouro_ganho" type="Label" parent="VBoxContainer/ouro"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_3qhjy")
 
 [node name="fama" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
