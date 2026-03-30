@@ -29,6 +29,62 @@ grow_vertical = 2
 layout_mode = 2
 text = "Fim do dia"
 
+[node name="ouro" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/ouro"]
+layout_mode = 2
+text = "ouro ganho:"
+horizontal_alignment = 2
+
+[node name="ouro_n" type="Label" parent="VBoxContainer/ouro"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="fama" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/fama"]
+layout_mode = 2
+text = "fama ganha:"
+
+[node name="fama_n" type="Label" parent="VBoxContainer/fama"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="acertos" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/acertos"]
+layout_mode = 2
+text = "Pedidos corretos:"
+
+[node name="acertos_n" type="Label" parent="VBoxContainer/acertos"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="erros" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/erros"]
+layout_mode = 2
+text = "Pedidos incorretos:"
+
+[node name="erros_n" type="Label" parent="VBoxContainer/erros"]
+unique_name_in_owner = true
+layout_mode = 2
+
+[node name="perdidos" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/perdidos"]
+layout_mode = 2
+text = "Pedidos perdidos:"
+
+[node name="perdidos_n" type="Label" parent="VBoxContainer/perdidos"]
+unique_name_in_owner = true
+layout_mode = 2
+
 [node name="Button" type="Button" parent="VBoxContainer"]
 layout_mode = 2
 text = "Começar novo dia"

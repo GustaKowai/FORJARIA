@@ -6,7 +6,7 @@ extends MarginContainer
 var lamina_tamanho:String
 var cabo_tamanho:String
 var paciencia_cliente:float = 5
-var velocidade_paciencia:float = 0.1
+@export var velocidade_paciencia:float = 0.1
 @onready var acerto: AudioStreamPlayer = $Acerto
 @onready var erro: AudioStreamPlayer = $erro
 @onready var paciencia_barra: ProgressBar = %paciencia_barra
@@ -96,7 +96,7 @@ func _on_panel_container_gui_input(event: InputEvent) -> void:
 func fim_do_dia():
 	print_debug("Você não fez meu pedido!!")
 	GameManager.pedidos_incompletos += 1
-	GameManager.fama -= 100*(6-floor(paciencia_cliente))
+	GameManager.fama -= 20*(6-floor(paciencia_cliente))
 	GameManager.muda_fama.emit(-10*(6-floor(paciencia_cliente)))
 	GameManager.pedido_entrou_saiu.emit(-1)
 	queue_free()

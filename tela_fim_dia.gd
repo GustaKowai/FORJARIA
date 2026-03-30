@@ -1,5 +1,12 @@
 extends Control
 
+@onready var ouro_n: Label = %ouro_n
+@onready var fama_n: Label = %fama_n
+@onready var acertos_n: Label = %acertos_n
+@onready var erros_n: Label = %erros_n
+@onready var perdidos_n: Label = %perdidos_n
+
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -19,4 +26,9 @@ func _on_button_pressed() -> void:
 	hide()
 
 func fim_do_dia():
+	ouro_n.text = str(GameManager.ouro)
+	fama_n.text = str(GameManager.fama)
+	acertos_n.text = str(GameManager.pedidos_corretos)
+	erros_n.text = str(GameManager.pedidos_errados)
+	perdidos_n.text = str(GameManager.pedidos_incompletos)
 	show()

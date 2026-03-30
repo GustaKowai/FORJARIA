@@ -25,6 +25,7 @@ custom_minimum_size = Vector2(900, 0)
 offset_right = 1323.0
 offset_bottom = 170.0
 script = ExtResource("1_nppye")
+velocidade_paciencia = 0.05
 
 [node name="PanelContainer" type="PanelContainer" parent="."]
 layout_mode = 2

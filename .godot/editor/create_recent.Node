@@ -1,4 +1,5 @@
 Label
+HBoxContainer
 ProgressBar
 TextureProgressBar
 Button
@@ -11,4 +12,3 @@ TextureRect
 Panel
 ColorRect
 AudioStreamPlayer
-HBoxContainer

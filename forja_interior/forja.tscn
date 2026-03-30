@@ -538,7 +538,7 @@ size = Vector2(186.31, 139.161)
 size = Vector2(339.693, 184.225)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iipqu"]
-size = Vector2(79, 174)
+size = Vector2(80.5, 180)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1unkw"]
 size = Vector2(286.656, 177.289)
@@ -749,21 +749,23 @@ position = Vector2(210, 970)
 [node name="Escada para baixo" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Escada para baixo"]
-position = Vector2(921.5, 58)
+position = Vector2(1109.75, 88)
+rotation = 0.550117
 shape = SubResource("RectangleShape2D_iipqu")
 
 [node name="saida escada para baixo" type="Marker2D" parent="Escada para baixo"]
-position = Vector2(1050, 70)
+position = Vector2(1210, 171)
 
 [node name="Escada para cima" type="Area2D" parent="."]
 position = Vector2(3980, -80)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Escada para cima"]
-position = Vector2(921.5, 58)
+position = Vector2(727, 85)
+rotation = -0.429447
 shape = SubResource("RectangleShape2D_iipqu")
 
 [node name="saida escada para cima" type="Marker2D" parent="Escada para cima"]
-position = Vector2(790, 80)
+position = Vector2(535, 184)
 
 [node name="fonte_carvao" parent="." instance=ExtResource("36_lvf4l")]
 position = Vector2(4144, 49)
