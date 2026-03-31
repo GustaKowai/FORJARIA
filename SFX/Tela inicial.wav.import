@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://nx0jtc3jyg07"
+path="res://.godot/imported/Tela inicial.wav-f6af2ff90e460966cc591ce3dbd3ace7.sample"
+
+[deps]
+
+source_file="res://SFX/Tela inicial.wav"
+dest_files=["res://.godot/imported/Tela inicial.wav-f6af2ff90e460966cc591ce3dbd3ace7.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

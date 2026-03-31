@@ -28,7 +28,7 @@ func _ready() -> void:
 		3:
 			texto_do_pedido.text = "Lâmina: "+lamina_tamanho+"\n Cabo: "+cabo_tamanho
 		4:
-			texto_do_pedido.text = "Bom dia! Hoje está um belo dia, não é mesmo? \n Eu gostaria de fazer uma encomenda com o senhor. Eu gostaria de uma lâmina de tamanho" +lamina_tamanho+ " e com um cabo "+ cabo_tamanho
+			texto_do_pedido.text = "Bom dia! Hoje está um belo dia, não é mesmo? \n Eu gostaria de fazer uma encomenda com o senhor. Eu gostaria de uma lâmina de tamanho " +lamina_tamanho+ " e com um cabo "+ cabo_tamanho
 		5:
 			texto_do_pedido.text = "Eu quero uma arma. O cabo pode ser " + cabo_tamanho + " e a lâmina de um tamanho...hum..."+lamina_tamanho+"...eu acho?"
 		_:

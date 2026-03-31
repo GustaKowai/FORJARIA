@@ -36,6 +36,8 @@ func _ready() -> void:
 	audio_stream_player.play()
 	lista_de_pedidos.position.x = -1000
 	GameManager.posicao_comeco_dia = entrada_inicio_do_dia.global_position
+	GameManager.comeco_do_dia.connect(toca_musica)
+	GameManager.fim_do_dia.connect(para_musica)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -183,3 +185,9 @@ func _on_pedidos_body_exited(body: Node2D) -> void:
 		tween.tween_property(lista_de_pedidos, "position:x", -1000, 1.0)
 
 #endregion
+
+func toca_musica():
+	audio_stream_player.play()
+	
+func para_musica():
+	audio_stream_player.stop()

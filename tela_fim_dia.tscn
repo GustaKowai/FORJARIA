@@ -1,7 +1,8 @@
-[gd_scene load_steps=44 format=3 uid="uid://bs0tu8f5j5sje"]
+[gd_scene load_steps=45 format=3 uid="uid://bs0tu8f5j5sje"]
 
 [ext_resource type="Script" uid="uid://btrcfq5sw4uih" path="res://tela_fim_dia.gd" id="1_56jpf"]
 [ext_resource type="Texture2D" uid="uid://cptojhnhcx735" path="res://UI/UI sprites/UI/Sprite-tela_Fim_Dia-Sheet.png" id="2_lgqeo"]
+[ext_resource type="AudioStream" uid="uid://b6lrmmxoppb6l" path="res://SFX/Loop de final de dia.wav" id="3_tlfml"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tlfml"]
 atlas = ExtResource("2_lgqeo")
@@ -252,15 +253,13 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_top = -571.0
-offset_bottom = -571.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(2, 2)
 script = ExtResource("1_56jpf")
 
 [node name="bg_final" type="AnimatedSprite2D" parent="."]
-position = Vector2(280, 535)
+position = Vector2(964, 545)
+scale = Vector2(3.4, 3.4)
 sprite_frames = SubResource("SpriteFrames_56jpf")
 frame = 28
 frame_progress = 1.0
@@ -272,12 +271,13 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -751.0
-offset_top = -92.0
-offset_right = -597.0
-offset_bottom = 101.0
+offset_left = -282.0
+offset_top = -273.0
+offset_right = -128.0
+offset_bottom = -80.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(3.4, 3.4)
 alignment = 1
 
 [node name="Label" type="Label" parent="Info_container"]
@@ -359,6 +359,9 @@ label_settings = SubResource("LabelSettings_theij")
 [node name="Button" type="Button" parent="Info_container"]
 layout_mode = 2
 text = "Começar novo dia"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_tlfml")
 
 [connection signal="animation_finished" from="bg_final" to="." method="_on_bg_final_animation_finished"]
 [connection signal="pressed" from="Info_container/Button" to="." method="_on_button_pressed"]

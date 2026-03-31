@@ -7,6 +7,7 @@ extends Control
 @onready var perdidos_n: Label = %perdidos_n
 @onready var bg_final: AnimatedSprite2D = $bg_final
 @onready var info_container: VBoxContainer = $Info_container
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 
 
@@ -35,10 +36,11 @@ func _on_button_pressed() -> void:
 	acertos_n.modulate.a = 0
 	erros_n.modulate.a = 0
 	perdidos_n.modulate.a = 0
+	audio_stream_player.stop()
 	hide()
 
 func fim_do_dia():
-	
+	audio_stream_player.play()
 	show()
 	bg_final.play()
 
