@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://b5j8knq75bfqi"]
+
+[ext_resource type="PackedScene" uid="uid://b4ag5lr6jisiy" path="res://itens/maos/base_mao.tscn" id="1_vntqv"]
+[ext_resource type="Script" uid="uid://boa22uacs1tny" path="res://itens/maos/mao_tesoura.gd" id="2_1ssi4"]
+[ext_resource type="Texture2D" uid="uid://bqpl7y6n0r1bu" path="res://itens/maos/mao_tesoura.png" id="3_2ekoj"]
+
+[node name="mao_tesoura" instance=ExtResource("1_vntqv")]
+script = ExtResource("2_1ssi4")
+item_name = "mao tesoura"
+
+[node name="Sprite2D" parent="Area2D" index="1"]
+texture = ExtResource("3_2ekoj")

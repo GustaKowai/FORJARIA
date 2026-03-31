@@ -5,18 +5,18 @@
 [ext_resource type="PackedScene" uid="uid://dsjubx2st8ga3" path="res://minigame-bigorna/bigorna-minigame.tscn" id="3_6p8tj"]
 [ext_resource type="AudioStream" uid="uid://dgcj57rkjr6p6" path="res://SFX/ambience.wav" id="4_s24td"]
 [ext_resource type="PackedScene" uid="uid://bs0tu8f5j5sje" path="res://tela_fim_dia.tscn" id="5_btcsk"]
-[ext_resource type="PackedScene" uid="uid://b2nobvox65m55" path="res://UI/pontuação_e_dinheiro.tscn" id="6_2xgge"]
-[ext_resource type="Texture2D" uid="uid://bm6argbd4uuh8" path="res://forja_interior/Térreo_Forja-sprites/Térreo_Forja/Xao_(chão)_expandido_forja.png" id="7_wtqya"]
+[ext_resource type="PackedScene" uid="uid://b2nobvox65m55" path="res://UI/pontuacao_e_dinheiro.tscn" id="6_2xgge"]
+[ext_resource type="Texture2D" uid="uid://bm6argbd4uuh8" path="res://forja_interior/Terreo_Forja-sprites/Terreo_Forja/Xao_(chao)_expandido_forja.png" id="7_wtqya"]
 [ext_resource type="PackedScene" uid="uid://8lvr8atrhxkk" path="res://jogador/jogador.tscn" id="7_yxeog"]
-[ext_resource type="Texture2D" uid="uid://cq8rw256a4ocp" path="res://forja_interior/Térreo_Forja-sprites/Térreo_Forja/The_Wall_expandido_forja.png" id="8_fhfks"]
+[ext_resource type="Texture2D" uid="uid://cq8rw256a4ocp" path="res://forja_interior/Terreo_Forja-sprites/Terreo_Forja/The_Wall_expandido_forja.png" id="8_fhfks"]
 [ext_resource type="PackedScene" uid="uid://cg8s2ahem447w" path="res://minigame_snake/minigame_snake.tscn" id="8_slqol"]
-[ext_resource type="Texture2D" uid="uid://bffscy41xi7st" path="res://forja_interior/Térreo_Forja-sprites/Térreo_Forja/Movis_(móveis)_expandido_forja.png" id="9_fkm0j"]
-[ext_resource type="Texture2D" uid="uid://bnq66fupnmtq1" path="res://forja_interior/Térreo_Forja-sprites/Térreo_Forja/bgterreo.png" id="9_xqu5v"]
+[ext_resource type="Texture2D" uid="uid://bffscy41xi7st" path="res://forja_interior/Terreo_Forja-sprites/Terreo_Forja/Movis_(moveis)_expandido_forja.png" id="9_fkm0j"]
+[ext_resource type="Texture2D" uid="uid://bnq66fupnmtq1" path="res://forja_interior/Terreo_Forja-sprites/Terreo_Forja/bgterreo.png" id="9_xqu5v"]
 [ext_resource type="Texture2D" uid="uid://bms0q7radmkoc" path="res://forja_interior/forja_sub/drive-download-20260326T184351Z-3-001/The_Expandido_SubForja.png" id="10_iipqu"]
 [ext_resource type="PackedScene" uid="uid://dl05qrqcb11or" path="res://itens/espada.tscn" id="11_fvg1a"]
 [ext_resource type="Texture2D" uid="uid://ijk1et3kfjl4" path="res://forja_interior/forja_sub/drive-download-20260326T184351Z-3-001/Xao_Expandido_Subforja.png" id="11_xyxbd"]
 [ext_resource type="PackedScene" uid="uid://cpv6qrwer5s7j" path="res://UI/seta_maquina.tscn" id="12_fkm0j"]
-[ext_resource type="Texture2D" uid="uid://calldiwwtgiwv" path="res://forja_interior/Térreo_Forja-sprites/Térreo_Forja/Detalhes_Expandidos_FINAL.png" id="12_o2iro"]
+[ext_resource type="Texture2D" uid="uid://calldiwwtgiwv" path="res://forja_interior/Terreo_Forja-sprites/Terreo_Forja/Detalhes_Expandidos_FINAL.png" id="12_o2iro"]
 [ext_resource type="Texture2D" uid="uid://d3rfg71u38wqx" path="res://forja_interior/forja_sub/drive-download-20260326T184351Z-3-001/Garganacl_SubForja_(Escadas).png" id="12_s24td"]
 [ext_resource type="Texture2D" uid="uid://dkqoq6dl8xtio" path="res://forja_interior/forja_sub/drive-download-20260326T184351Z-3-001/Ferro_SubForja.png" id="14_pis78"]
 [ext_resource type="PackedScene" uid="uid://ca7xjwoywjm6y" path="res://Locais_forja/fornalha.tscn" id="14_wt0nb"]
@@ -24,13 +24,13 @@
 [ext_resource type="Texture2D" uid="uid://mt38siujd15f" path="res://forja_interior/forja_sub/drive-download-20260326T184351Z-3-001/Fogo_da_Forja_o_Forno1-Sheet.png" id="15_btcsk"]
 [ext_resource type="Texture2D" uid="uid://2dfyydwqebmd" path="res://forja_interior/forja_sub/drive-download-20260326T184351Z-3-001/Presente_de_Natal_SubForja.png" id="15_lvf4l"]
 [ext_resource type="Texture2D" uid="uid://5wq2qfs64tbl" path="res://forja_interior/forja_sub/drive-download-20260326T184351Z-3-001/bgsub.png" id="15_yo5d2"]
-[ext_resource type="PackedScene" uid="uid://bmh2mfcpoyusl" path="res://itens/mãos/mao_de_mao.tscn" id="16_fhfks"]
-[ext_resource type="PackedScene" uid="uid://d340pnoaksmy2" path="res://itens/itens basicos/carvão.tscn" id="16_fvg1a"]
+[ext_resource type="PackedScene" uid="uid://bmh2mfcpoyusl" path="res://itens/maos/mao_de_mao.tscn" id="16_fhfks"]
+[ext_resource type="PackedScene" uid="uid://d340pnoaksmy2" path="res://itens/itens basicos/carvao.tscn" id="16_fvg1a"]
 [ext_resource type="PackedScene" uid="uid://dsappc1xym3pk" path="res://UI/inventario.tscn" id="16_wtqya"]
 [ext_resource type="PackedScene" uid="uid://mm81pqa6hoe1" path="res://itens/itens processados/lamina.tscn" id="17_fhfks"]
 [ext_resource type="PackedScene" uid="uid://cbdecjq0wbcdx" path="res://itens/materia prima/couro.tscn" id="17_wtqya"]
 [ext_resource type="Texture2D" uid="uid://c2b2yqwgax0qg" path="res://forja_interior/forja_sub/drive-download-20260326T184351Z-3-001/Bingorrna_SubForja.png" id="18_cija0"]
-[ext_resource type="PackedScene" uid="uid://b5j8knq75bfqi" path="res://itens/mãos/mao_tesoura.tscn" id="18_fhfks"]
+[ext_resource type="PackedScene" uid="uid://b5j8knq75bfqi" path="res://itens/maos/mao_tesoura.tscn" id="18_fhfks"]
 [ext_resource type="Texture2D" uid="uid://2jc2xpdhes1e" path="res://espadas/laminalonga.png" id="18_fkm0j"]
 [ext_resource type="Texture2D" uid="uid://103d2c06112m" path="res://forja_interior/forja_sub/drive-download-20260326T184351Z-3-001/Forja_o_Forno.png" id="19_yppbg"]
 [ext_resource type="Texture2D" uid="uid://dtk4q6rbtfs2s" path="res://forja_interior/forja_sub/drive-download-20260326T184351Z-3-001/Gaita_de_Fole_SubForja.png" id="20_1unkw"]
@@ -41,7 +41,7 @@
 [ext_resource type="Texture2D" uid="uid://butrn2fcet72" path="res://forja_interior/forja_sub/drive-download-20260326T184351Z-3-001/BARRIIIILS_1.png" id="25_btcsk"]
 [ext_resource type="PackedScene" uid="uid://csnc45le7bkut" path="res://Locais_forja/fonte_carvao.tscn" id="36_lvf4l"]
 [ext_resource type="PackedScene" uid="uid://dm1txswhxg4im" path="res://Locais_forja/fonte_minerio.tscn" id="37_cija0"]
-[ext_resource type="PackedScene" uid="uid://cxnem2dmutv01" path="res://itens/mãos/mao_martelo.tscn" id="38_yppbg"]
+[ext_resource type="PackedScene" uid="uid://cxnem2dmutv01" path="res://itens/maos/mao_martelo.tscn" id="38_yppbg"]
 [ext_resource type="PackedScene" uid="uid://b8ayde71hj108" path="res://hud/lista_de_pedidos.tscn" id="39_1unkw"]
 [ext_resource type="PackedScene" uid="uid://dioae4c61x763" path="res://Locais_forja/fonte_couro.tscn" id="45_brwrp"]
 
@@ -568,7 +568,7 @@ z_index = 1
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
-[node name="Pontuação e dinheiro" parent="CanvasLayer" instance=ExtResource("6_2xgge")]
+[node name="Pontuacao e dinheiro" parent="CanvasLayer" instance=ExtResource("6_2xgge")]
 
 [node name="Inventario" parent="." instance=ExtResource("16_wtqya")]
 
@@ -580,7 +580,7 @@ tile_set = SubResource("TileSet_il0ar")
 position = Vector2(751, 729)
 texture = ExtResource("9_xqu5v")
 
-[node name="Xao(chão)" type="Sprite2D" parent="terreo"]
+[node name="Xao(chao)" type="Sprite2D" parent="terreo"]
 position = Vector2(725, 700)
 texture = ExtResource("7_wtqya")
 
@@ -588,7 +588,7 @@ texture = ExtResource("7_wtqya")
 position = Vector2(725, 700)
 texture = ExtResource("8_fhfks")
 
-[node name="Movis(móveis)" type="Sprite2D" parent="terreo"]
+[node name="Movis(moveis)" type="Sprite2D" parent="terreo"]
 position = Vector2(725, 700)
 texture = ExtResource("9_fkm0j")
 

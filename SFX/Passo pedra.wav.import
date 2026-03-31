@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://bv21kg3pmbnx7"
-path="res://.godot/imported/Passo pedra.wav-a65638b234844c0c9265302e8881391c.sample"
+path="res://.godot/imported/Passo Pedra.wav-0d62fcaec927ba760fe5fac7197f33dc.sample"
 
 [deps]
 
-source_file="res://SFX/Passo pedra.wav"
-dest_files=["res://.godot/imported/Passo pedra.wav-a65638b234844c0c9265302e8881391c.sample"]
+source_file="res://SFX/Passo Pedra.wav"
+dest_files=["res://.godot/imported/Passo Pedra.wav-0d62fcaec927ba760fe5fac7197f33dc.sample"]
 
 [params]
 

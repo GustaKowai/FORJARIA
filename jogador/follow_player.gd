@@ -1,8 +1,5 @@
 extends Node2D
 
-const PASSO_MADEIRA = preload("res://SFX/Passo madeira.wav")
-const PASSO_PEDRA = preload("res://SFX/Passo pedra.wav")
-
 @export var speed = 0.5
 var jogador:Jogador
 var sprite:Sprite2D

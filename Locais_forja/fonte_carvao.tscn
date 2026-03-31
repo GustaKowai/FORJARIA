@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://csnc45le7bkut"]
 
 [ext_resource type="Script" uid="uid://dl3sscol8gtn8" path="res://fonte_carvao.gd" id="1_2upqc"]
-[ext_resource type="PackedScene" uid="uid://d340pnoaksmy2" path="res://itens/itens basicos/carvão.tscn" id="2_asmhk"]
+[ext_resource type="PackedScene" uid="uid://d340pnoaksmy2" path="res://itens/itens basicos/carvao.tscn" id="2_asmhk"]
 [ext_resource type="PackedScene" uid="uid://cpv6qrwer5s7j" path="res://UI/seta_maquina.tscn" id="3_sygp5"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_asmhk"]
