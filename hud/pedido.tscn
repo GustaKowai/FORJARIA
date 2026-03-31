@@ -2,8 +2,8 @@
 
 [ext_resource type="Texture2D" uid="uid://bvxgqxvilx7kt" path="res://UI/UI sprites/UI/papelpedido.png" id="1_6j5q0"]
 [ext_resource type="Script" uid="uid://d3p6f8kr6shvr" path="res://hud/pedido.gd" id="1_nppye"]
-[ext_resource type="AudioStream" uid="uid://bornq7iock4ws" path="res://SFX/Acertei o pedido.wav" id="3_lfca5"]
-[ext_resource type="AudioStream" uid="uid://ckppj4c8gio1b" path="res://SFX/Errei o pedido.wav" id="4_0dfex"]
+[ext_resource type="AudioStream" uid="uid://bf54howrtj6s8" path="res://SFX/Acertei o pedido cut.wav" id="3_lfca5"]
+[ext_resource type="AudioStream" uid="uid://bql0eii0gftx" path="res://SFX/Errei o pedido cut.wav" id="4_0dfex"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lfca5"]
 
